@@ -281,29 +281,45 @@ session_start();
                             <?php
                             if((filter_input(INPUT_POST, 'suggestionEmail')) && (filter_input(INPUT_POST, 'suggestionEmail')))
                             {
-                                $email=filter_input(INPUT_POST, 'suggestionEmail');
-                                $message=filter_input(INPUT_POST,'suggestionMessage');
-                                $query="Insert into suggestion values ('$email','$message')";
-                                mysqli_query($con, $query);       
-         $to = "guraaji@gmail.com";
-         $subject = "This is subject";
-         
-         $message = "<b>This is HTML message.</b>";
-         $message .= "<h1>This is headline.</h1>";
-         
-         $header = "From:ajinkyagurav21695@gmail.com \r\n";
-         $header .= "Cc:ajinkyagurav21695@gmail.com \r\n";
-         $header .= "MIME-Version: 1.0\r\n";
-         $header .= "Content-type: text/html\r\n";
-         
-         $retval = mail ($to,$subject,$message,$header);
-         
-         if( $retval == true ) {
-            echo "Message sent successfully...";
-         }else {
-            echo "Message could not be sent...";
-         }
-                            }
+                                require_once('phpmailer/PHPMailerAutoload.php');
+                                try{
+                                $mail = new PHPMailer;
+
+                                $mail->isSMTP();                            // Set mailer to use SMTP
+                                $mail->Host = "smtp.gmail.com";             // Specify main and backup SMTP servers
+                                $mail->SMTPAuth = true;                     // Enable SMTP authentication
+                                $mail->Username = 'ajinkyagurav21695@gmail.com';          // SMTP username
+                                $mail->Password = '121237h21'; // SMTP password
+                                $mail->SMTPSecure = 'tls';                  // Enable TLS encryption, `ssl` also accepted
+                                $mail->Port = 587;                          // TCP port to connect to
+                                $mail->setFrom('ajinkyagurav21695@gmail.com','Ajinkya Gurav');
+                                $mail->addReplyTo('ajinkyagurav21695@gmail.com', 'Ajinkya Gurav');
+                                $mail->addAddress('shiramteke3@gmail.com');   // Add a recipient
+
+
+                                $mail->isHTML(true);  // Set email format to HTML
+
+                                $bodyContent = '<h1>How to Send Email using PHP in Localhost by CodexWorld</h1>';
+                                $bodyContent .= '<p>This is the HTML email sent from localhost using PHP script by <b>CodexWorld</b></p>';
+
+                                $mail->Subject = 'Email from Localhost by CodexWorld';
+                                $mail->Body    = $bodyContent;
+
+                                if(!$mail->send()) {
+                                    echo 'Message could not be sent.';
+                                    echo 'Mailer Error: ' . $mail->ErrorInfo;
+                                } else {
+                                    echo 'Message has been sent';
+                                }
+                                }
+                                catch (phpmailerException $e) {
+                                    $errors[] = $e->errorMessage(); //Pretty error messages from PHPMailer
+                                    echo $errors;
+                                } catch (Exception $e) {
+                                    $errors[] = $e->getMessage(); //Boring error messages from anything else!
+                                    echo $errors;
+                                }
+                                                            }
                             ?>
                             
 

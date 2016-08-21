@@ -61,18 +61,46 @@ and open the template in the editor.
 </html>
 
 <?php
-if(isset($_POST['submit']))
-{
-    $to      = 'nobody@example.com';
-    $subject = 'the subject';
-    $message = 'hello';
-    $headers = 'From: webmaster@example.com' . "\r\n" .
-        'Reply-To: webmaster@example.com' . "\r\n" .
-        'X-Mailer: PHP/' . phpversion();
+if((filter_input(INPUT_POST, 'Email_ID')))
+                            {
+                                require_once('phpmailer/PHPMailerAutoload.php');
+                                try{
+                                $mail = new PHPMailer;
 
-    mail($to, $subject, $message, $headers);
+                                $mail->isSMTP();                            // Set mailer to use SMTP
+                                $mail->Host = "smtp.gmail.com";             // Specify main and backup SMTP servers
+                                $mail->SMTPAuth = true;                     // Enable SMTP authentication
+                                $mail->Username = 'ajinkyagurav21695@gmail.com';          // SMTP username
+                                $mail->Password = '121237h21'; // SMTP password
+                                $mail->SMTPSecure = 'tls';                  // Enable TLS encryption, `ssl` also accepted
+                                $mail->Port = 587;                          // TCP port to connect to
+                                $mail->setFrom('ajinkyagurav21695@gmail.com','Ajinkya Gurav');
+                                $mail->addReplyTo('ajinkyagurav21695@gmail.com', 'Ajinkya Gurav');
+                                $mail->addAddress('shiramteke3@gmail.com');   // Add a recipient
 
-    echo 'Email Sent.';
-}
+
+                                $mail->isHTML(true);  // Set email format to HTML
+
+                                $bodyContent = '<h1>You requested to reset passord</h1>';
+                                $bodyContent .= '<p>This is your OTP <b>1234</b></p>';
+
+                                $mail->Subject = 'Email from Team Halfpace';
+                                $mail->Body    = $bodyContent;
+
+                                if(!$mail->send()) {
+                                    echo 'Message could not be sent.';
+                                    echo 'Mailer Error: ' . $mail->ErrorInfo;
+                                } else {
+                                    echo 'Message has been sent';
+                                }
+                                }
+                                catch (phpmailerException $e) {
+                                    $errors[] = $e->errorMessage(); //Pretty error messages from PHPMailer
+                                    echo $errors;
+                                } catch (Exception $e) {
+                                    $errors[] = $e->getMessage(); //Boring error messages from anything else!
+                                    echo $errors;
+                                }
+                                                            }
 
 ?>

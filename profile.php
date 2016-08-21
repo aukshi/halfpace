@@ -224,7 +224,7 @@ session_start();
     </div><!-- @end #content2 -->
    
   </div><!-- @end #w2 -->
-  <!--Footer-->
+<!--Footer-->
     <footer class="footer-distributed">
 
 			<div class="footer-left">
@@ -267,13 +267,58 @@ session_start();
                             <h4>Want to suggest a skill?<br>
                                 Or anything else?<br></h4>
 
-				<form action="#" method="post">
+				<form action="" method="post">
 
-					<input type="text" name="email" placeholder="Email" />
-					<textarea name="message" placeholder="Message"></textarea>
+					<input type="text" name="suggestionEmail" placeholder="Email" />
+					<textarea name="suggestionMessage" placeholder="Message"></textarea>
 					<button>Send</button>
 
 				</form>
+                            <!-- To check whether HTML fields are set -->
+                            <?php
+                            if((filter_input(INPUT_POST, 'suggestionEmail')) && (filter_input(INPUT_POST, 'suggestionEmail')))
+                            {
+                                require_once('phpmailer/PHPMailerAutoload.php');
+                                try{
+                                $mail = new PHPMailer;
+
+                                $mail->isSMTP();                            // Set mailer to use SMTP
+                                $mail->Host = "smtp.gmail.com";             // Specify main and backup SMTP servers
+                                $mail->SMTPAuth = true;                     // Enable SMTP authentication
+                                $mail->Username = 'ajinkyagurav21695@gmail.com';          // SMTP username
+                                $mail->Password = '121237h21'; // SMTP password
+                                $mail->SMTPSecure = 'tls';                  // Enable TLS encryption, `ssl` also accepted
+                                $mail->Port = 587;                          // TCP port to connect to
+                                $mail->setFrom('ajinkyagurav21695@gmail.com','Ajinkya Gurav');
+                                $mail->addReplyTo('ajinkyagurav21695@gmail.com', 'Ajinkya Gurav');
+                                $mail->addAddress('shiramteke3@gmail.com');   // Add a recipient
+
+
+                                $mail->isHTML(true);  // Set email format to HTML
+
+                                $bodyContent = '<h1>How to Send Email using PHP in Localhost by CodexWorld</h1>';
+                                $bodyContent .= '<p>This is the HTML email sent from localhost using PHP script by <b>CodexWorld</b></p>';
+
+                                $mail->Subject = 'Email from Localhost by CodexWorld';
+                                $mail->Body    = $bodyContent;
+
+                                if(!$mail->send()) {
+                                    echo 'Message could not be sent.';
+                                    echo 'Mailer Error: ' . $mail->ErrorInfo;
+                                } else {
+                                    echo 'Message has been sent';
+                                }
+                                }
+                                catch (phpmailerException $e) {
+                                    $errors[] = $e->errorMessage(); //Pretty error messages from PHPMailer
+                                    echo $errors;
+                                } catch (Exception $e) {
+                                    $errors[] = $e->getMessage(); //Boring error messages from anything else!
+                                    echo $errors;
+                                }
+                                                            }
+                            ?>
+                            
 
 			</div>
 
