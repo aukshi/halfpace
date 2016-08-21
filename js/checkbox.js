@@ -5,12 +5,27 @@
  */
 var main = function(){
     
-    $('stateDef').removeClass(".ui-state-active");
-   
+    
   //toggle the componenet with class msg_body
- $(":checkbox").on('click', function(){
-     $(this).parent().toggleClass("squaredTwo");
+// $(":checkbox").on('click', function(){
+//     $(this).parent().toggleClass("squaredTwo");
+//}
+        
+     //       );
+$('.drop').removeClass("squaredOne");
+$('.cbox').change(function(){
+if(this.checked){
+$(this).next().next().show();
+$('.drop').style.display="inline-block";
+$('.drop').css("z-index","3");
+}
+else{
+$('.drop').hide();
+}
 });
+    
 };
 $(document).ready(main);
 
+/*
+}*/
