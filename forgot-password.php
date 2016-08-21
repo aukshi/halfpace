@@ -61,12 +61,13 @@ and open the template in the editor.
 </html>
 
 <?php
-if((filter_input(INPUT_POST, 'Email_ID')))
+                            if((filter_input(INPUT_POST, 'Email_ID')))
                             {
+                                $forgotP_email="".$_POST['Email_ID'];
                                 require_once('phpmailer/PHPMailerAutoload.php');
                                 try{
                                 $mail = new PHPMailer;
-
+                                $OTP=1234;
                                 $mail->isSMTP();                            // Set mailer to use SMTP
                                 $mail->Host = "smtp.gmail.com";             // Specify main and backup SMTP servers
                                 $mail->SMTPAuth = true;                     // Enable SMTP authentication
@@ -76,13 +77,14 @@ if((filter_input(INPUT_POST, 'Email_ID')))
                                 $mail->Port = 587;                          // TCP port to connect to
                                 $mail->setFrom('ajinkyagurav21695@gmail.com','Ajinkya Gurav');
                                 $mail->addReplyTo('ajinkyagurav21695@gmail.com', 'Ajinkya Gurav');
-                                $mail->addAddress('shiramteke3@gmail.com');   // Add a recipient
+                                $mail->addAddress($forgotP_email);   // Add a recipient
 
 
                                 $mail->isHTML(true);  // Set email format to HTML
 
-                                $bodyContent = '<h1>You requested to reset passord</h1>';
-                                $bodyContent .= '<p>This is your OTP <b>1234</b></p>';
+                                $bodyContent = '<h1>You requested to reset password</h1>';
+                                $bodyContent .= '<p>Your temperory one time password is  <b></b> .'
+                                        . 'Do login again using this password.</p>';
 
                                 $mail->Subject = 'Email from Team Halfpace';
                                 $mail->Body    = $bodyContent;
