@@ -8,11 +8,15 @@ var main = function(){
     $('stateDef').removeClass(".ui-state-active");
    
   //toggle the componenet with class msg_body
- $(":checkbox").on('checked', function(){
-     
+ $(":checkbox").on('click', function(){
      $(this).parent().toggleClass("squaredTwo");
-     $("#drop").style.display = "block";
-     $(this).next().firstchild().style.display="box";
-});
+}
+        
+            );
+    
+    
 };
 $(document).ready(main);
+
+/*
+}*/

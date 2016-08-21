@@ -1,0 +1,28 @@
+.layer1 {
+margin: 0;
+padding: 0;
+width: 100%;
+
+}
+.details{
+    align:right;  
+    width: 150%;
+    height: 190%;
+    background-color:white;
+    margin: 10px;
+    
+}
+.heading {
+margin: 1px;
+color: #fff;
+padding: 3px 10px;
+cursor: pointer;
+position: relative;
+background-color:#2196F3;
+}
+.content {
+padding: 5px 10px;
+background-color:#fafafa;
+width:95%;
+}
+p { padding: 5px 0; }
