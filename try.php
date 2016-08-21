@@ -32,15 +32,69 @@ function myFunction(id) {
   </button>
   <div id="Demo1" class="w3-accordion-content w3-container">
                   <div class="content">
+                      
+                      
+                      <?php
+                      $skills = array("abcd","abcd","abcd","abcd","abcd","abcd","abcd","abcd","abcd","abcd");
+                      $squared = array("squared1","squared2","squared3","squared4","squared5","squared6","squared7","squared8","squared9","squared10");
+                      $i=0;
+                      foreach($skills as $item){
+                      ?>
+                                <div class="squaredOne">
+                                    <input class="cbox" type="checkbox" value="None" id="<?php echo $squared[$i];?>" name="check" />
+                                    <label for="<?php echo $squared[$i];?>"><font size="3"> <?php echo $item;?> </font></label>
+                                   <div class="drop w3-card-8 w3-dropdown-content" style="display:none;">
+                                    
+                          <div ><input class="w3-radio" type="radio" name="gender" value="Beginner" checked>
+                              <label class="w3-validate">Beginner</label></div>
+
+                                  <div> <input class="w3-radio" type="radio" name="gender" value="Intermediate">
+                                      <label class="w3-validate">Intermediate</label></div>
+
+                                      <div> <input class="w3-radio" type="radio" name="gender" value="Expert">
+                                          <label class="w3-validate">Expert</label></div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                      <?php
+                      $i++;
+                      }
+                      ?>
                                                                      
                                 <div class="squaredOne">
-                                    <input type="checkbox" value="None" id="squared1" name="check" />
+                                    <input class="cbox" type="checkbox" value="None" id="squared1" name="check" />
+                                     
                                     <label for="squared1"><font size="3"> Counseling </font></label>
+                                    <div class="drop w3-card-8 w3-dropdown-content" style="display:none;">
+                                    
+                                        <div ><input class="w3-radio" type="radio" name="gender" value="Beginner" checked>
+                              <label class="w3-validate">Beginner</label></div>
+
+                                  <div> <input class="w3-radio" type="radio" name="gender" value="Intermediate">
+                                      <label class="w3-validate">Intermediate</label></div>
+
+                                      <div> <input class="w3-radio" type="radio" name="gender" value="Expert">
+                                          <label class="w3-validate">Expert</label></div>
+                                        
+                                    </div>
                                 </div>
-      
+                     
                                  <div class="squaredOne" >
-                                        <input type="checkbox" value="None" id="squared2" name="check" />
+                                        <input class="cbox" type="checkbox" value="None" id="squared2" name="check" />
                                           <label for="squared2"><font size="3"> Fashion </font></label>
+                                          <div class="drop w3-card-8 w3-dropdown-content" style="display:none;">
+                                              
+                                              <div ><input class="w3-radio" type="radio" name="gender" value="Beginner" checked>
+                              <label class="w3-validate">Beginner</label></div>
+
+                                  <div> <input class="w3-radio" type="radio" name="gender" value="Intermediate">
+                                      <label class="w3-validate">Intermediate</label></div>
+
+                                      <div> <input class="w3-radio" type="radio" name="gender" value="Expert">
+                                          <label class="w3-validate">Expert</label></div>
+                                              
+                                          </div>
                                  </div>
                                                                   
                                  <div class="squaredOne">
@@ -81,7 +135,7 @@ function myFunction(id) {
                                         <input type="checkbox" value="None" id="squared10" name="check" />
                                          <label for="squared10"><font size="3"> Home Science </font></label>
                                  </div> 
-                      
+                     
                   </div>
   </div>
   <button onclick="myFunction('Demo2')" class="w3-btn-block w3-left-align">
@@ -265,4 +319,5 @@ function myFunction(id) {
          
          </div>
 </body>
+
 </html>
