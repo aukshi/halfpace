@@ -1,0 +1,333 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8 Aug, 2016, 12:52:02 PM
+    Author     : Abhishek Kshirsagar
+*/
+
+section, head, aside, hgroup,body,header{
+    display: box;
+}
+h4{
+    margin: auto;
+    font-family: cursive;
+    font-weight: bold;
+    color: darkslateblue; 
+}
+
+body{
+	width: 100%;
+	display:-webkit-box;
+	-webkit-box-pack: center;
+}
+.header1{
+    position: fixed;
+    width: 100%;
+    top:0;
+    left:0;
+    right: 10px;
+    border-radius: 50px; 
+    z-index: 7;
+
+
+    
+}
+
+#logo{
+    float:left;
+    margin-left:25px;
+    margin-top:15px;
+    padding:5px;
+    padding-right: 40px;
+}
+#searcharea{
+    float:left;
+    top:30px;
+    width:400px;
+    left:200px;
+    float:left;
+    
+}
+
+#searchbox{
+    float:left;
+    height:20px;
+    width: 400px;
+    padding: 5px;
+    outline: none;
+    border-radius: 10px/10px;
+    background-position: 465px;
+}
+
+#profilearea{
+    left:50%;
+    top:1.8%;
+    height: 30px;
+    width: 0px;
+}
+
+#profilearea a{color:green;text-decoration:none}
+#profilearea a:hover{color:white;text-decoration:none}
+
+
+#nav{list-style:none;
+     margin: 10px;
+     margin-left:50px;
+     margin-right: 50px;
+     padding: 10px;}
+#nav li {
+float: right;
+margin-right: 20px;
+font-size: 14px;
+font-weight:bold;
+}
+#nav li a{color:green;text-decoration:none}
+#nav li a:hover{color:white;text-decoration:none}
+
+#notification_li, #friend_li
+{
+position:relative
+}
+
+#notificationContainer,#friendContainer 
+{
+background-color: #fff;
+border: 1px solid rgba(100, 100, 100, .4);
+-webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+overflow: visible;
+position: absolute;
+top: 30px;
+margin-left: -170px;
+width: 400px;
+z-index: -1;
+display: none; /* Enable this after jquery implementation*/ 
+}
+
+.imageCircle{
+    display: block;
+    width:80px;
+    height: 80px;
+    border-radius: 50%;
+}
+/*Popup Arrow*/
+#notificationContainer:before {
+content: '';
+display: block;
+position: absolute;
+width: 0;
+height: 0;
+color: transparent;
+border: 10px solid black;
+border-color: transparent transparent white;
+margin-top: -20px;
+margin-left: 188px;
+}
+
+#friendContainer:before {
+content: '';
+display: block;
+position: absolute;
+width: 0;
+height: 0;
+color: transparent;
+border: 10px solid black;
+border-color: transparent transparent white;
+margin-top: -20px;
+margin-left: 188px;
+}
+
+#notificationTitle,#friendTitle
+{
+font-weight: bold;
+padding: 8px;
+font-size: 13px;
+background-color: #ffffff;
+position: fixed;
+z-index: 1000;
+width: 384px;
+border-bottom: 1px solid #dddddd;
+}
+#notificationsBody,#friendBody
+{
+padding: 33px 0px 0px 0px !important;
+min-height:300px;
+}
+#notificationFooter,#friendFooter
+{
+background-color: #e9eaed;
+text-align: center;
+font-weight: bold;
+padding: 8px;
+font-size: 12px;
+border-top: 1px solid #dddddd;
+}
+
+#notification_count
+{
+padding: 3px 7px 3px 7px;
+background: #cc0000;
+color: #ffffff;
+font-weight: bold;
+margin-left: 77px;
+border-radius: 9px;
+-moz-border-radius: 9px; 
+-webkit-border-radius: 9px;
+position: absolute;
+margin-top: -12px;
+font-size: 11px;
+}
+
+#friend_count 
+{
+padding: 3px 7px 3px 7px;
+background: #cc0000;
+color: #ffffff;
+font-weight: bold;
+margin-left: 100px;
+border-radius: 9px;
+-moz-border-radius: 9px; 
+-webkit-border-radius: 9px;
+position: absolute;
+margin-top: -12px;
+font-size: 11px;
+}
+
+
+#checking{
+        
+	width: 100%;
+	height: 1200px;
+}
+#centerbody{
+	
+	display:-webkit-box;
+        margin:10px;
+        padding:10px;
+	width: 95%;
+        margin-top: 100px;
+	height: 1200px;
+        color:red;
+	/*-webkit-box-direction:reverse;*/
+}
+#leftboxes{
+        display:-webkit-box;
+        -webkit-box-flex:1;
+        margin:10px;
+        padding:0px;
+        -webkit-box-orient:vertical;
+      
+      
+}
+
+#trending{
+    display: -webkit-box;
+    width: 100%;
+    height: 600px;
+    background: whitesmoke;
+    border:2px groove;
+   
+}
+#feed{
+    display: -webkit-box;
+    margin: 5px;
+    padding:2px;
+    width: 53%;
+    margin-bottom: 10px;
+    background: white;
+}
+
+#ad1{
+    left:10px;
+    top: 600px;
+    margin-top:10px;
+    padding-top:10px;
+    -webkit-box-flex:1;
+    width: 100%;
+    height: 500px;
+    background: floralwhite;
+    border:2px groove;
+}
+
+#rightboxes{
+        display:-webkit-box;
+        -webkit-box-flex:1;
+        margin:10px;
+        padding:0px;
+        -webkit-box-orient:vertical;
+      
+}
+
+#endorsements{
+    display: -webkit-box;
+    color: olive;
+    font-size:20px;
+    text-align: center;
+    width: 100%;
+    height: 600px;
+    background: whitesmoke;
+    border:2px groove;
+}
+
+#ad2{
+    top:600px;
+    margin-top:10px;
+    -webkit-box-flex:1;
+    width: 100%;
+    height: 500px;
+    background: floralwhite;
+    border:2px groove;
+}
+
+
+/* Dropdown */
+
+.dropdown-menu {
+  font-size: 16px;
+  margin-top: 5px;
+  min-width: 105px;
+}
+
+.dropdown-menu li a {
+  color: #898989;
+  padding: 6px 20px;
+  font-weight: 300;
+}
+
+.layer1 {
+margin: 0;
+padding: 0;
+width: 100%;
+
+}
+.details{
+      
+    width: 360px;
+    height: 100px;
+    background-color:white;
+    margin: 10px;
+    
+}
+.heading {
+ width: 100%;
+margin: 1px;
+color: black;
+padding: 3px 10px;
+cursor: pointer;
+position: relative;
+background:  #F5B7B1;
+    
+}
+
+
+.content {
+padding: 5px 10px;
+background-color:#fafafa;
+}
+p { padding: 5px 0; }
+.tendsOnHover:hover,tendsOnHover:active{
+    font-size: 100%;
+    color: blue;
+}

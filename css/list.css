@@ -1,0 +1,91 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 13, 2016, 12:12:42 PM
+    Author     : Aishwarya
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #333;
+}
+
+.superparent{
+    width: 47%;
+    height: 400px;
+    float:left; 
+    background:beige;
+    margin:10px; 
+    margin-left: 20px;
+    float: left;
+}
+
+.squaredOne {
+	width: 28px;
+	height: 28px;
+	margin: 5px; 
+        width: auto; 
+        font-family: cursive; 
+        background: wheat; 
+        float: left; 
+        
+}
+
+.squaredTwo {
+	width: 28px;
+	height: 28px;
+	margin: 5px; 
+        width: auto; 
+        font-family: cursive; 
+        background:plum; 
+        float: left; 
+}
+div {
+  width: 900px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+div.highlight {
+    width: 100px;
+    height: 46px;
+    background-color: #FF7F50;
+}
+
+
+
+ul {
+  list-style-type: none;
+}
+
+li img {
+  float: left;
+  margin: 10px;
+  border: 5px solid #fff;
+
+  -webkit-transition: box-shadow 0.5s ease;
+  -moz-transition: box-shadow 0.5s ease;
+  -o-transition: box-shadow 0.5s ease;
+  -ms-transition: box-shadow 0.5s ease;
+  transition: box-shadow 0.5s ease;
+}
+
+li img:hover {
+  -webkit-box-shadow: 0px 0px 7px rgba(255,255,255,0.9);
+  box-shadow: 0px 0px 7px rgba(255,255,255,0.9);
+}
+
+
+
+
+
+
+
+
