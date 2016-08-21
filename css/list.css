@@ -1,0 +1,72 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 13, 2016, 12:12:42 PM
+    Author     : Abhishek Kshirsagar
+*/
+
+
+.superparent{
+    width: 45%;
+    height: 900px;
+    float:left; 
+    background:beige;
+    margin:10px;
+    padding:10px;
+    margin-left: 20px;
+    overflow-x: hidden;
+}
+
+.squaredOne {
+	width:auto;
+	height: 28px;
+	margin: 5px;  
+        font-family: cursive; 
+        background: wheat; 
+        float: left;
+        border-radius: 5px;
+        
+}
+
+.squaredTwo {
+	width:auto;
+	height: 28px;
+	margin: 5px; 
+        font-family: cursive; 
+        background:plum; 
+        float: left;
+        border-radius: 5px;
+}
+
+.squaredOne:hover label{
+	color: #FFFFFF;
+}
+
+.squaredTwo:hover .check {
+  border: 5px solid #FFFFFF;
+}
+
+
+.content {
+display: box;
+padding: 5px 10px;
+background-color:#fafafa;
+}
+p { padding: 5px 0; }
+
+.ui-accordion .ui-accordion-header {
+	display: block;
+	cursor: pointer;
+	position: relative;
+	margin: 2px 0 0 0;
+	padding: .5em .5em .5em .7em;
+	font-size: 100%;
+}
+.ui-accordion .ui-accordion-content {
+	padding: 1em 2.2em;
+	border-top: 0;
+	overflow: auto;
+}
