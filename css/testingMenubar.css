@@ -321,13 +321,8 @@ background:  #F5B7B1;
     
 }
 
-
 .content {
 padding: 5px 10px;
 background-color:#fafafa;
 }
 p { padding: 5px 0; }
-.tendsOnHover:hover,tendsOnHover:active{
-    font-size: 100%;
-    color: blue;
-}

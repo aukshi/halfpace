@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+var main = function(){
     
     
   //toggle the componenet with class msg_body
@@ -12,22 +12,20 @@
 //}
         
      //       );
-$(document).ready(function(){
 $('.drop').removeClass("squaredOne");
 $('.cbox').change(function(){
 if(this.checked){
-$('.drop').hide();
 $(this).next().next().show();
 $('.drop').style.display="inline-block";
 $('.drop').css("z-index","3");
 }
 else{
 $('.drop').hide();
-$('.drop').css("z-index","0");
 }
-});});
-
-
+});
+    
+};
+$(document).ready(main);
 
 /*
 }*/
