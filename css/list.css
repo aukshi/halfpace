@@ -42,9 +42,9 @@ and open the template in the editor.
         border-radius: 5px;
 }
 
-.squaredOne:hover label{
+/*.squaredOne:hover label{
 	color: #FFFFFF;
-}
+}*/
 
 .squaredTwo:hover .check {
   border: 5px solid #FFFFFF;
