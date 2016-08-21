@@ -12,6 +12,7 @@
   <script src="js/checkbox.js"></script>
   <script>
 function myFunction(id) {
+    $(".drop").hide();
     var x = document.getElementById(id);
     if (x.className.indexOf("w3-show") === -1) {
         x.className += " w3-show";
@@ -43,7 +44,7 @@ function myFunction(id) {
                                 <div class="squaredOne">
                                     <input class="cbox" type="checkbox" value="None" id="<?php echo $squared[$i];?>" name="check" />
                                     <label for="<?php echo $squared[$i];?>"><font size="3"> <?php echo $item;?> </font></label>
-                                   <div class="drop w3-card-8 w3-dropdown-content" style="display:none;">
+                                   <div class="drop w3-card-8 w3-dropdown-content" >
                                     
                           <div ><input class="w3-radio" type="radio" name="gender" value="Beginner" checked>
                               <label class="w3-validate">Beginner</label></div>
