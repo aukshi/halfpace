@@ -36,8 +36,8 @@ function myFunction(id) {
                       
                       
                       <?php
-                      $skills = array("abcd","abcd","abcd","abcd","abcd","abcd","abcd","abcd","abcd","abcd");
-                      $squared = array("squared1","squared2","squared3","squared4","squared5","squared6","squared7","squared8","squared9","squared10");
+                      $skills = array("Bike Driving","Bi-Cycle Driving","Car Driving","Sewing","Decoration","Event Management","Gardenning","Cooking","Baking","Tie Knot","video making,editing anf Sound Mixing","Beauty Tips","Photography","Caligraphy","Entrepreneurship","Legal Advices","Communication Skills","Time Management","Fashion","Festival Knowledge","Trademarketing","Swimming","Excel","Rooting Phone","Formatting Laptop","Meditation");
+                      $squared = array("squared1","squared2","squared3","squared4","squared5","squared6","squared7","squared8","squared9","squared10","squared11","squared12","squared13","squared14","squared15","squared16","squared17","squared18","Squared19","squared20","squared21","squared22","squared23","squared24","squared25","squared26");
                       $i=0;
                       foreach($skills as $item){
                       ?>
@@ -71,54 +71,36 @@ function myFunction(id) {
   </button>
   <div id="Demo2" class="w3-accordion-content w3-container">
     <div class="content">
-                        <div class="squaredOne">
-                                    <input type="checkbox" value="None" id="squareda1" name="check" />
-                                    <label for="squareda1"><font size="3"> Maths(basic) </font></label>
-                                    </div>
-      
-                                 <div class="squaredOne" >
-                                        <input type="checkbox" value="None" id="squareda2" name="check" />
-                                          <label for="squareda2"><font size="3"> Higher Mathematics </font></label>
-                                 </div>
-                                                                  
-                                 <div class="squaredOne">
-                                        <input type="checkbox" value="None" id="squareda3" name="check" />
-                                        <label for="squareda3"><font size="3"> Physics </font></label>
-                                  </div>                         
+                          
+                      <?php
+                      $skills1 = array("General Mathematics","Statestics","Calculus","Chemistry","Physics","Biology","History","Geography","Economics","Civics","Politics","Psychology","Philosophy","Engineering Graphics","Mechanics","C","C++","Java","Python","Web Developement","Mobile App Developement","Embedded System","Microcontroller Programming","Robotics","Compititive Exams","Interviews","Career Guidance","College Selection");
+                      $squared1 = array("squared1","squared2","squared3","squared4","squared5","squared6","squared7","squared8","squared9","squared10","squared11","squared12","squared13","squared14","squared15","squared16","squared17","squared18","squared19","squared20","squared21","squared22","squared23","squared24","squared25","squared26","squared27","squared28");
+                      $i=0;
+                      foreach($skills1 as $item){
+                      ?>
+                                <div class="squaredOne">
+                                    <input class="cbox" type="checkbox" value="None" id="<?php echo $squared1[$i];?>" name="check" />
+                                    <label for="<?php echo $squared1[$i];?>"><font size="3"> <?php echo $item;?> </font></label>
+                                   <div class="drop w3-card-8 w3-dropdown-content" >
                                     
-                                  <div class="squaredOne" >
-                                        <input type="checkbox" value="None" id="squareda4" name="check" />
-                                         <label for="squareda4"><font size="3"> Chemistry </font></label>
-                                 </div>  
-                      
-                      <div class="squaredOne" >
-                                        <input type="checkbox" value="None" id="squareda5" name="check" />
-                                         <label for="squareda5"><font size="3"> Biology </font></label>
-                                 </div>
-                      <div class="squaredOne" >
-                                        <input type="checkbox" value="None" id="squareda6" name="check" />
-                                         <label for="squareda6"><font size="3"> History </font></label>
-                                 </div> 
-                      
-                      <div class="squaredOne" >
-                                        <input type="checkbox" value="None" id="squareda7" name="check" />
-                                         <label for="squareda7"><font size="3"> Literature </font></label>
-                                 </div> 
-                      
-                      <div class="squaredOne" >
-                                        <input type="checkbox" value="None" id="squareda8" name="check" />
-                                         <label for="squareda8"><font size="3"> Geography </font></label>
-                                 </div> 
-                      
-                      <div class="squaredOne" >
-                                        <input type="checkbox" value="None" id="squareda9" name="check" />
-                                         <label for="squareda9"><font size="3"> Electronics </font></label>
-                                 </div>
-                      
-                      <div class="squaredOne" >
-                                        <input type="checkbox" value="None" id="squareda10" name="check" />
-                                         <label for="squareda10"><font size="3"> Computer Science </font></label>
-                                 </div> 
+                          <div ><input class="w3-radio" type="radio" name="gender" value="Beginner" checked>
+                              <label class="w3-validate">Beginner</label></div>
+
+                                  <div> <input class="w3-radio" type="radio" name="gender" value="Intermediate">
+                                      <label class="w3-validate">Intermediate</label></div>
+
+                                      <div> <input class="w3-radio" type="radio" name="gender" value="Expert">
+                                          <label class="w3-validate">Expert</label></div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                      <?php
+                      $i++;
+                      }
+                      ?>
+                                                                     
+                     
                     </div>
   </div>
 </div>
@@ -128,112 +110,154 @@ function myFunction(id) {
   </button>
         <div id="Demo3" class="w3-accordion-content w3-container">
             <div class="content">
-                        <div class="squaredOne">
-                                    <input type="checkbox" value="None" id="squaredb1" name="check" />
-                                    <label for="squaredb1"><font size="3"> English </font></label>
-                                </div>
-      
-                                 <div class="squaredOne" >
-                                        <input type="checkbox" value="None" id="squaredb2" name="check" />
-                                          <label for="squaredb2"><font size="3"> German </font></label>
-                                 </div>
-                                                                  
-                                 <div class="squaredOne">
-                                        <input type="checkbox" value="None" id="squaredb3" name="check" />
-                                        <label for="squaredb3"><font size="3"> French </font></label>
-                                  </div>                         
+                                                 
+                      <?php
+                      $skills2 = array("English","Germen","French","Spanish","Hindi","Marathi","Sanskrit","Grammer");
+                      $squared2 = array("squared1","squared2","squared3","squared4","squared5","squared6","squared7","squared8");
+                      $i=0;
+                      foreach($skills2 as $item){
+                      ?>
+                                <div class="squaredOne">
+                                    <input class="cbox" type="checkbox" value="None" id="<?php echo $squared2[$i];?>" name="check" />
+                                    <label for="<?php echo $squared2[$i];?>"><font size="3"> <?php echo $item;?> </font></label>
+                                   <div class="drop w3-card-8 w3-dropdown-content" >
                                     
-                                  <div class="squaredOne" >
-                                        <input type="checkbox" value="None" id="squaredb4" name="check" />
-                                         <label for="squaredb4"><font size="3"> Hindi </font></label>
-                                 </div>  
-                      
-                      <div class="squaredOne" >
-                                        <input type="checkbox" value="None" id="squaredb5" name="check" />
-                                         <label for="squaredb5"><font size="3"> Marathi </font></label>
-                                 </div>
-                      <div class="squaredOne" >
-                                        <input type="checkbox" value="None" id="squaredb6" name="check" />
-                                         <label for="squaredb6"><font size="3"> Sanskrit </font></label>
-                                 </div> 
-                      
-                      <div class="squaredOne" >
-                                        <input type="checkbox" value="None" id="squaredb7" name="check" />
-                                         <label for="squaredb7"><font size="3"> Spanish </font></label>
-                                 </div> 
-                      
-                      <div class="squaredOne" >
-                                        <input type="checkbox" value="None" id="squaredb8" name="check" />
-                                         <label for="squaredb8"><font size="3"> Tamil </font></label>
-                                 </div> 
-                      
-                      <div class="squaredOne" >
-                                        <input type="checkbox" value="None" id="squaredb9" name="check" />
-                                         <label for="squaredb9"><font size="3"> Telugu </font></label>
-                                 </div>
-                      
-                      <div class="squaredOne" >
-                                        <input type="checkbox" value="None" id="squaredb10" name="check" />
-                                         <label for="squaredb10"><font size="3"> Bengali </font></label>
-                                 </div> 
+                          <div ><input class="w3-radio" type="radio" name="gender" value="Beginner" checked>
+                              <label class="w3-validate">Beginner</label></div>
+
+                                  <div> <input class="w3-radio" type="radio" name="gender" value="Intermediate">
+                                      <label class="w3-validate">Intermediate</label></div>
+
+                                      <div> <input class="w3-radio" type="radio" name="gender" value="Expert">
+                                          <label class="w3-validate">Expert</label></div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                      <?php
+                      $i++;
+                      }
+                      ?>
+                     
                     </div>
                   </div>
         
     
      <button onclick="myFunction('Demo4')" class="w3-btn-block w3-left-align">
-    Food and Health
+    Food Fitness and Healthcare
   </button>
     <div id="Demo4" class="w3-accordion-content w3-container">
         <div class="content">
                                                                      
+                                    <?php
+                      $skills3 = array("Heart Care","Diabetes Care","Yoga","Diet","Home Remidies","BabyCare","Skin Care","Aerobics","Hair Care","Dressing","Mother care");
+                      $squared3 = array("squared1","squared2","squared3","squared4","squared5","squared6","squared7","squared8","squared9","squared7","squared8","squared9","squared10","squared11");
+                      $i=0;
+                      foreach($skills3 as $item){
+                      ?>
                                 <div class="squaredOne">
-                                    <input type="checkbox" value="None" id="squaredc1" name="check" />
-                                    <label for="squaredc1"><font size="3"> Diabetes </font></label>
-                                </div>
-      
-                                 <div class="squaredOne" >
-                                        <input type="checkbox" value="None" id="squaredc2" name="check" />
-                                          <label for="squaredc2"><font size="3"> Fitness </font></label>
-                                 </div>
-                                                                  
-                                 <div class="squaredOne">
-                                        <input type="checkbox" value="None" id="squaredc3" name="check" />
-                                        <label for="squaredc3"><font size="3"> Diet </font></label>
-                                  </div>                         
+                                    <input class="cbox" type="checkbox" value="None" id="<?php echo $squared3[$i];?>" name="check" />
+                                    <label for="<?php echo $squared3[$i];?>"><font size="3"> <?php echo $item;?> </font></label>
+                                   <div class="drop w3-card-8 w3-dropdown-content" >
                                     
-                                  <div class="squaredOne" >
-                                        <input type="checkbox" value="None" id="squaredc4" name="check" />
-                                         <label for="squaredc4"><font size="3"> Yoga </font></label>
-                                 </div>  
+                          <div ><input class="w3-radio" type="radio" name="gender" value="Beginner" checked>
+                              <label class="w3-validate">Beginner</label></div>
+
+                                  <div> <input class="w3-radio" type="radio" name="gender" value="Intermediate">
+                                      <label class="w3-validate">Intermediate</label></div>
+
+                                      <div> <input class="w3-radio" type="radio" name="gender" value="Expert">
+                                          <label class="w3-validate">Expert</label></div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                      <?php
+                      $i++;
+                      }
+                      ?>
                       
-                      <div class="squaredOne" >
-                                        <input type="checkbox" value="None" id="squaredc5" name="check" />
-                                         <label for="squaredc5"><font size="3"> Weight loss  </font></label>
-                                 </div>
-                      <div class="squaredOne" >
-                                        <input type="checkbox" value="None" id="squaredc6" name="check" />
-                                         <label for="squaredc6"><font size="3"> Baby care </font></label>
-                                 </div> 
+                  </div>
+                  
+        
+    </div>
+ 
+        
+         <button onclick="myFunction('Demo5')" class="w3-btn-block w3-left-align">
+    Art
+  </button>
+    <div id="Demo5" class="w3-accordion-content w3-container">
+        <div class="content">
+                                                                     
+                                    <?php
+                      $skills4 = array("Sketching","Painting","3-D Art","Nail Art","Dance","Singing","Drama","Guitar","Tabla","Synthesiser","Quilling","Card Making","Handcraft");
+                      $squared4 = array("squared1","squared2","squared3","squared4","squared5","squared6","squared7","squared8","squared9","squared7","squared8","squared9","squared10","squared11");
+                      $i=0;
+                      foreach($skills4 as $item){
+                      ?>
+                                <div class="squaredOne">
+                                    <input class="cbox" type="checkbox" value="None" id="<?php echo $squared4[$i];?>" name="check" />
+                                    <label for="<?php echo $squared4[$i];?>"><font size="3"> <?php echo $item;?> </font></label>
+                                   <div class="drop w3-card-8 w3-dropdown-content" >
+                                    
+                          <div ><input class="w3-radio" type="radio" name="gender" value="Beginner" checked>
+                              <label class="w3-validate">Beginner</label></div>
+
+                                  <div> <input class="w3-radio" type="radio" name="gender" value="Intermediate">
+                                      <label class="w3-validate">Intermediate</label></div>
+
+                                      <div> <input class="w3-radio" type="radio" name="gender" value="Expert">
+                                          <label class="w3-validate">Expert</label></div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                      <?php
+                      $i++;
+                      }
+                      ?>
                       
-                      <div class="squaredOne" >
-                                        <input type="checkbox" value="None" id="squaredc7" name="check" />
-                                         <label for="squaredc7"><font size="3"> Skin care </font></label>
-                                 </div> 
-                      
-                      <div class="squaredOne" >
-                                        <input type="checkbox" value="None" id="squaredc8" name="check" />
-                                         <label for="squaredc8"><font size="3"> Hair care </font></label>
-                                 </div> 
-                      
-                      <div class="squaredOne" >
-                                        <input type="checkbox" value="None" id="squaredc9" name="check" />
-                                         <label for="squaredc9"><font size="3"> Home remedies </font></label>
-                                 </div>
-                      
-                      <div class="squaredOne" >
-                                        <input type="checkbox" value="None" id="squaredc10" name="check" />
-                                         <label for="squaredc10"><font size="3"> Heart care </font></label>
-                                 </div> 
+                  </div>
+                  
+        
+    </div>
+ 
+        
+        
+        
+         <button onclick="myFunction('Demo6')" class="w3-btn-block w3-left-align">
+    Games
+  </button>
+    <div id="Demo6" class="w3-accordion-content w3-container">
+        <div class="content">
+                                                                     
+                                    <?php
+                      $skills5 = array("Cricket","Badminton","Tennise","Table Tennise","Hockey","Chess","Kabaddi");
+                      $squared5 = array("squared1","squared2","squared3","squared4","squared5","squared6","squared7");
+                      $i=0;
+                      foreach($skills5 as $item){
+                      ?>
+                                <div class="squaredOne">
+                                    <input class="cbox" type="checkbox" value="None" id="<?php echo $squared5[$i];?>" name="check" />
+                                    <label for="<?php echo $squared5[$i];?>"><font size="3"> <?php echo $item;?> </font></label>
+                                   <div class="drop w3-card-8 w3-dropdown-content" >
+                                    
+                          <div ><input class="w3-radio" type="radio" name="gender" value="Beginner" checked>
+                              <label class="w3-validate">Beginner</label></div>
+
+                                  <div> <input class="w3-radio" type="radio" name="gender" value="Intermediate">
+                                      <label class="w3-validate">Intermediate</label></div>
+
+                                      <div> <input class="w3-radio" type="radio" name="gender" value="Expert">
+                                          <label class="w3-validate">Expert</label></div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                      <?php
+                      $i++;
+                      }
+                      ?>
                       
                   </div>
                   
@@ -244,6 +268,246 @@ function myFunction(id) {
     
     <div class="superparent" id="right_div" >
           
+          <h2>I want to learn</h2>
+ 
+<div class="w3-accordion w3-light-grey">
+  <button onclick="myFunction('Demo11')" class="w3-btn-block w3-left-align">
+    Lifestyle
+  </button>
+  <div id="Demo11" class="w3-accordion-content w3-container">
+                  <div class="content">
+                      
+                      
+                      <?php
+                      $skills11 = array("Bike Driving","Bi-Cycle Driving","Car Driving","Sewing","Decoration","Event Management","Gardenning","Cooking","Baking","Tie Knot","video making,editing anf Sound Mixing","Beauty Tips","Photography","Caligraphy","Entrepreneurship","Legal Advices","Communication Skills","Time Management","Fashion","Festival Knowledge","Trademarketing","Swimming","Excel","Rooting Phone","Formatting Laptop","Meditation");
+                      $squared11 = array("squared1","squared2","squared3","squared4","squared5","squared6","squared7","squared8","squared9","squared10","squared11","squared12","squared13","squared14","squared15","squared16","squared17","squared18","Squared19","squared20","squared21","squared22","squared23","squared24","squared25","squared26");
+                      $i=0;
+                      foreach($skills11 as $item){
+                      ?>
+                                <div class="squaredOne">
+                                    <input class="cbox" type="checkbox" value="None" id="<?php echo $squared11[$i];?>" name="check" />
+                                    <label for="<?php echo $squared11[$i];?>"><font size="3"> <?php echo $item;?> </font></label>
+                                   <!--div class="drop w3-card-8 w3-dropdown-content" >
+                                    
+                          <!--div ><input class="w3-radio" type="radio" name="gender" value="Beginner" checked>
+                              <label class="w3-validate">Beginner</label></div>
+
+                                  <div> <input class="w3-radio" type="radio" name="gender" value="Intermediate">
+                                      <label class="w3-validate">Intermediate</label></div>
+
+                                      <div> <input class="w3-radio" type="radio" name="gender" value="Expert">
+                                          <label class="w3-validate">Expert</label></div>
+                                    </div-->
+                                    
+                                    
+                                </div-->
+                      <?php
+                      $i++;
+                      }
+                      ?>
+                                                                     
+                     
+                  </div>
+  </div>
+  <button onclick="myFunction('Demo2')" class="w3-btn-block w3-left-align">
+    Education
+  </button>
+  <div id="Demo2" class="w3-accordion-content w3-container">
+    <div class="content">
+                          
+                      <?php
+                      $skills1 = array("General Mathematics","Statestics","Calculus","Chemistry","Physics","Biology","History","Geography","Economics","Civics","Politics","Psychology","Philosophy","Engineering Graphics","Mechanics","C","C++","Java","Python","Web Developement","Mobile App Developement","Embedded System","Microcontroller Programming","Robotics","Compititive Exams","Interviews","Career Guidance","College Selection");
+                      $squared1 = array("squared1","squared2","squared3","squared4","squared5","squared6","squared7","squared8","squared9","squared10","squared11","squared12","squared13","squared14","squared15","squared16","squared17","squared18","squared19","squared20","squared21","squared22","squared23","squared24","squared25","squared26","squared27","squared28");
+                      $i=0;
+                      foreach($skills1 as $item){
+                      ?>
+                                <div class="squaredOne">
+                                    <input class="cbox" type="checkbox" value="None" id="<?php echo $squared1[$i];?>" name="check" />
+                                    <label for="<?php echo $squared1[$i];?>"><font size="3"> <?php echo $item;?> </font></label>
+                                   <div class="drop w3-card-8 w3-dropdown-content" >
+                                    
+                          <div ><input class="w3-radio" type="radio" name="gender" value="Beginner" checked>
+                              <label class="w3-validate">Beginner</label></div>
+
+                                  <div> <input class="w3-radio" type="radio" name="gender" value="Intermediate">
+                                      <label class="w3-validate">Intermediate</label></div>
+
+                                      <div> <input class="w3-radio" type="radio" name="gender" value="Expert">
+                                          <label class="w3-validate">Expert</label></div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                      <?php
+                      $i++;
+                      }
+                      ?>
+                                                                     
+                     
+                    </div>
+  </div>
+</div>
+
+        <button onclick="myFunction('Demo3')" class="w3-btn-block w3-left-align">
+    Languages
+  </button>
+        <div id="Demo3" class="w3-accordion-content w3-container">
+            <div class="content">
+                                                 
+                      <?php
+                      $skills2 = array("English","Germen","French","Spanish","Hindi","Marathi","Sanskrit","Grammer");
+                      $squared2 = array("squared1","squared2","squared3","squared4","squared5","squared6","squared7","squared8");
+                      $i=0;
+                      foreach($skills2 as $item){
+                      ?>
+                                <div class="squaredOne">
+                                    <input class="cbox" type="checkbox" value="None" id="<?php echo $squared2[$i];?>" name="check" />
+                                    <label for="<?php echo $squared2[$i];?>"><font size="3"> <?php echo $item;?> </font></label>
+                                   <div class="drop w3-card-8 w3-dropdown-content" >
+                                    
+                          <div ><input class="w3-radio" type="radio" name="gender" value="Beginner" checked>
+                              <label class="w3-validate">Beginner</label></div>
+
+                                  <div> <input class="w3-radio" type="radio" name="gender" value="Intermediate">
+                                      <label class="w3-validate">Intermediate</label></div>
+
+                                      <div> <input class="w3-radio" type="radio" name="gender" value="Expert">
+                                          <label class="w3-validate">Expert</label></div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                      <?php
+                      $i++;
+                      }
+                      ?>
+                     
+                    </div>
+                  </div>
+        
+    
+     <button onclick="myFunction('Demo4')" class="w3-btn-block w3-left-align">
+    Food Fitness and Healthcare
+  </button>
+    <div id="Demo4" class="w3-accordion-content w3-container">
+        <div class="content">
+                                                                     
+                                    <?php
+                      $skills3 = array("Heart Care","Diabetes Care","Yoga","Diet","Home Remidies","BabyCare","Skin Care","Aerobics","Hair Care","Dressing","Mother care");
+                      $squared3 = array("squared1","squared2","squared3","squared4","squared5","squared6","squared7","squared8","squared9","squared7","squared8","squared9","squared10","squared11");
+                      $i=0;
+                      foreach($skills3 as $item){
+                      ?>
+                                <div class="squaredOne">
+                                    <input class="cbox" type="checkbox" value="None" id="<?php echo $squared3[$i];?>" name="check" />
+                                    <label for="<?php echo $squared3[$i];?>"><font size="3"> <?php echo $item;?> </font></label>
+                                   <div class="drop w3-card-8 w3-dropdown-content" >
+                                    
+                          <div ><input class="w3-radio" type="radio" name="gender" value="Beginner" checked>
+                              <label class="w3-validate">Beginner</label></div>
+
+                                  <div> <input class="w3-radio" type="radio" name="gender" value="Intermediate">
+                                      <label class="w3-validate">Intermediate</label></div>
+
+                                      <div> <input class="w3-radio" type="radio" name="gender" value="Expert">
+                                          <label class="w3-validate">Expert</label></div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                      <?php
+                      $i++;
+                      }
+                      ?>
+                      
+                  </div>
+                  
+        
+    </div>
+ 
+        
+         <button onclick="myFunction('Demo5')" class="w3-btn-block w3-left-align">
+    Art
+  </button>
+    <div id="Demo5" class="w3-accordion-content w3-container">
+        <div class="content">
+                                                                     
+                                    <?php
+                      $skills4 = array("Sketching","Painting","3-D Art","Nail Art","Dance","Singing","Drama","Guitar","Tabla","Synthesiser","Quilling","Card Making","Handcraft");
+                      $squared4 = array("squared1","squared2","squared3","squared4","squared5","squared6","squared7","squared8","squared9","squared7","squared8","squared9","squared10","squared11");
+                      $i=0;
+                      foreach($skills4 as $item){
+                      ?>
+                                <div class="squaredOne">
+                                    <input class="cbox" type="checkbox" value="None" id="<?php echo $squared4[$i];?>" name="check" />
+                                    <label for="<?php echo $squared4[$i];?>"><font size="3"> <?php echo $item;?> </font></label>
+                                   <div class="drop w3-card-8 w3-dropdown-content" >
+                                    
+                          <div ><input class="w3-radio" type="radio" name="gender" value="Beginner" checked>
+                              <label class="w3-validate">Beginner</label></div>
+
+                                  <div> <input class="w3-radio" type="radio" name="gender" value="Intermediate">
+                                      <label class="w3-validate">Intermediate</label></div>
+
+                                      <div> <input class="w3-radio" type="radio" name="gender" value="Expert">
+                                          <label class="w3-validate">Expert</label></div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                      <?php
+                      $i++;
+                      }
+                      ?>
+                      
+                  </div>
+                  
+        
+    </div>
+ 
+        
+        
+        
+         <button onclick="myFunction('Demo6')" class="w3-btn-block w3-left-align">
+    Games
+  </button>
+    <div id="Demo6" class="w3-accordion-content w3-container">
+        <div class="content">
+                                                                     
+                                    <?php
+                      $skills5 = array("Cricket","Badminton","Tennise","Table Tennise","Hockey","Chess","Kabaddi");
+                      $squared5 = array("squared1","squared2","squared3","squared4","squared5","squared6","squared7");
+                      $i=0;
+                      foreach($skills5 as $item){
+                      ?>
+                                <div class="squaredOne">
+                                    <input class="cbox" type="checkbox" value="None" id="<?php echo $squared5[$i];?>" name="check" />
+                                    <label for="<?php echo $squared5[$i];?>"><font size="3"> <?php echo $item;?> </font></label>
+                                   <div class="drop w3-card-8 w3-dropdown-content" >
+                                    
+                          <div ><input class="w3-radio" type="radio" name="gender" value="Beginner" checked>
+                              <label class="w3-validate">Beginner</label></div>
+
+                                  <div> <input class="w3-radio" type="radio" name="gender" value="Intermediate">
+                                      <label class="w3-validate">Intermediate</label></div>
+
+                                      <div> <input class="w3-radio" type="radio" name="gender" value="Expert">
+                                          <label class="w3-validate">Expert</label></div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                      <?php
+                      $i++;
+                      }
+                      ?>
+                      
+                  </div>
+                  
+        
+    </div>
+ 
+        
          
          </div>
 </body>
