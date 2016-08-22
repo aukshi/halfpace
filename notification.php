@@ -37,7 +37,7 @@ and open the template in the editor.
      </head>
      <body>
          <!-- Menubar begins here-->
-             <div id="header" class="header1" style="width: 100%; height:80px; background:url('Images/bg1.jpg')0 100% no-repeat; background-size: cover;; margin:10px; ">
+             <div id="header" class="header1" style="background:url('Images/bg1.jpg')0 100% no-repeat; background-size: cover;">
             <div id="logo">Logo</div>
             <div id="searcharea" class="header1"><input placeholder="search" type="text" id="searchbox"/></div>
             <div  id="profilearea" class="header1" ><a href="profile.html"><img class="imageCircle" src="kitten.jpg" alt="Profile" width="100" height="100"></a></div>
@@ -46,12 +46,6 @@ and open the template in the editor.
             <li class="dropdown">
             <a href="#" class="dropdown-toggle">Settings<b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Option 1</a></li>
-              <li><a href="#">Option 2</a></li>
-              <li><a href="#">Option 3</a></li>
-              <li><a href="#">Option 4</a></li>
-              <li><a href="#">Option 5</a></li>
-              <li><a href="#">About us</a></li>
               <li><a href="#">Log out</a></li>
             </ul>
             
