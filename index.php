@@ -99,8 +99,17 @@ session_start();
                       <img src="Images/timepass.jpg" alt="Avatar" style="width:80%">
                       <h5>John Doe</h5>
 
-                      <button class="w3-btn w3-green">Accept</button>
-                      <button class="w3-btn w3-red">Decline</button>
+                      <button name="acceptFR " class="w3-btn w3-green">Accept</button>
+                      <button name="declineFR" class="w3-btn w3-red">Decline</button>
+                      <?php 
+                      //if(filter_input(INPUT_POST,'acceptFR'))
+//                      if(isset($_POST['accepetFR']))
+//                      {
+//                          header('profile.php', true);
+//                      }
+                      
+                      
+                      ?>
                     </div>
 
                     </div>
