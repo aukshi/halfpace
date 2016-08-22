@@ -32,7 +32,23 @@ session_start();
                   });
                 });
             </script>
-
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>
+    
+        function friendAcc(value){
+            $.ajax({
+                type:'post'
+                url:'friendsStatus.php',
+                success: 
+                    alert("HII");
+                ,
+                error:function(exception){
+                    alert('Exception:'+exception);
+   }
+            });
+        };
+    
+    </script>
 
        
             
@@ -99,22 +115,14 @@ session_start();
                       <img src="Images/timepass.jpg" alt="Avatar" style="width:80%">
                       <h5>John Doe</h5>
 
-                      <button name="acceptFR " class="w3-btn w3-green">Accept</button>
-                      <button name="declineFR" class="w3-btn w3-red">Decline</button>
-                      <?php 
-                      //if(filter_input(INPUT_POST,'acceptFR'))
-//                      if(isset($_POST['accepetFR']))
-//                      {
-//                          header('profile.php', true);
-//                      }
+                      <button id="acceptFR " name="acceptFR" onclick="friendAcc(this.value);" class= "w3-btn w3-green" >Accept</button>
+                      <button id="declineFR" name="declineFR" class="w3-btn w3-red">Decline</button>
                       
-                      
-                      ?>
                     </div>
 
                     </div>
                 </div>
-                <div id="friendFooter"><a href="friendRequest.html">See All</a></div>
+                <div id="friendFooter"><a href="friendRequest.php">See All</a></div>
                 </div>
 
             </li>
@@ -339,14 +347,7 @@ session_start();
 
         
 </div>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <?php
-        // put your code here
-        ?>
-    </body>
+
+
+     </body>
 </html>
