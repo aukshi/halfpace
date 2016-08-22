@@ -316,10 +316,10 @@ function myFunction(id) {
     <div class="content">
                           
                       <?php
-                      $skills1 = array("General Mathematics","Statestics","Calculus","Chemistry","Physics","Biology","History","Geography","Economics","Civics","Politics","Psychology","Philosophy","Engineering Graphics","Mechanics","C","C++","Java","Python","Web Developement","Mobile App Developement","Embedded System","Microcontroller Programming","Robotics","Compititive Exams","Interviews","Career Guidance","College Selection");
-                      $squared1 = array("squared1","squared2","squared3","squared4","squared5","squared6","squared7","squared8","squared9","squared10","squared11","squared12","squared13","squared14","squared15","squared16","squared17","squared18","squared19","squared20","squared21","squared22","squared23","squared24","squared25","squared26","squared27","squared28");
+                      $skills12 = array("General Mathematics","Statestics","Calculus","Chemistry","Physics","Biology","History","Geography","Economics","Civics","Politics","Psychology","Philosophy","Engineering Graphics","Mechanics","C","C++","Java","Python","Web Developement","Mobile App Developement","Embedded System","Microcontroller Programming","Robotics","Compititive Exams","Interviews","Career Guidance","College Selection");
+                      $squared12 = array("squared1","squared2","squared3","squared4","squared5","squared6","squared7","squared8","squared9","squared10","squared11","squared12","squared13","squared14","squared15","squared16","squared17","squared18","squared19","squared20","squared21","squared22","squared23","squared24","squared25","squared26","squared27","squared28");
                       $i=0;
-                      foreach($skills1 as $item){
+                      foreach($skills12 as $item){
                       ?>
                                 <div class="squaredOne">
                                     <input class="cbox" type="checkbox" value="None" id="<?php echo $squared1[$i];?>" name="check" />
