@@ -4,6 +4,9 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+<?php
+include 'DB_Con.php';
+?>
 <html>
     <head>
         <title>Forgot Password</title>
@@ -16,7 +19,6 @@ and open the template in the editor.
             function validateForgotPasswordForm()
             {
             var email = document.forgot_password.username.value;
-            alert("Email: "+email);
             <?php echo "Hii" ?>
 	//var password = document.getElementById("password").value;
         
@@ -61,45 +63,58 @@ and open the template in the editor.
 </html>
 
 <?php
-if((filter_input(INPUT_POST, 'Email_ID')))
+                            if((filter_input(INPUT_POST, 'Email_ID')))
                             {
+                                $forgotP_email="".$_POST['Email_ID'];
                                 require_once('phpmailer/PHPMailerAutoload.php');
                                 try{
                                 $mail = new PHPMailer;
-
+                                $OTP=1234;
                                 $mail->isSMTP();                            // Set mailer to use SMTP
                                 $mail->Host = "smtp.gmail.com";             // Specify main and backup SMTP servers
                                 $mail->SMTPAuth = true;                     // Enable SMTP authentication
-                                $mail->Username = 'ajinkyagurav21695@gmail.com';          // SMTP username
-                                $mail->Password = '121237h21'; // SMTP password
+                                $mail->Username = 'halfpacepvt@gmail.com';          // SMTP username
+                                $mail->Password = 'tinytown'; // SMTP password
                                 $mail->SMTPSecure = 'tls';                  // Enable TLS encryption, `ssl` also accepted
                                 $mail->Port = 587;                          // TCP port to connect to
                                 $mail->setFrom('ajinkyagurav21695@gmail.com','Ajinkya Gurav');
                                 $mail->addReplyTo('ajinkyagurav21695@gmail.com', 'Ajinkya Gurav');
-                                $mail->addAddress('shiramteke3@gmail.com');   // Add a recipient
-
+                                $mail->addAddress($forgotP_email);   // Add a recipient
+                                
 
                                 $mail->isHTML(true);  // Set email format to HTML
 
-                                $bodyContent = '<h1>You requested to reset passord</h1>';
-                                $bodyContent .= '<p>This is your OTP <b>1234</b></p>';
+                                $bodyContent = '<h1>You requested to reset password</h1>';
+                                $bodyContent .= '<p>Your temperory one time password is  <b> '.$OTP.'</b> .'
+                                        . 'Do login again using this password.</p>';
 
-                                $mail->Subject = 'Email from Team Halfpace';
+                                $mail->Subject = 'Team Halfpace';
                                 $mail->Body    = $bodyContent;
-
-                                if(!$mail->send()) {
-                                    echo 'Message could not be sent.';
-                                    echo 'Mailer Error: ' . $mail->ErrorInfo;
+                                $checkUserRegistered="select * from users where email_id='$forgotP_email'";
+                                $results=  mysqli_query($con, $checkUserRegistered);
+                                $row=  mysqli_fetch_array($results);
+                                if(empty($row))
+                                {
+                                    echo "<script type='text/javascript'>alert('Sorry! This Email ID is not registered.');</script>";
+                                }
+                                else if(!$mail->send()) {
+                                    //echo 'Message could not be sent.';
+                                    echo "<script type='text/javascript'>alert('email could not be sent. Please check the email entered');</script>";
+                                    //echo 'Mailer Error: ' . $mail->ErrorInfo;
                                 } else {
-                                    echo 'Message has been sent';
+                                    //echo 'Message has been sent';
+                                    echo "<script type='text/javascript'>alert('email has been sent');</script>";
+                                    $addValues="insert into forgotPassword values('$forgotP_email','$OTP')";
+                                    $results=  mysqli_query($con, $addValues);
+                                    
                                 }
                                 }
                                 catch (phpmailerException $e) {
                                     $errors[] = $e->errorMessage(); //Pretty error messages from PHPMailer
-                                    echo $errors;
+                                    //echo $errors;
                                 } catch (Exception $e) {
                                     $errors[] = $e->getMessage(); //Boring error messages from anything else!
-                                    echo $errors;
+                                    //echo $errors;
                                 }
                                                             }
 
