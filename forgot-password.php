@@ -73,8 +73,8 @@ include 'DB_Con.php';
                                 $mail->isSMTP();                            // Set mailer to use SMTP
                                 $mail->Host = "smtp.gmail.com";             // Specify main and backup SMTP servers
                                 $mail->SMTPAuth = true;                     // Enable SMTP authentication
-                                $mail->Username = 'ajinkyagurav21695@gmail.com';          // SMTP username
-                                $mail->Password = '121237h21'; // SMTP password
+                                $mail->Username = '.com';          // SMTP username
+                                $mail->Password = ''; // SMTP password
                                 $mail->SMTPSecure = 'tls';                  // Enable TLS encryption, `ssl` also accepted
                                 $mail->Port = 587;                          // TCP port to connect to
                                 $mail->setFrom('ajinkyagurav21695@gmail.com','Ajinkya Gurav');
