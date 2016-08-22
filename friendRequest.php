@@ -1,3 +1,13 @@
+<?php
+    include_once 'DB_Con.php';
+    session_start();
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+?>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -18,6 +28,29 @@ and open the template in the editor.
         <link rel="stylesheet" href="css/footer-distributed-with-contact-form.css">
         <script type="text/javascript" src="js/notifications.js"></script>
         <link rel="stylesheet" href="css/testingMenubar.css">
+        
+<!--         <script type="text/javascript">
+                $(document).ready(function(){
+                    $("#acceptFR").click(function () {
+                        alert("Accept");
+                        $.ajax({
+                type:'post'
+                url:'friendsStatus.php',
+                success: 
+                    alert("HII");
+                ,
+                error:function(exception){
+                    alert('Exception:'+exception);
+   }
+            });
+                        
+                    });
+                    $("#declineFR").click(function () {
+                        alert("Decline");
+                    });
+                });
+            </script>-->
+     
     </head>
     <body>
         <!-- Menubar begins here-->
@@ -36,7 +69,7 @@ and open the template in the editor.
               <li><a href="#">Option 4</a></li>
               <li><a href="#">Option 5</a></li>
               <li><a href="#">About us</a></li>
-              <li><a href="#">Log out</a></li>
+              <li><a href="login.php">Log out</a></li>
             </ul>
             
             
@@ -71,8 +104,8 @@ and open the template in the editor.
                       <img src="Images/timepass.jpg" alt="Avatar" style="width:80%">
                       <h5>John Doe</h5>
 
-                      <button class="w3-btn w3-green">Accept</button>
-                      <button class="w3-btn w3-red">Decline</button>
+                      <a href="friendsStatus.php?Acc=true"> <button id="acceptFR"class="w3-btn w3-green" formaction="friendsStatus.php">Accept</button></a>
+                      <a href="friendsStatus.php?Dec=true"><button id="declineFR" class="w3-btn w3-red" formaction="friendsStatus.php">Decline</button></a>
                     </div>
 
                     </div>
@@ -91,17 +124,30 @@ and open the template in the editor.
            
                 <div style="align-content: center; font-family: Comic Sans; font-size:20px; font-weight: bold; text-align: center;">Friend requests</div>
                  <div id="requests" style= "display: -webkit-box; -webkit-box-orient:horizontal; padding-bottom: 10%;">
-                <div class="w3-card-8 w3-dark-grey" style="width:20%; margin-left: 2%; padding-left: 2%;">
+                
+                     <?php 
+                      $loggedUser=$_SESSION["loggedUser"];
+                        $reqFriendsQuery="select * from friend_status where requested=1 AND eid2='$loggedUser'";
+                        $Results=  mysqli_query($con, $reqFriendsQuery);
+                        foreach ($Results as $row)
+                        {
+                      ?>
+                     <div class="w3-card-8 w3-dark-grey" style="width:20%; margin-left: 2%; padding-left: 2%;">
 
                     <div class="w3-container w3-center">
                       <img src="Images/timepass.jpg" alt="Avatar" style="width:80%">
-                      <h5>Abhishek Kshirsagar</h5>
-
-                      <button class="w3-btn w3-green">Accept</button>
-                      <button class="w3-btn w3-red">Decline</button>
+                      
+                      <h5><?php echo $row["eid1"]; $userRequested=$row["eid1"];?></h5>
+                      
+                      <a href="friendsStatus.php?Acc=true&requested=<?php echo $userRequested ?>"><button class="w3-btn w3-green">Accept</button></a>
+                      <a href="friendsStatus.php?Dec=true&requested=<?php echo $userRequested ?>"><button class="w3-btn w3-red">Decline</button></a>
+                      
                     </div>
 
                     </div>
+                     <?php 
+                        }
+                      ?>
             </div>
                 
              <div style="align-content: center; font-family: Comic Sans; font-size:20px; font-weight: bold; text-align: center;">Let's expand your circle!</div>
