@@ -58,11 +58,6 @@ session_start();
             <li class="dropdown">
             <a class="dropdown-toggle">Settings<b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Option 1</a></li>
-              <li><a href="#">Option 2</a></li>
-              <li><a href="#">Option 3</a></li>
-              <li><a href="#">Option 4</a></li>
-              <li><a href="#">Option 5</a></li>
               <li><a href="#">About us</a></li>
               <li><a href="logout.php">Log out</a></li>
             </ul>
