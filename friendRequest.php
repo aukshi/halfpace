@@ -21,10 +21,10 @@ and open the template in the editor.
     </head>
     <body>
         <!-- Menubar begins here-->
-             <div id="header" class="header1" style="width: 100%; height:80px; background:url('Images/bg1.jpg')0 100% no-repeat; background-size: cover;; margin:10px; ">
+             <div id="header" class="header1" style=" background:url('Images/bg1.jpg')0 100% no-repeat; background-size: cover; ">
             <div id="logo">Logo</div>
             <div id="searcharea" class="header1"><input placeholder="search" type="text" id="searchbox"/></div>
-            <div  id="profilearea" class="header1" ><a href="profile.html"><img class="imageCircle" src="kitten.jpg" alt="Profile" width="100" height="100"></a></div>
+            <div  id="profilearea" class="header1" ><a href="profile.php"><img class="imageCircle" src="kitten.jpg" alt="Profile" width="100" height="100"></a></div>
             
             <ul id="nav">
             <li class="dropdown">
@@ -52,7 +52,7 @@ and open the template in the editor.
                     <p>w3-card</p>
                     </div>
                 </div>
-                <div id="notificationFooter"><a href="notification.html">See All</a></div>
+                <div id="notificationFooter"><a href="notification.php">See All</a></div>
                 </div>
 
             </li>
@@ -77,7 +77,7 @@ and open the template in the editor.
 
                     </div>
                 </div>
-                <div id="friendFooter"><a href="friendRequest.html">See All</a></div>
+                <div id="friendFooter"><a href="friendRequest.php">See All</a></div>
                 </div>
 
             </li>

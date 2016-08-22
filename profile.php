@@ -38,7 +38,7 @@ session_start();
 
 <body>
 <!-- Menubar begins here-->
-             <div id="header" class="header1" style="width: 100%; height:80px; background:url('Images/bg1.jpg')0 100% no-repeat; background-size: cover;; margin:10px; ">
+             <div id="header" class="header1" style="background:url('Images/bg1.jpg')0 100% no-repeat; background-size: cover; ">
             <div id="logo">Logo</div>
             <div id="searcharea" class="header1"><input placeholder="search" type="text" id="searchbox"/></div>
             <div  id="profilearea" class="header1" ><a href="profile.html"><img class="imageCircle" src="kitten.jpg" alt="Profile" width="100" height="100"></a></div>
@@ -262,14 +262,12 @@ session_start();
 
 			</div>
 
-			<div class="footer-right" style='margin-top:-12%;'>
+			<div class="footer-right" >
 
                             <h4>Want to suggest a skill?<br>
                                 Or anything else?<br></h4>
 
 				<form action="" method="post">
-
-					<input type="text" name="suggestionEmail" placeholder="Email" />
 					<textarea name="suggestionMessage" placeholder="Message"></textarea>
 					<button>Send</button>
 
