@@ -67,13 +67,8 @@ and open the template in the editor.
             <div  id="profilearea" class="header1" ><a href="profile.php"><img class="imageCircle" src="<?php echo $profilePic; ?>" alt="<?php echo $profilePic; ?>" width="100" height="100"></a></div>
             
             <ul id="nav">
-            <li class="dropdown">
-            <a href="#" class="dropdown-toggle">Settings<b class="caret"></b></a>
-            <ul class="dropdown-menu">
-                <li><a href="logout.php">Log out</a></li>
-            </ul>
-            
-            
+            <li><a href="logout.php">Log out</a></li>          
+                  
             <li id="notification_li">
             
                 <span id="notification_count">3</span>
