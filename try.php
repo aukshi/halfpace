@@ -29,14 +29,14 @@ function myFunction(id) {
  
 <div class="w3-accordion w3-light-grey">
   <button onclick="myFunction('Demo1')" class="w3-btn-block w3-left-align">
-    Lifestyle
+    Everyday skills
   </button>
   <div id="Demo1" class="w3-accordion-content w3-container">
                   <div class="content">
                       
                       
                       <?php
-                      $skills = array("Bike Driving","Bi-Cycle Driving","Car Driving","Sewing","Decoration","Event Management","Gardenning","Cooking","Baking","Tie Knot","video making,editing anf Sound Mixing","Beauty Tips","Photography","Caligraphy","Entrepreneurship","Legal Advices","Communication Skills","Time Management","Fashion","Festival Knowledge","Trademarketing","Swimming","Excel","Rooting Phone","Formatting Laptop","Meditation");
+                      $skills = array("Bike Driving","Bi-Cycle Driving","Car Driving","Sewing","Decoration","Event Management","Gardenning","Cooking","Baking","To knot a tie","video making,editing and Sound Mixing","Beauty Tips","Photography","Caligraphy","Entrepreneurship","Legal Advices","Communication Skills","Time Management","Fashion","Festival Knowledge","Trademarketing","Swimming","Excel","Rooting a Phone","Formatting Laptop","Meditation");
                       $squared = array("squared1","squared2","squared3","squared4","squared5","squared6","squared7","squared8","squared9","squared10","squared11","squared12","squared13","squared14","squared15","squared16","squared17","squared18","Squared19","squared20","squared21","squared22","squared23","squared24","squared25","squared26");
                       $i=0;
                       foreach($skills as $item){
@@ -73,7 +73,7 @@ function myFunction(id) {
     <div class="content">
                           
                       <?php
-                      $skills1 = array("General Mathematics","Statestics","Calculus","Chemistry","Physics","Biology","History","Geography","Economics","Civics","Politics","Psychology","Philosophy","Engineering Graphics","Mechanics","C","C++","Java","Python","Web Developement","Mobile App Developement","Embedded System","Microcontroller Programming","Robotics","Compititive Exams","Interviews","Career Guidance","College Selection");
+                      $skills1 = array("General Mathematics","Statestics","Calculus","Chemistry","Physics","Biology","History","Geography","Economics","Civics","Politics","Psychology","Philosophy","Engineering Graphics","Mechanics","C","C++","Java","Python","Web Developement","Mobile App Developement","Embedded System","Microcontroller Programming","Robotics","Competitive Exams","Interviews","Career Guidance","College Selection");
                       $squared1 = array("squared1","squared2","squared3","squared4","squared5","squared6","squared7","squared8","squared9","squared10","squared11","squared12","squared13","squared14","squared15","squared16","squared17","squared18","squared19","squared20","squared21","squared22","squared23","squared24","squared25","squared26","squared27","squared28");
                       $i=0;
                       foreach($skills1 as $item){
