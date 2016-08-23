@@ -113,7 +113,7 @@ session_start();
 
                     </div>
                 </div>
-                <div id="friendFooter"><a href="friendRequest.php">See All</a></div>
+                <div id="friendFooter"><a href="friendRequested.php">See All</a></div>
                 </div>
 
             </li>

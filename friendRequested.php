@@ -6,6 +6,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 ?>
 <!DOCTYPE html>
 <!--
@@ -28,6 +29,27 @@ and open the template in the editor.
         <script type="text/javascript" src="js/notifications.js"></script>
         <link rel="stylesheet" href="css/testingMenubar.css">
         
+<!--         <script type="text/javascript">
+                $(document).ready(function(){
+                    $("#acceptFR").click(function () {
+                        alert("Accept");
+                        $.ajax({
+                type:'post'
+                url:'friendsStatus.php',
+                success: 
+                    alert("HII");
+                ,
+                error:function(exception){
+                    alert('Exception:'+exception);
+   }
+            });
+                        
+                    });
+                    $("#declineFR").click(function () {
+                        alert("Decline");
+                    });
+                });
+            </script>-->
      
     </head>
     <body>
@@ -45,9 +67,8 @@ and open the template in the editor.
             <div  id="profilearea" class="header1" ><a href="profile.php"><img class="imageCircle" src="<?php echo $profilePic; ?>" alt="<?php echo $profilePic; ?>" width="100" height="100"></a></div>
             
             <ul id="nav">
-            <li><a href="logout.php">Log out</a></li>
-            
-            
+            <li><a href="logout.php">Log out</a></li>          
+                  
             <li id="notification_li">
             
                 <span id="notification_count">3</span>
@@ -95,11 +116,13 @@ and open the template in the editor.
              </div>
           <!-- Menubar ends here-->
         
-       <div id="mainbody" style="margin-top: 10%;">
+       <div id="mainbody" style="margin-top: 10%; width: 100%">
            
                 <div style="align-content: center; font-family: Comic Sans; font-size:20px; font-weight: bold; text-align: center;">Friend requests</div>
                 <!-- Friend Requests--> 
-                <?php 
+                <div id="requests" style= "display:box;  padding-bottom: 10%;overflow-y: scroll; width:100%" >
+                
+                     <?php 
                     
                       $loggedUser=$_SESSION["loggedUser"];
                       //Finding the friends of logged user
@@ -144,12 +167,10 @@ and open the template in the editor.
                         foreach ($Results as $row)
                         {   
                       ?>
-                <div id="requests" style= "display: block; -webkit-box-orient:horizontal; padding-bottom: 10%;overflow-y: scroll; width:100%" >
-                
-                     
-                     <div class="w3-card-8 w3-dark-grey" style="width:20%; margin-left: 2%; padding-left: 2%;">
+                      
+                     <div class="w3-card-8 w3-dark-grey" style="width:17%; height:180px; margin: 2%; padding: 2%; float: left;">
 
-                    <div class="w3-container w3-center">
+                         <div class="w3-container w3-center" style="width: 100%; height: 105%; margin:0; padding-left: 2%; margin-top: -12%;">
                         <?php
             $loggedUser=$_SESSION["loggedUser"];
             $RequestedFriend=$row["eid1"];
@@ -160,7 +181,7 @@ and open the template in the editor.
             
             
             ?>
-                      <img src="<?php echo $profilePic;?>" alt="Avatar" style="width:80%">
+                      <img src="<?php echo $profilePic;?>" alt="Avatar" style="width:85%; height: 100%;">
                       
                       <h5><?php echo $row["eid1"]; $userRequested=$row["eid1"];?></h5>
                       
@@ -170,11 +191,10 @@ and open the template in the editor.
                     </div>
 <br>
                     </div>
-                    
-            </div>
-                 <?php 
+                     <?php 
                         }
                       ?>
+            </div>
                 <!-- Friend requests end here-->
                 
              <div style="align-content: center; font-family: Comic Sans; font-size:20px; font-weight: bold; text-align: center;">Let's expand your circle!</div>
@@ -202,10 +222,10 @@ and open the template in the editor.
                                         
                       ?>
                 <div id="knowthemsub">
-                <div class="w3-card-4" style="width:40%; margin-left: 2%; padding-left: 2%;">
+                <div class="w3-card-4" style="width:40%;">
 
                 <header class="w3-container w3-light-grey">
-                  <h3><?php echo $suggestions["eid2"] ?></h3>
+                  <h3 ><?php echo $suggestions["eid2"] ?></h3>
                 </header>
 
                 <div class="w3-container">
@@ -382,9 +402,9 @@ and open the template in the editor.
 
 				<p class="footer-links">
 					<a href="#">About us</a>
-					
+					Â·
 					<a href="#">FAQ</a>
-					
+					Â·
 					<a href="#">Contact</a>
 				</p>
                                 
