@@ -121,11 +121,11 @@ and open the template in the editor.
              </div>
           <!-- Menubar ends here-->
         
-       <div id="mainbody" style="margin-top: 10%;">
+       <div id="mainbody" style="margin-top: 10%; width: 100%">
            
                 <div style="align-content: center; font-family: Comic Sans; font-size:20px; font-weight: bold; text-align: center;">Friend requests</div>
                 <!-- Friend Requests--> 
-                <div id="requests" style= "display: box; -webkit-box-orient:horizontal; padding-bottom: 10%;overflow-y: scroll; width:100%" >
+                <div id="requests" style= "display:box;  padding-bottom: 10%;overflow-y: scroll; width:100%" >
                 
                      <?php 
                      $break=0;
@@ -137,9 +137,9 @@ and open the template in the editor.
                             
                             
                       ?>
-                     <div class="w3-card-8 w3-dark-grey" style="width:20%; margin-left: 2%; padding-left: 2%;">
+                     <div class="w3-card-8 w3-dark-grey" style="width:17%; height:180px; margin: 2%; padding: 2%; float: left;">
 
-                    <div class="w3-container w3-center">
+                         <div class="w3-container w3-center" style="width: 100%; height: 105%; margin:0; padding-left: 2%; margin-top: -12%;">
                         <?php
             $loggedUser=$_SESSION["loggedUser"];
             $RequestedFriend=$row["eid1"];
@@ -150,7 +150,7 @@ and open the template in the editor.
             
             
             ?>
-                      <img src="<?php echo $profilePic;?>" alt="Avatar" style="width:80%">
+                      <img src="<?php echo $profilePic;?>" alt="Avatar" style="width:85%; height: 100%;">
                       
                       <h5><?php echo $row["eid1"]; $userRequested=$row["eid1"];?></h5>
                       
@@ -167,17 +167,15 @@ and open the template in the editor.
                 <!-- Friend requests end here-->
                 
              <div style="align-content: center; font-family: Comic Sans; font-size:20px; font-weight: bold; text-align: center;">Let's expand your circle!</div>
-            <div id="knowthem" style=" height: 50%; display: -webkit-box; -webkit-box-orient:horizontal; padding-bottom:5%;">
+            <div id="knowthem" style="display:box;  padding-bottom: 10%;overflow-y: scroll; width:100%">
                 <div id="knowthemsub">
-                <div class="w3-card-4" style="width:40%; margin-left: 2%; padding-left: 2%;">
+                <div class="w3-card-4" style="width:20%; margin-left: 2%; padding-left: 2%;">
 
                 <header class="w3-container w3-light-grey">
                   <h3>Abhijeet Kharat</h3>
                 </header>
 
                 <div class="w3-container">
-                  <p>1 new friend request</p>
-                  <hr>
                   <img src="Images/kitten.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:40%">
                   <p>CEO at Mighty Schools. Marketing and Advertising. Seeking a new job and new opportunities.</p><br>
                 </div>
