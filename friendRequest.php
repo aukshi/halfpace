@@ -169,7 +169,7 @@ and open the template in the editor.
              <div style="align-content: center; font-family: Comic Sans; font-size:20px; font-weight: bold; text-align: center;">Let's expand your circle!</div>
             <div id="knowthem" style="display:box;  padding-bottom: 10%;overflow-y: scroll; width:100%">
                 <div id="knowthemsub">
-                <div class="w3-card-4" style="width:20%; margin-left: 2%; padding-left: 2%;">
+                <div class="w3-card-4" style="width:20%;  margin-left: 2%; padding-left: 2%;">
 
                 <header class="w3-container w3-light-grey">
                   <h3>Abhijeet Kharat</h3>
