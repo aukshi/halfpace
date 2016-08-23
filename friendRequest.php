@@ -389,9 +389,9 @@ and open the template in the editor.
 
 				<p class="footer-links">
 					<a href="#">About us</a>
-					Â·
+					Ã‚Â·
 					<a href="#">FAQ</a>
-					Â·
+					Ã‚Â·
 					<a href="#">Contact</a>
 				</p>
                                 

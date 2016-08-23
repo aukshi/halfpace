@@ -14,6 +14,10 @@ if (isset($_GET['Acc'])) {
     
         decline($con);
     }
+    else if (isset($_GET['connect'])) {
+    
+        connect($con);
+    }
 
 
 function accept(mysqli $con) {
@@ -34,6 +38,16 @@ function decline(mysqli $con) {
     $requestedUser=$_GET["requested"];
     echo "<script type='text/javascript'>alert('In Accept '.$requestedUser)</script>";
     $acceptQuery="update friend_status set accepted=0,requested=0 where eid1='$requestedUser' AND eid2='$loggedUser'";
+    mysqli_query($con,$acceptQuery);
+    echo 'Successful';
+    header('Location: ' . $_SERVER["HTTP_REFERER"] );
+exit;
+}
+function connect(mysqli $con) {
+   $loggedUser=$_SESSION["loggedUser"];
+    $connect=$_GET["connect"];
+    echo "<script type='text/javascript'>alert('In connect '.$connect)</script>";
+    $acceptQuery="insert into friend_status values('$loggedUser','$connect',1,0)";
     mysqli_query($con,$acceptQuery);
     echo 'Successful';
     header('Location: ' . $_SERVER["HTTP_REFERER"] );
