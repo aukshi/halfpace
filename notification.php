@@ -145,7 +145,7 @@ and open the template in the editor.
 
 			</div>
 
-			<div class="footer-right" style='margin-top:-12%;'>
+			<div class="footer-right" >
 
                             <h4>Want to suggest a skill?<br>
                                 Or anything else?<br></h4>
