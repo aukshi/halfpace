@@ -71,7 +71,7 @@ and open the template in the editor.
                       <img src="Images/timepass.jpg" alt="Avatar" style="width:80%">
                       <h5>John Doe</h5>
 
-                      <button class="w3-btn w3-green">Accept</button>
+                      <button class="w3-btn w3-green">Ac</button>
                       <button class="w3-btn w3-red">Decline</button>
                     </div>
 

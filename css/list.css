@@ -12,13 +12,13 @@ and open the template in the editor.
 
 .superparent{
     width: 45%;
-    height: 900px;
+    height: 600px;
     float:left; 
     background:beige;
     margin:10px;
     padding:10px;
     margin-left: 20px;
-    overflow-x: hidden;
+    overflow-y:auto;
 }
 
 .squaredOne {
@@ -26,9 +26,11 @@ and open the template in the editor.
 	height: 28px;
 	margin: 5px;  
         font-family: cursive; 
-        background: wheat; 
+        background:grey; 
+        color: snow;
         float: left;
         border-radius: 5px;
+        padding: 4px;
         
 }
 
@@ -54,7 +56,7 @@ and open the template in the editor.
 .content {
 display: box;
 padding: 5px 10px;
-background-color:#fafafa;
+background-color: whitesmoke;
 }
 p { padding: 5px 0; }
 

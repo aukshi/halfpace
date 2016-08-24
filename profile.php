@@ -16,12 +16,19 @@ session_start();
   <link rel="stylesheet" href="css/testingMenubar.css">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  
+  <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">-->
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
   <script type="text/javascript" src="js/notifications.js"></script>
   <link rel="stylesheet" href="css/testingMenubar.css">
    <link rel="stylesheet" href="css/footer-distributed-with-contact-form.css">
   <link rel="shortcut icon" href="kitten.jpg">
   <link rel="icon" href="kitten.jpg">
-  
+<!--  
   <script type="text/javascript">
                 jQuery(document).ready(function() {
                   jQuery(".content").hide();
@@ -33,7 +40,16 @@ session_start();
                 });
             </script>
         
-       
+       <link rel="stylesheet" href="http://dodsoftware.com/sotests/fancy/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript" src="http://dodsoftware.com/sotests/fancy/jquery.fancybox-1.3.4.js"></script>
+<script type="text/javascript" src="http://dodsoftware.com/sotests/fancy/jquery.easing-1.3.pack.js"></script>
+<script type="text/javascript" src="http://dodsoftware.com/sotests/fancy/jquery.mousewheel-3.0.4.pack.js"></script>
+
+            -->
+            
+            
+            
 </head>
 
 <body>
@@ -89,7 +105,7 @@ session_start();
                       <h5>John Doe</h5>
 
                       <button class="w3-btn w3-green">Accept</button>
-                      <button class="w3-btn w3-red">Decline</button>
+                      <button class="w3-btn w3-green">Decline</button>
                     </div>
 
                     </div>
@@ -121,6 +137,82 @@ session_start();
         <div id="userphoto"><img src="<?php echo $profilePic ?>" alt="<?php echo $profilePic ?>" width="300" height="300"></div>
       <div id="profilespecs">
       <nav id="profiletabs">
+          
+          
+          
+          
+          <div data-role="main" class="ui-content">
+    <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">Update Profile</a>
+
+    
+    
+ <div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
+
+      <form method="post" action="demoform.asp">
+        <div>
+          <!--<h3>Login information</h3>-->
+          <label for="status" >Status</label>
+          <input type="text" name="user" id="status" placeholder="Username">
+          <label for="mno" >Mobile Number</label>
+          <input type="text" name="passw" id="mno" placeholder="0123456789">
+          
+          <label for="adr" >Address</label>
+          <input type="password" name="passw" id="adr" placeholder="Address">
+          
+          <label for="pswd" >Update Passward</label>
+           <label for="cpswd" class="ui-hidden-accessible">Current Passward</label>
+          <input type="password" name="passw" id="cpswd" placeholder="Password">
+          <label for="npswd" >New Passward</label>
+          <input type="password" name="passw" id="npswd" placeholder="Password">
+         <label for="cnpswd" >Confirm Passward</label>
+          <input type="password" name="passw" id="cnpswd" placeholder="Password">
+          
+          <input type="submit" data-inline="true" value="Update">
+        </div>
+      </form>
+    </div>
+<!--          <script>      
+          $(document).ready(function() {
+    
+    $('.btn').click(function{
+        $(this).next().show();
+        $('.divi').css.style.display="inline-block";
+        $('.divi').css("z-index","3");
+    });
+        
+    });
+            
+          </script>
+          
+          
+          <a id="inline" class="btn" >My Button</a>
+
+          <div class="divi" style="display:none">
+    <div id="data">
+          <p>Update your account:</p>
+
+            <p class="setting"><span>Mobile Number <img src="Images/edit.png" alt="*Edit*"></span> <input type="text" name="Contact Number" value="0123456789" /></p>
+
+            <p class="setting"><span>Address <img src="Images/edit.png" alt="*Edit*"></span><input type="text" name="Address" value="xyz"/></p>
+
+            <p class="setting"><span>Status <img src="Images/edit.png" alt="*Edit*"></span><input type="text" name="Status" value=" If you gotta dream then you gotta protect it."/></p>
+
+            <p class="setting"><span>Profile Status <img src="Images/edit.png" alt="*Edit*"></span> <input type="radio" name="privacy" value="Public"> Public <input type="radio" name="privacy" value="Private"> Private
+            </p>
+            
+            <p class="setting"><span>Change Password</span></p>
+            
+            <p class="setting"><span>Existing Password</span><input type="text"></p>
+            <p class="setting"><span>New Password</span><input type="text"></p>
+             <p class="setting"><span>C Password</span><input type="text"></p>
+            
+            
+            <button id="update" style="float: right">update</button>
+           
+            
+    </div>
+    </div>
+          -->
         <ul class="clearfix">
             <?php
         //Code for getting the profile of the logged user
