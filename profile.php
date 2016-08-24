@@ -167,7 +167,7 @@ session_start();
                     //loop
                     foreach ($profileResultsAcc as $rowAcc){
                           ?>
-                    <li><a href="#"><img src="Images/avatar.png" width="22" height="22"><?php echo $rowAcc["eid1"] ?></a></li>
+                    <li><a href="temp1.php?temp1=true" method="post"><img src="Images/avatar.png" width="22" height="22"><?php echo $rowAcc["eid1"] ?></a></li>
             <?php 
                     }
             ?>
