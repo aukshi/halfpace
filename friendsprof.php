@@ -143,9 +143,9 @@ session_start();
           <?php 
                     //loop
                     foreach ($profileResultsAcc as $rowAcc){
-                        if($rowReq["eid2"]==$_SESSION["loggedUser"]){
+                        if($rowAcc["eid2"]==$_SESSION["loggedUser"]){
                             ?>
-            <li><a href="profile.php"><img src="Images/avatar.png" width="22" height="22"><?php echo $rowReq["eid2"] ?></a></li>
+            <li><a href="profile.php"><img src="Images/avatar.png" width="22" height="22"><?php echo $rowAcc["eid2"] ?></a></li>
             <?php 
                         }
                         else {

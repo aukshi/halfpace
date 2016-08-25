@@ -50,7 +50,7 @@ function connect(mysqli $con) {
     $acceptQuery="insert into friend_status values('$loggedUser','$connect',1,0)";
     mysqli_query($con,$acceptQuery);
     echo 'Successful';
-    header('Location: ' . $_SERVER["HTTP_REFERER"] );
+    //header('Location: ' . $_SERVER["HTTP_REFERER"] );
 exit;
 }
 ?>
