@@ -246,6 +246,7 @@ font-size: 11px;
     width: 53%;
     margin-bottom: 10px;
     background: white;
+    overflow-y: scroll;
 }
 
 #ad1{

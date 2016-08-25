@@ -32,67 +32,7 @@ and open the template in the editor.
     </head>
     <body>
         <!-- Menubar begins here-->
-             <div id="header" class="header1" style=" background:url('Images/bg1.jpg')0 100% no-repeat; background-size: cover; ">
-            <div id="logo">Logo</div>
-            <div id="searcharea" class="header1"><input placeholder="search" type="text" id="searchbox"/></div>
-            <?php
-            $loggedUser=$_SESSION["loggedUser"];
-            $usersQuery="select * from profile where email_id='$loggedUser'";
-            $profileResults=  mysqli_query($con, $usersQuery);
-            $row = mysqli_fetch_array($profileResults);
-            $profilePic=$row["picture"];
-            ?>
-            <div  id="profilearea" class="header1" ><a href="profile.php"><img class="imageCircle" src="<?php echo $profilePic; ?>" alt="<?php echo $profilePic; ?>" width="100" height="100"></a></div>
-            
-            <ul id="nav">
-            <li><a href="logout.php">Log out</a></li>
-            
-            
-            <li id="notification_li">
-            
-                <span id="notification_count">3</span>
-                <a href="#" id="notificationLink">Notifications</a>
-
-                <div id="notificationContainer">
-                <div id="notificationTitle">Notifications</div>
-                <div id="notificationsBody" class="notifications">
-                    <div class="w3-card w3-yellow">
-                    <p>w3-card</p>
-                    </div>
-                </div>
-                <div id="notificationFooter"><a href="notification.php">See All</a></div>
-                </div>
-
-            </li>
-            
-            <li id="friend_li">
-            
-                <span id="friend_count">3</span>
-                <a href="#" id="friendLink">Friend Requests</a>
-
-                <div id="friendContainer">
-                <div id="friendTitle">Friend Requests</div>
-                <div id="friendBody" class="notifications">
-                    <div class="w3-card-8 w3-dark-grey">
-
-                    <div class="w3-container w3-center">
-                      <img src="Images/timepass.jpg" alt="Avatar" style="width:80%">
-                      <h5>John Doe</h5>
-
-                      <a href="friendsStatus.php?Acc=true"> <button id="acceptFR"class="w3-btn w3-green" formaction="friendsStatus.php">Accept</button></a>
-                      <a href="friendsStatus.php?Dec=true"><button id="declineFR" class="w3-btn w3-red" formaction="friendsStatus.php">Decline</button></a>
-                    </div>
-
-                    </div>
-                </div>
-                <div id="friendFooter"><a href="friendRequest.php">See All</a></div>
-                </div>
-
-            </li>
-            
-            
-            </ul>
-             </div>
+            <?php include('header.php'); ?>
           <!-- Menubar ends here-->
         
        <div id="mainbody" style="margin-top: 10%;">
@@ -374,51 +314,7 @@ and open the template in the editor.
             </div>
              
              <!--Footer-->
-    <footer class="footer-distributed">
-
-			<div class="footer-left">
-
-				<h3>Halfpace<span>...Coz everything can't be learned on the Internet!</span></h3>
-
-				<p class="footer-links">
-					<a href="#">About us</a>
-					
-					<a href="#">FAQ</a>
-					
-					<a href="#">Contact</a>
-				</p>
-                                
-                                <div class="footer-icons">
-                                    <p style='color:white;'>Share us on</p>
-                                    <a href="#" style="background:url('Images/fb.png')0 100% no-repeat;"></a>
-					<a href="#" style="background:url('Images/twit.jpg')0 100% no-repeat;"></a>
-					<a href="#" style="background:url('Images/in.png')0 100% no-repeat;"></a>
-					
-
-				</div>
-
-				<p class="footer-company-name">Halfpace Pvt. Ltd. &copy; 2016</p>
-
-				
-
-			</div>
-
-			<div class="footer-right">
-
-                            <h4>Want to suggest a skill?<br>
-                                Or anything else?<br></h4>
-
-				<form action="#" method="post">
-
-					<input type="text" name="email" placeholder="Email" />
-					<textarea name="message" placeholder="Message"></textarea>
-					<button>Send</button>
-
-				</form>
-
-			</div>
-
-		</footer>
+    <?php include('footer.php'); ?>
     <!--Footer ends here-->
 
         </div>
