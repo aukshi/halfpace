@@ -130,13 +130,13 @@ session_start();
 <div class="main">
      
 <h2>Update Profile: </h2>
-<form id="Register" method="post" name="update">
+<form id="Register" method="post" name="update" action="profUpdate.php">
  <br/>   
  <!--<label class="required">Username :</label>
 <input type="text" name="username" id="reg_username"/>
 -->
 <label class="required" for="status">Status</label>
-<input type="text" id="status" name="mno" placeholder="Status"/>
+<input type="text" id="status" name="status" placeholder="Status"/>
 <br>
 <label class="required" for="mno">Mobile Number:</label>
 <input type="text" name="mno" id="mno" placeholder="0123456789"/>
@@ -147,7 +147,7 @@ session_start();
 <label class="required">Confirm Password :</label>
 <input type="password" name="password" id="reg_confirm_password"/>
 <br>
-<label class="required" for="profStat">Profile Status</label><br> <input type="radio" name="profStat" value="Public"> Public<br> <input type="radio" name="profStat" value="Private"> Private
+<label class="required" for="privacyStat">Privacy Status</label><br> <input type="radio" name="privacyStat" value="Public"> Public<br> <input type="radio" name="privacyStat" value="Private"> Private
             </p>
   
             <button type="submit" id="submit" class="btn btn-blue" onclick="myFormSubmit()">Update</button>
@@ -177,16 +177,26 @@ session_start();
       
       <section id="activity" class="hidden">
         <p>Most recent actions:</p>
+        <?php 
         
-        <p class="activity">Activity 1</p>
+        $activityQuery="select * from activity order by timestamp asc";
+        $activities=  mysqli_query($con, $activityQuery);
+                                foreach ($activities as $activity)//Fiends of the value in 2nd column
+                                {
         
-        <p class="activity">Activity 2</p>
+        ?>
+                                    <p class="activity"><?php echo $activity["activity_type"] ?></p>
+        <?php 
+                                }
+        ?>
+        
+<!--        <p class="activity">Activity 2</p>
         
         <p class="activity">Activity 3</p>
         
         <p class="activity">Activity 4</p>
         
-        <p class="activity">Activity 5</p>
+        <p class="activity">Activity 5</p>-->
       </section>
       
       <section id="friends" class="hidden">
@@ -203,7 +213,7 @@ session_start();
                     //loop
                     foreach ($profileResultsReq as $rowReq){
                             ?>
-          <li><a href="#"><img src="Images/avatar.png" width="22" height="22"><?php echo $rowReq["eid2"] ?></a></li>
+            <li><a href="friendsprof.php?redirectName=<?php echo $rowReq["eid2"] ?>"><img src="Images/avatar.png" width="22" height="22"><?php echo $rowReq["eid2"] ?></a></li>
             <?php 
                     }
             ?>
@@ -211,7 +221,7 @@ session_start();
                     //loop
                     foreach ($profileResultsAcc as $rowAcc){
                           ?>
-                    <li><a href="temp1.php?temp1=true" method="post"><img src="Images/avatar.png" width="22" height="22"><?php echo $rowAcc["eid1"] ?></a></li>
+                    <li><a href="friendsprof.php?redirectName=<?php echo $rowAcc["eid1"] ?>" method="post"><img src="Images/avatar.png" width="22" height="22"><?php echo $rowAcc["eid1"] ?></a></li>
             <?php 
                     }
             ?>

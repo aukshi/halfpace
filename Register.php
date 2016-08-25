@@ -17,7 +17,6 @@ include_once 'DB_Con.php';
 <script>
     function validateRegisterForm()
 	{
-            alert("M in ValidateReg");
 	var name = document.reg_form.reg_name.value;
         var password = document.reg_form.reg_password.value;
         var email = document.reg_form.reg_email.value;
@@ -87,7 +86,7 @@ if(!empty($email)){
 
                                     if( $user["email_id"]==$email)
                                     {
-                                        $message = " Hii Oops! Email Already Registered <br> Please enter new Email ID";
+                                        $message = "Oops! Email Already Registered <br> Please enter new Email ID";
                                         echo "<script type='text/javascript'>alert('$message');</script>";
                                         //echo'Oops! Email Already Registered <br> Please enter new Email ID';
                                         //header( "refresh:3; url=Register.php" );
