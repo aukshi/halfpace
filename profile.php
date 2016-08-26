@@ -124,15 +124,15 @@ session_start();
         <p>Most recent actions:</p>
         <?php 
         
-        $activityQuery="select * from activity order by timestamp asc";
+        $activityQuery="select * from activity where email_id='$loggedUser' order by timestamp  ";
         $activities=  mysqli_query($con, $activityQuery);
-        $Query="insert into tablename (email_id,timestamp) values ('1234',CURRENT_TIMESTAMP);";
-        mysqli_query($con, $Query);
+//        $Query="insert into activity (email_id,timestamp) values (CURRENT_TIMESTAMP,CURRENT_TIMESTAMP);";
+//        mysqli_query($con, $Query);
                                 foreach ($activities as $activity)//Fiends of the value in 2nd column
                                 {
         
         ?>
-                                    <p class="activity"><?php echo $activity["activity_type"] ?></p>
+                                    <p class="activity"><?php echo $activity["description"] ?> at <?php $activityTimestamp=$activity["timestamp"]; echo $activityTimestamp;?> OR <?php date_default_timezone_set('Asia/Calcutta');$time=date('Y-m-d G:i:s');echo ($time-$activityTimestamp)?></p>
         <?php 
                                 }
         ?>

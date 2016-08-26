@@ -26,6 +26,12 @@ function accept(mysqli $con) {
     echo "<script type='text/javascript'>alert('In Accept '.$requestedUser)</script>";
     $acceptQuery="update friend_status set accepted=1,requested=0 where eid1='$requestedUser' AND eid2='$loggedUser'";
     mysqli_query($con,$acceptQuery);
+    //Enter the action in activity table
+    $desc="You Accepted the friend request of $requestedUser";
+    $description=mysql_real_escape_string($desc);
+    $activityQuery="insert into activity (email_id,description,timestamp) values ('$loggedUser','$description',CURRENT_TIMESTAMP);";
+    mysqli_query($con,$activityQuery);
+    //////////////////////
     echo 'Successful';
     header('Location: ' . $_SERVER["HTTP_REFERER"] );
 exit;
@@ -39,6 +45,14 @@ function decline(mysqli $con) {
     echo "<script type='text/javascript'>alert('In Accept '.$requestedUser)</script>";
     $acceptQuery="update friend_status set accepted=0,requested=0 where eid1='$requestedUser' AND eid2='$loggedUser'";
     mysqli_query($con,$acceptQuery);
+    
+    //Enter the action in activity table
+    $desc="You declined the friend request of $requestedUser";
+    $description=mysql_real_escape_string($desc);
+    $activityQuery="insert into activity (email_id,description,timestamp) values ('$loggedUser','$description',CURRENT_TIMESTAMP);";
+    mysqli_query($con,$activityQuery);
+    ////////////////////////////////
+    
     echo 'Successful';
     header('Location: ' . $_SERVER["HTTP_REFERER"] );
 exit;
@@ -49,6 +63,12 @@ function connect(mysqli $con) {
     echo "<script type='text/javascript'>alert('In connect '.$connect)</script>";
     $acceptQuery="insert into friend_status values('$loggedUser','$connect',1,0)";
     mysqli_query($con,$acceptQuery);
+    //Enter the action in activity table
+    $desc="You sent friend request to $connect";
+    $description=mysql_real_escape_string($desc);
+    $activityQuery="insert into activity (email_id,description,timestamp) values ('$loggedUser','$description',CURRENT_TIMESTAMP);";
+    mysqli_query($con,$activityQuery);
+    ////////////////////////////////
     echo 'Successful';
     //header('Location: ' . $_SERVER["HTTP_REFERER"] );
 exit;
