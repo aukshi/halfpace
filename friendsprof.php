@@ -77,11 +77,14 @@ session_start();
                         //////////////////////////////
                         ?>
           <li><a href="#bio" class="sel">Bio</a></li>
-          
           <li><a href="#activity">Activity</a></li>
           <li><a href="#friends">Friends</a></li>
-          <li><a href="friendsStatus.php?connect=<?php echo $currentUser ?>"><button id="frndrq" class="w3-btn " style="float: right" >Send Request</button></a></li>
           
+          <?php 
+                      $flist=$_SESSION["flist"];
+                        if(!in_array($currentUser,$flist)) {         ?>
+                        <li><a href="friendsStatus.php?connect=<?php echo $currentUser ?>"><button id="frndrq" class="w3-btn " style="float: right" >Send Request</button></a></li>
+          <?php } ?>
         </ul>
       </nav>
           </div>
@@ -120,9 +123,9 @@ session_start();
         <ul id="friendslist" class="clearfix">
             <!--Code for displaying friends-->
             <?php 
-                    $profileQueryRequested="select * from friend_status where eid1='$currentUser'";
+                    $profileQueryRequested="select * from friend_status where eid1='$currentUser' AND accepted=1";
                         $profileResultsReq=  mysqli_query($con, $profileQueryRequested);
-                        $profileQueryAccepted="select * from friend_status where eid2='$currentUser'";
+                        $profileQueryAccepted="select * from friend_status where eid2='$currentUser' AND accepted=1";
                         $profileResultsAcc=  mysqli_query($con, $profileQueryAccepted);
                         
                     //loop for displaying the friends who sent friend requests
@@ -143,9 +146,9 @@ session_start();
           <?php 
                     //loop
                     foreach ($profileResultsAcc as $rowAcc){
-                        if($rowReq["eid2"]==$_SESSION["loggedUser"]){
+                        if($rowAcc["eid2"]==$_SESSION["loggedUser"]){
                             ?>
-            <li><a href="profile.php"><img src="Images/avatar.png" width="22" height="22"><?php echo $rowReq["eid2"] ?></a></li>
+            <li><a href="profile.php"><img src="Images/avatar.png" width="22" height="22"><?php echo $rowAcc["eid2"] ?></a></li>
             <?php 
                         }
                         else {
