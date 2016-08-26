@@ -32,7 +32,23 @@ session_start();
                   });
                 });
             </script>
-
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>
+    
+        function friendAcc(value){
+            $.ajax({
+                type:'post'
+                url:'friendsStatus.php',
+                success: 
+                    alert("HII");
+                ,
+                error:function(exception){
+                    alert('Exception:'+exception);
+   }
+            });
+        };
+    
+    </script>
 
        
             
@@ -41,7 +57,7 @@ session_start();
      </head>
      <body onload="document.refresh();">
          <!-- Menubar begins here-->
-             <div id="header" class="header1" style="width: 100%; height:80px; background:url('images/bg1.jpg')0 100% no-repeat; background-size: cover;; margin:10px; ">
+             <div id="header" class="header1" style="background:url('Images/bg1.jpg')0 100% no-repeat;  background-size: cover; ">
             <div id="logo">Logo</div>
             <div id="searcharea" class="header1"><input placeholder="search" type="text" id="searchbox"/></div>
             <?php
@@ -51,21 +67,12 @@ session_start();
             $row = mysqli_fetch_array($profileResults);
             $profilePic=$row["picture"];
             ?>
-            
+            <div id="profilename" class="header1"><h4>Hi <?php echo $loggedUser;?></h4></div>
             <div  id="profilearea" class="header1" ><a href="profile.php"><img class="imageCircle" src="<?php echo $profilePic; ?>" alt="<?php echo $profilePic; ?>" width="100" height="100"></a></div>
             
             <ul id="nav">
-            <li class="dropdown">
-            <a class="dropdown-toggle">Settings<b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Option 1</a></li>
-              <li><a href="#">Option 2</a></li>
-              <li><a href="#">Option 3</a></li>
-              <li><a href="#">Option 4</a></li>
-              <li><a href="#">Option 5</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="logout.php">Log out</a></li>
-            </ul>
+            <li><a href="logout.php">Log out</a></li>
+              
             
             
             <li id="notification_li">
@@ -80,7 +87,7 @@ session_start();
                     <p>w3-card</p>
                     </div>
                 </div>
-                <div id="notificationFooter"><a href="notification.html">See All</a></div>
+                <div id="notificationFooter"><a href="notification.php">See All</a></div>
                 </div>
 
             </li>
@@ -99,13 +106,14 @@ session_start();
                       <img src="Images/timepass.jpg" alt="Avatar" style="width:80%">
                       <h5>John Doe</h5>
 
-                      <button class="w3-btn w3-green">Accept</button>
-                      <button class="w3-btn w3-red">Decline</button>
+                      <button id="acceptFR " name="acceptFR" onclick="friendAcc(this.value);" class= "w3-btn w3-green" >Accept</button>
+                      <button id="declineFR" name="declineFR" class="w3-btn w3-red">Decline</button>
+                      
                     </div>
 
                     </div>
                 </div>
-                <div id="friendFooter"><a href="friendRequest.html">See All</a></div>
+                <div id="friendFooter"><a href="friendRequested.php">See All</a></div>
                 </div>
 
             </li>
@@ -265,14 +273,12 @@ session_start();
 
 			</div>
 
-			<div class="footer-right" style='margin-top:-12%;'>
+			<div class="footer-right" >
 
                             <h4>Want to suggest a skill?<br>
                                 Or anything else?<br></h4>
 
 				<form action="" method="post">
-
-					<input type="text" name="suggestionEmail" placeholder="Email" />
 					<textarea name="suggestionMessage" placeholder="Message"></textarea>
 					<button>Send</button>
 
@@ -330,14 +336,7 @@ session_start();
 
         
 </div>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <?php
-        // put your code here
-        ?>
-    </body>
+
+
+     </body>
 </html>

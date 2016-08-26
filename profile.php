@@ -16,39 +16,34 @@ session_start();
   <link rel="stylesheet" href="css/testingMenubar.css">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  
-  <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">-->
-<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<link rel="stylesheet" href=
+      "css/style.css"/>
+<link rel="stylesheet" href=
+      "css/style3.css"/>
+<link rel="stylesheet" href=
+      "css/button.css"/>
 
   <script type="text/javascript" src="js/notifications.js"></script>
   <link rel="stylesheet" href="css/testingMenubar.css">
    <link rel="stylesheet" href="css/footer-distributed-with-contact-form.css">
   <link rel="shortcut icon" href="kitten.jpg">
   <link rel="icon" href="kitten.jpg">
-<!--  
-  <script type="text/javascript">
-                jQuery(document).ready(function() {
-                  jQuery(".content").hide();
-                  //toggle the componenet with class msg_body
-                  jQuery(".heading").click(function()
-                  {
-                    jQuery(this).next(".content").slideToggle(500);
-                  });
-                });
-            </script>
-        
-       <link rel="stylesheet" href="http://dodsoftware.com/sotests/fancy/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-<script type="text/javascript" src="http://dodsoftware.com/sotests/fancy/jquery.fancybox-1.3.4.js"></script>
-<script type="text/javascript" src="http://dodsoftware.com/sotests/fancy/jquery.easing-1.3.pack.js"></script>
-<script type="text/javascript" src="http://dodsoftware.com/sotests/fancy/jquery.mousewheel-3.0.4.pack.js"></script>
 
-            -->
             
+            <script>
+            function myFormSubmit(){
+                $(".container").hide();
+                $(".container").style.display="none";
+                $('.container').css("z-index","0");
+            }
             
+            function myUpdate(){
+                $(".container").show();
+                $(".container").style.display="popup";
+                $('.container').css("z-index","3");
+            }
+            </script>          
             
 </head>
 
@@ -60,17 +55,8 @@ session_start();
             <div  id="profilearea" class="header1" ><a href="profile.html"><img class="imageCircle" src="kitten.jpg" alt="Profile" width="100" height="100"></a></div>
             
             <ul id="nav">
-            <li class="dropdown">
-            <a href="#" class="dropdown-toggle">Settings<b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Option 1</a></li>
-              <li><a href="#">Option 2</a></li>
-              <li><a href="#">Option 3</a></li>
-              <li><a href="#">Option 4</a></li>
-              <li><a href="#">Option 5</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="logout.php">Log out</a></li>
-            </ul>
+             <li><a href="logout.php">Log out</a></li>
+            
             
             
             <li id="notification_li">
@@ -85,7 +71,7 @@ session_start();
                     <p>w3-card</p>
                     </div>
                 </div>
-                <div id="notificationFooter"><a href="notification.html">See All</a></div>
+                <div id="notificationFooter"><a href="notification.php">See All</a></div>
                 </div>
 
             </li>
@@ -110,7 +96,7 @@ session_start();
 
                     </div>
                 </div>
-                <div id="friendFooter"><a href="friendRequest.html">See All</a></div>
+                <div id="friendFooter"><a href="friendRequest.php">See All</a></div>
                 </div>
 
             </li>
@@ -138,81 +124,38 @@ session_start();
       <div id="profilespecs">
       <nav id="profiletabs">
           
-          
-          
-          
-          <div data-role="main" class="ui-content">
-    <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">Update Profile</a>
+         <button type="button" id="updateProfile" class="btn btn-blue" onclick="myUpdate()">Update profile</button></a>
 
-    
-    
- <div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
-
-      <form method="post" action="demoform.asp">
-        <div>
-          <!--<h3>Login information</h3>-->
-          <label for="status" >Status</label>
-          <input type="text" name="user" id="status" placeholder="Username">
-          <label for="mno" >Mobile Number</label>
-          <input type="text" name="passw" id="mno" placeholder="0123456789">
-          
-          <label for="adr" >Address</label>
-          <input type="password" name="passw" id="adr" placeholder="Address">
-          
-          <label for="pswd" >Update Passward</label>
-           <label for="cpswd" class="ui-hidden-accessible">Current Passward</label>
-          <input type="password" name="passw" id="cpswd" placeholder="Password">
-          <label for="npswd" >New Passward</label>
-          <input type="password" name="passw" id="npswd" placeholder="Password">
-         <label for="cnpswd" >Confirm Passward</label>
-          <input type="password" name="passw" id="cnpswd" placeholder="Password">
-          
-          <input type="submit" data-inline="true" value="Update">
-        </div>
-      </form>
-    </div>
-<!--          <script>      
-          $(document).ready(function() {
-    
-    $('.btn').click(function{
-        $(this).next().show();
-        $('.divi').css.style.display="inline-block";
-        $('.divi').css("z-index","3");
-    });
-        
-    });
-            
-          </script>
-          
-          
-          <a id="inline" class="btn" >My Button</a>
-
-          <div class="divi" style="display:none">
-    <div id="data">
-          <p>Update your account:</p>
-
-            <p class="setting"><span>Mobile Number <img src="Images/edit.png" alt="*Edit*"></span> <input type="text" name="Contact Number" value="0123456789" /></p>
-
-            <p class="setting"><span>Address <img src="Images/edit.png" alt="*Edit*"></span><input type="text" name="Address" value="xyz"/></p>
-
-            <p class="setting"><span>Status <img src="Images/edit.png" alt="*Edit*"></span><input type="text" name="Status" value=" If you gotta dream then you gotta protect it."/></p>
-
-            <p class="setting"><span>Profile Status <img src="Images/edit.png" alt="*Edit*"></span> <input type="radio" name="privacy" value="Public"> Public <input type="radio" name="privacy" value="Private"> Private
+    <div class="container w3-dropdown-content" data-role="popup" id="myPopup" style="display: none; margin-top: -33%; margin-left: 30%;" >
+<div class="main">
+     
+<h2>Update Profile: </h2>
+<form id="Register" method="post" name="update">
+ <br/>   
+ <!--<label class="required">Username :</label>
+<input type="text" name="username" id="reg_username"/>
+-->
+<label class="required" for="status">Status</label>
+<input type="text" id="status" name="mno" placeholder="Status"/>
+<br>
+<label class="required" for="mno">Mobile Number:</label>
+<input type="text" name="mno" id="mno" placeholder="0123456789"/>
+<br>
+<label class="required">Enter Password :</label>
+<input type="password" name="password" id="reg_password"/>
+<br>
+<label class="required">Confirm Password :</label>
+<input type="password" name="password" id="reg_confirm_password"/>
+<br>
+<label class="required" for="profStat">Profile Status</label><br> <input type="radio" name="profStat" value="Public"> Public<br> <input type="radio" name="profStat" value="Private"> Private
             </p>
-            
-            <p class="setting"><span>Change Password</span></p>
-            
-            <p class="setting"><span>Existing Password</span><input type="text"></p>
-            <p class="setting"><span>New Password</span><input type="text"></p>
-             <p class="setting"><span>C Password</span><input type="text"></p>
-            
-            
-            <button id="update" style="float: right">update</button>
-           
-            
-    </div>
-    </div>
-          -->
+  
+            <button type="submit" id="submit" class="btn btn-blue" onclick="myFormSubmit()">Update</button>
+</form>
+<!--<span><b >Note : </b> <b class="note"> * </b> fields are compulsory <br/></span>-->
+
+</div>
+</div>
         <ul class="clearfix">
             <?php
         //Code for getting the profile of the logged user
@@ -292,7 +235,7 @@ session_start();
       </section>
       
     </div><!-- @end #content -->
-   
+ 
   </div><!-- @end #w -->
    <div id="w2" style=" width: 30%; float:right; margin-left:2%;">
     <div id="content2" class="clearfix">

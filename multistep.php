@@ -1,5 +1,7 @@
 
-
+<?php
+ include_once 'DB_Con.php';
+ ?>
 <html>
     <head>
         <title>TODO supply a title</title>
@@ -10,7 +12,10 @@
   <script src="http://thecodeplayer.com/uploads/js/jquery-1.9.1.min.js" type="text/javascript"></script>
 <!-- jQuery easing plugin -->
 <script src="http://thecodeplayer.com/uploads/js/jquery.easing.min.js" type="text/javascript"></script>
-  
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
   
         <script> //jQuery time
 $(function() {
@@ -89,9 +94,17 @@ animating = false;
 easing: 'easeInOutBack'
 });
 });
-
-$(".submit").click(function(){
-return false;
+//$('.submit action-button').click(function(e) {
+//    e.preventDefault(); // prevent the link's default behaviour
+//    $('#try.php').submit(); // trigget the submit handler
+//});
+////
+//$( "#try.php" ).submit(function(){
+//     event.preventDefault();
+////}
+$(".submit").click(function(a){
+//return false;
+   a.preventDefault();
 });
 
 });
@@ -131,6 +144,19 @@ font-family: montserrat;
 color: #2C3E50;
 font-size: 13px;
 }
+
+.sel{
+ padding: 15px;
+border: 1px solid #ccc;
+border-radius: 3px;
+margin-bottom: 10px;
+width: 100%;
+box-sizing: border-box;
+font-family: montserrat;
+color: #2C3E50;
+font-size: 13px;   
+}
+
 /*buttons*/
 #msform .action-button {
 width: 100px;
@@ -221,8 +247,9 @@ color: white;
 	<!-- progressbar -->
 	<ul id="progressbar">
 		<li class="active">Account Setup</li>
+                <li>Personal Details</li>
 		<li>Social Profiles</li>
-		<li>Personal Details</li>
+		
 	</ul>
 	<!-- fieldsets -->
 	<fieldset>
@@ -233,28 +260,95 @@ color: white;
 		<input type="password" name="cpass" placeholder="Confirm Password" />
 		<input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
-	<fieldset>
-		<h2 class="fs-title">Social Profiles</h2>
+        
+       
+        	<fieldset>
+                    <h2 class="fs-title">Social Profiles</h2>
 		<h3 class="fs-subtitle">Address details!!</h3>
-		<input type="text" name="twitter" placeholder="Country" />
-		<input type="text" name="facebook" placeholder="State" />
-		<input type="text" name="gplus" placeholder="City" />
-		<input type="button" name="previous" class="previous action-button" value="Previous" />
-		<input type="button" name="next" class="next action-button" value="Next" />
-	</fieldset>
-	<fieldset>
-		<h2 class="fs-title">Profile  Details!!</h2>
-		<h3 class="fs-subtitle"></h3>
-		<input type="text" name="fname" placeholder="First Name" />
+                    
+		
+                <input type="text" name="fname" placeholder="First Name" />
 		<input type="text" name="lname" placeholder="Last Name" />
 		<input type="text" name="phone" placeholder="Phone" />
                 Upload picture
 		 <input type="file" name="pic" accept="image/*" />
+                
+		
+		<input type="button" name="previous" class="previous action-button" value="Previous" />
+		<input type="button" name="next" class="next action-button" value="Next" />
+	</fieldset>
+        
+        <fieldset>
+		<h2 class="fs-title">Profile  Details!!</h2>
+                
+                
+                
+                <select class="sel" name="country" onchange="getCountryID(this.value);">
+                    <option value=""> Select Country</option>
+                    <?php
+                    $query="select * from countries";
+                    $results=  mysqli_query($con, $query);
+                    //loop
+                    foreach ($results as $country){
+                        ?>
+                    <option value="<?php echo $country["Country_ID"];?>"> <?php echo $country["Country_Name"];?></option>
+                    <?php
+                    }
+                    ?>
+                </select>
+               
+                <select class="sel" name="states" id="statesList" onchange="getStateID(this.value)">
+                <option value=""> Select State</option>
+                
+            </select>
+                
+		<br>
+                       
+                            
+                            <select class="sel" name="cities" id="citiesList" >
+                                <option value=""> Select City</option>
+                                
+                            </select>
+                        <br>
+                       
+                        
+               
+		<input type="text" name="street" placeholder="Street Address/Area/Sector" />
                    
 		<input type="button" name="previous" class="previous action-button" value="Previous" />
-		<input type="submit" name="submit" class="submit action-button" value="Submit" />
-	</fieldset>
+                <a href="try.php"> <input type="button" class="action-button" value="Submit" /></a>
+		 </fieldset>
+        
+	
+	
 </form>
+      
+  <script>
+    function getCountryID(val){
+       $.ajax({
+           
+           type:"POST",
+           url:"States.php",
+           data:"cid="+val,
+           success: function(data){
+               $("#statesList").html(data);
+           }
+       });
+    }
+    </script>
+    <script>
+    function getStateID(val){
+       $.ajax({
+           
+           type:"POST",
+           url:"Cities.php",
+           data:"cid="+val,
+           success: function(data){
+               $("#citiesList").html(data);
+           }
+       });
+    }
+    </script>
 
 <!-- jQuery -->
 
