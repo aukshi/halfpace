@@ -32,7 +32,6 @@ function myFunction(id) {
     Everyday skills
   </button>
   <div id="Demo1" class="w3-accordion-content w3-container">
-                  <div class="content">
                       
                       
                       <?php
@@ -64,13 +63,12 @@ function myFunction(id) {
                       ?>
                                                                      
                      
-                  </div>
+                  
   </div>
   <button onclick="myFunction('Demo2')" class="w3-btn-block w3-left-align">
     Education
   </button>
   <div id="Demo2" class="w3-accordion-content w3-container">
-    <div class="content">
                           
                       <?php
                       $skills1 = array("General Mathematics","Statestics","Calculus","Chemistry","Physics","Biology","History","Geography","Economics","Civics","Politics","Psychology","Philosophy","Engineering Graphics","Mechanics","C","C++","Java","Python","Web Developement","Mobile App Developement","Embedded System","Microcontroller Programming","Robotics","Competitive Exams","Interviews","Career Guidance","College Selection");
@@ -101,7 +99,7 @@ function myFunction(id) {
                       ?>
                                                                      
                      
-                    </div>
+                 
   </div>
 </div>
 
@@ -109,7 +107,6 @@ function myFunction(id) {
     Languages
   </button>
         <div id="Demo3" class="w3-accordion-content w3-container">
-            <div class="content">
                                                  
                       <?php
                       $skills2 = array("English","Germen","French","Spanish","Hindi","Marathi","Sanskrit","Grammer");
@@ -139,7 +136,6 @@ function myFunction(id) {
                       }
                       ?>
                      
-                    </div>
                   </div>
         
     
@@ -147,8 +143,7 @@ function myFunction(id) {
     Food Fitness and Healthcare
   </button>
     <div id="Demo4" class="w3-accordion-content w3-container">
-        <div class="content">
-                                                                     
+                                                                    
                                     <?php
                       $skills3 = array("Heart Care","Diabetes Care","Yoga","Diet","Home Remidies","BabyCare","Skin Care","Aerobics","Hair Care","Dressing","Mother care");
                       $squared3 = array("squared1","squared2","squared3","squared4","squared5","squared6","squared7","squared8","squared9","squared7","squared8","squared9","squared10","squared11");
@@ -177,7 +172,6 @@ function myFunction(id) {
                       }
                       ?>
                       
-                  </div>
                   
         
     </div>
@@ -187,8 +181,7 @@ function myFunction(id) {
     Art
   </button>
     <div id="Demo5" class="w3-accordion-content w3-container">
-        <div class="content">
-                                                                     
+                                                                    
                                     <?php
                       $skills4 = array("Sketching","Painting","3-D Art","Nail Art","Dance","Singing","Drama","Guitar","Tabla","Synthesiser","Quilling","Card Making","Handcraft");
                       $squared4 = array("squared1","squared2","squared3","squared4","squared5","squared6","squared7","squared8","squared9","squared7","squared8","squared9","squared10","squared11");
@@ -216,8 +209,6 @@ function myFunction(id) {
                       $i++;
                       }
                       ?>
-                      
-                  </div>
                   
         
     </div>
@@ -229,7 +220,6 @@ function myFunction(id) {
     Games
   </button>
     <div id="Demo6" class="w3-accordion-content w3-container">
-        <div class="content">
                                                                      
                                     <?php
                       $skills5 = array("Cricket","Badminton","Tennise","Table Tennise","Hockey","Chess","Kabaddi");
@@ -259,8 +249,7 @@ function myFunction(id) {
                       }
                       ?>
                       
-                  </div>
-                  
+                 
         
     </div>
  
@@ -275,7 +264,6 @@ function myFunction(id) {
     Lifestyle
   </button>
   <div id="Demo11" class="w3-accordion-content w3-container">
-                  <div class="content">
                       
                       
                       <?php
@@ -307,13 +295,12 @@ function myFunction(id) {
                       ?>
                                                                      
                      
-                  </div>
+                
   </div>
   <button onclick="myFunction('Demo2')" class="w3-btn-block w3-left-align">
     Education
   </button>
   <div id="Demo2" class="w3-accordion-content w3-container">
-    <div class="content">
                           
                       <?php
                       $skills12 = array("General Mathematics","Statestics","Calculus","Chemistry","Physics","Biology","History","Geography","Economics","Civics","Politics","Psychology","Philosophy","Engineering Graphics","Mechanics","C","C++","Java","Python","Web Developement","Mobile App Developement","Embedded System","Microcontroller Programming","Robotics","Compititive Exams","Interviews","Career Guidance","College Selection");
@@ -344,7 +331,7 @@ function myFunction(id) {
                       ?>
                                                                      
                      
-                    </div>
+                    
   </div>
 </div>
 
@@ -352,8 +339,7 @@ function myFunction(id) {
     Languages
   </button>
         <div id="Demo3" class="w3-accordion-content w3-container">
-            <div class="content">
-                                                 
+                                                
                       <?php
                       $skills2 = array("English","Germen","French","Spanish","Hindi","Marathi","Sanskrit","Grammer");
                       $squared2 = array("squared1","squared2","squared3","squared4","squared5","squared6","squared7","squared8");
@@ -382,7 +368,7 @@ function myFunction(id) {
                       }
                       ?>
                      
-                    </div>
+                   
                   </div>
         
     
@@ -390,7 +376,6 @@ function myFunction(id) {
     Food Fitness and Healthcare
   </button>
     <div id="Demo4" class="w3-accordion-content w3-container">
-        <div class="content">
                                                                      
                                     <?php
                       $skills3 = array("Heart Care","Diabetes Care","Yoga","Diet","Home Remidies","BabyCare","Skin Care","Aerobics","Hair Care","Dressing","Mother care");
@@ -420,8 +405,7 @@ function myFunction(id) {
                       }
                       ?>
                       
-                  </div>
-                  
+                 
         
     </div>
  
@@ -430,7 +414,6 @@ function myFunction(id) {
     Art
   </button>
     <div id="Demo5" class="w3-accordion-content w3-container">
-        <div class="content">
                                                                      
                                     <?php
                       $skills4 = array("Sketching","Painting","3-D Art","Nail Art","Dance","Singing","Drama","Guitar","Tabla","Synthesiser","Quilling","Card Making","Handcraft");
@@ -459,10 +442,7 @@ function myFunction(id) {
                       $i++;
                       }
                       ?>
-                      
-                  </div>
-                  
-        
+                         
     </div>
  
         
@@ -472,7 +452,6 @@ function myFunction(id) {
     Games
   </button>
     <div id="Demo6" class="w3-accordion-content w3-container">
-        <div class="content">
                                                                      
                                     <?php
                       $skills5 = array("Cricket","Badminton","Tennise","Table Tennise","Hockey","Chess","Kabaddi");
@@ -505,7 +484,7 @@ function myFunction(id) {
                   </div>
                   
         
-    </div>
+   
  
         
          
