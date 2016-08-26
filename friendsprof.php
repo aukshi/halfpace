@@ -82,9 +82,16 @@ session_start();
           
           <?php 
                       $flist=$_SESSION["flist"];
-                        if(!in_array($currentUser,$flist)) {         ?>
+                      $rlist=$_SESSION["rlist"];
+                        if(!in_array($currentUser,$flist)) {        
+                            if(in_array($currentUser, $rlist)){?>
+                        <a href=""><button id="frndrqSent" class="w3-btn " style="float: right" >Request already sent </button></a>
+                        <?php 
+                            }
+                            else {
+                        ?>
                         <a href="friendsStatus.php?connect=<?php echo $currentUser ?>"><button id="frndrq" class="w3-btn " style="float: right" >Send Request</button></a>
-          <?php } ?>
+          <?php } } ?>
         </ul>
       </nav>
           </div>
