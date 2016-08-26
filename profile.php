@@ -127,6 +127,8 @@ session_start();
         
         $activityQuery="select * from activity order by timestamp asc";
         $activities=  mysqli_query($con, $activityQuery);
+        $Query="insert into tablename (email_id,timestamp) values ('1234',CURRENT_TIMESTAMP);";
+        mysqli_query($con, $Query);
                                 foreach ($activities as $activity)//Fiends of the value in 2nd column
                                 {
         

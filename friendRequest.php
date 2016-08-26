@@ -42,6 +42,7 @@ and open the template in the editor.
                 <?php 
                     
                       $loggedUser=$_SESSION["loggedUser"];
+                      $flist=$_SESSION["flist"];
                       //Finding the friends of logged user
 //                      $flist=array();
 //                      $_SESSION['flist']=$flist;

@@ -83,7 +83,7 @@ session_start();
           <?php 
                       $flist=$_SESSION["flist"];
                         if(!in_array($currentUser,$flist)) {         ?>
-                        <li><a href="friendsStatus.php?connect=<?php echo $currentUser ?>"><button id="frndrq" class="w3-btn " style="float: right" >Send Request</button></a></li>
+                        <a href="friendsStatus.php?connect=<?php echo $currentUser ?>"><button id="frndrq" class="w3-btn " style="float: right" >Send Request</button></a>
           <?php } ?>
         </ul>
       </nav>
