@@ -40,8 +40,8 @@ and open the template in the editor.
              function validateLoginForm()
 	{
             
-	var name = document.login_form.username.value;
-        var password = document.login_form.password.value;
+	var name = document.msform.username.value;
+        var password = document.msform.password.value;
         //alert("Username "+name+"\nPassword : "+password);
 	//var password = document.getElementById("password").value;
         
@@ -80,9 +80,9 @@ and open the template in the editor.
             <fieldset>
 		<h2 class="fs-title">Welcome to Halfpace!</h2>
                 <h2 class="fs-subtitle">Let's begin</h2>
-		<input type="text" name="email" placeholder="Email" />
-		<input type="password" name="pass" placeholder="Password" />
-		<input type="button" name="Login" class="next action-button" value="Submit" />
+		<input type="text" id="username" name="username" placeholder="Email" onclick="this.value = ''" />
+		<input type="password"  id="password" name="password" placeholder="Password" onclick="this.value = ''"/>
+		 <button type="submit" id="submit" class="action-button">Log In</button>
                 <br>
                 <div id="links_left" style="margin-left:21%;">
 
