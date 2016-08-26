@@ -24,9 +24,6 @@ session_start();
 <link rel="stylesheet" href=
       "css/button.css"/>
 
-  <script type="text/javascript" src="js/notifications.js"></script>
-  <link rel="stylesheet" href="css/testingMenubar.css">
-   <link rel="stylesheet" href="css/footer-distributed-with-contact-form.css">
   <link rel="shortcut icon" href="kitten.jpg">
   <link rel="icon" href="kitten.jpg">
 
