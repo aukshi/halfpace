@@ -24,14 +24,12 @@ and open the template in the editor.
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="css/footer-distributed-with-contact-form.css">
-        <script type="text/javascript" src="js/notifications.js"></script>
-        <link rel="stylesheet" href="css/testingMenubar.css">
         
      
     </head>
     <body>
         <!-- Menubar begins here-->
+
              <div id="header" class="header1" style=" background:url('Images/bg1.jpg')0 100% no-repeat; background-size: cover; ">
             <div id="logo">Logo</div>
             <div id="searcharea" class="header1"><input placeholder="search" type="text" id="searchbox"/></div>
@@ -93,6 +91,9 @@ and open the template in the editor.
             
             </ul>
              </div>
+
+            <?php include('header.php'); ?>
+
           <!-- Menubar ends here-->
         
        <div id="mainbody" style="margin-top: 10%;">
@@ -102,6 +103,7 @@ and open the template in the editor.
                 <?php 
                     
                       $loggedUser=$_SESSION["loggedUser"];
+
                       //Finding the friends of logged user
                       $flist=array();
                       $friendList="select *from friend_status where eid1='$loggedUser' AND accepted=1";
@@ -137,6 +139,46 @@ and open the template in the editor.
                       {
                           $rlist[]=$fr1["eid1"];
                       }
+
+                      $flist=$_SESSION["flist"];
+                      $rlist=$_SESSION["rlist"];
+                      //Finding the friends of logged user
+//                      $flist=array();
+//                      $_SESSION['flist']=$flist;
+//                      $friendList="select *from friend_status where eid1='$loggedUser' AND accepted=1";
+//                      
+//                      $friends=mysqli_query($con, $friendList);
+//                      foreach ($friends as $fr)
+//                      {
+//                          $flist[]=$fr["eid2"];
+//                          
+//                      }
+//                      $friendList1="select *from friend_status where eid2='$loggedUser' AND accepted=1";
+//                      $friends1=mysqli_query($con, $friendList1);
+//                      foreach ($friends1 as $fr)
+//                      {
+//                          $flist[]=$fr["eid1"];
+//                          echo 'Hii '.$flist[0];
+//                      }
+                      
+                      ///////////////////////////////
+//                      //Already Requested 
+//                      
+//                      $rlist=array();
+//                      $requestList="select * from friend_status where eid1='$loggedUser' AND requested=1";
+//                      $requestedfriends=mysqli_query($con, $requestList);
+//                      foreach ($requestedfriends as $fr)
+//                      {
+//                          $rlist[]=$fr["eid2"];
+//                          
+//                      }
+//                      $requestList1="select *from friend_status where eid2='$loggedUser' AND requested=1";
+//                      $requestedfriends1=mysqli_query($con, $requestList1);
+//                      foreach ($requestedfriends1 as $fr1)
+//                      {
+//                          $rlist[]=$fr1["eid1"];
+//                      }
+
                       
                       //////////////
                         $reqFriendsQuery="select * from friend_status where requested=1 AND eid2='$loggedUser'";
@@ -374,51 +416,6 @@ and open the template in the editor.
             </div>
              
              <!--Footer-->
-    <footer class="footer-distributed">
-
-			<div class="footer-left">
-
-				<h3>Halfpace<span>...Coz everything can't be learned on the Internet!</span></h3>
-
-				<p class="footer-links">
-					<a href="#">About us</a>
-					
-					<a href="#">FAQ</a>
-					
-					<a href="#">Contact</a>
-				</p>
-                                
-                                <div class="footer-icons">
-                                    <p style='color:white;'>Share us on</p>
-                                    <a href="#" style="background:url('Images/fb.png')0 100% no-repeat;"></a>
-					<a href="#" style="background:url('Images/twit.jpg')0 100% no-repeat;"></a>
-					<a href="#" style="background:url('Images/in.png')0 100% no-repeat;"></a>
-					
-
-				</div>
-
-				<p class="footer-company-name">Halfpace Pvt. Ltd. &copy; 2016</p>
-
-				
-
-			</div>
-
-			<div class="footer-right">
-
-                            <h4>Want to suggest a skill?<br>
-                                Or anything else?<br></h4>
-
-				<form action="#" method="post">
-
-					<input type="text" name="email" placeholder="Email" />
-					<textarea name="message" placeholder="Message"></textarea>
-					<button>Send</button>
-
-				</form>
-
-			</div>
-
-		</footer>
     <!--Footer ends here-->
 
         </div>

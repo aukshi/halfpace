@@ -14,11 +14,11 @@ include 'DB_Con.php';
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link type="text/css" rel="stylesheet" href="css/style1.css" media="screen" />
         <link type="text/css" rel="stylesheet" href="css/button.css" media="screen" />
-        
+        <link type="text/css" rel="stylesheet" href="css/login.css" media="screen" />
         <script>
             function validateForgotPasswordForm()
             {
-            var email = document.forgot_password.username.value;
+            var email = document.msform.username.value;
             <?php echo "Hii" ?>
 	//var password = document.getElementById("password").value;
         
@@ -31,36 +31,23 @@ include 'DB_Con.php';
  </script>
     </head>
     <body>
-          <form id="forgot_password" method="post" name="forgot_password" onsubmit=" return validateForgotPasswordForm()"  >
-       <div id="wrapper">
-	    <div id="wrappertop"></div>
-                <div id="wrappermiddle">
-                     <br><h3>Forgot Password</h3>
-                        <br><br>
-                           <div id="username_input">
-                                <div id="username_inputleft"></div>
-                                    <div id="username_inputmiddle">
-			                 <input type="text" id="username" name="Email_ID" Placeholder="E-mail Address" >
-					    <br> <br>  <img id="url_user" src="images/mailicon.png" alt="">
-                                     </div>
-                                     <div id="username_inputright"></div>
-                           </div>
-                       <div class="hot-container">
-	          <p>
-                      <br>
-		<button type="submit" id="submit" class="btn btn-blue">Send My Password</button>
-	          </p>
-	
-                      </div>
-
-		</div>
-            
-                <div id="wrapperbottom"></div>
+        <form id="msform" method="post" name="forgot_password" onsubmit=" return validateForgotPasswordForm()" style="margin-top:15%;"  >
+      <fieldset>
+		<h2 class="fs-title">Too many passwords too remember :{ </h2>
+                <h2 class="fs-subtitle">Don't worry, it happens. Just give us your Email id :)</h2>
+		
                 
-       </div>
+                <input type="text" id="username" name="Email_ID" Placeholder="E-mail Address" >
+                
+                <br><br>
+                <button type="submit" id="submit" class="action-button" style="margin-left: 30%;">Send My Password</button>
+                
+        
+	</fieldset>
           </form>
     </body>
 </html>
+
 
 <?php
                             if((filter_input(INPUT_POST, 'Email_ID')))

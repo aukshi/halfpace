@@ -18,7 +18,7 @@ session_start();
             <link rel="stylesheet" href="css/w3.css">
             <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-            <script type="text/javascript" src="js/notifications.js"></script>
+           
             <link rel="stylesheet" href="css/testingMenubar.css">
             <link rel="stylesheet" href="css/footer-distributed-with-contact-form.css">
 
@@ -28,7 +28,9 @@ session_start();
                   //toggle the componenet with class msg_body
                   jQuery(".heading").click(function()
                   {
+                    $('.heading').not(this).next(".content").hide(500);  
                     jQuery(this).next(".content").slideToggle(500);
+                    
                   });
                 });
             </script>
@@ -56,73 +58,46 @@ session_start();
             <link rel="stylesheet" href="css/testingMenubar.css">
      </head>
      <body onload="document.refresh();">
-         <!-- Menubar begins here-->
-             <div id="header" class="header1" style="background:url('Images/bg1.jpg')0 100% no-repeat;  background-size: cover; ">
-            <div id="logo">Logo</div>
-            <div id="searcharea" class="header1"><input placeholder="search" type="text" id="searchbox"/></div>
-            <?php
-            $loggedUser=$_SESSION["loggedUser"];
-            $usersQuery="select * from profile where email_id='$loggedUser'";
-            $profileResults=  mysqli_query($con, $usersQuery);
-            $row = mysqli_fetch_array($profileResults);
-            $profilePic=$row["picture"];
-            ?>
-            <div id="profilename" class="header1"><h4>Hi <?php echo $loggedUser;?></h4></div>
-            <div  id="profilearea" class="header1" ><a href="profile.php"><img class="imageCircle" src="<?php echo $profilePic; ?>" alt="<?php echo $profilePic; ?>" width="100" height="100"></a></div>
-            
-            <ul id="nav">
-            <li><a href="logout.php">Log out</a></li>
-              
-            
-            
-            <li id="notification_li">
-            
-                <span id="notification_count">3</span>
-                <a href="#" id="notificationLink">Notifications</a>
-
-                <div id="notificationContainer">
-                <div id="notificationTitle">Notifications</div>
-                <div id="notificationsBody" class="notifications">
-                    <div class="w3-card w3-yellow">
-                    <p>w3-card</p>
-                    </div>
-                </div>
-                <div id="notificationFooter"><a href="notification.php">See All</a></div>
-                </div>
-
-            </li>
-            
-            <li id="friend_li">
-            
-                <span id="friend_count">3</span>
-                <a href="#" id="friendLink">Friend Requests</a>
-
-                <div id="friendContainer">
-                <div id="friendTitle">Friend Requests</div>
-                <div id="friendBody" class="notifications">
-                    <div class="w3-card-8 w3-dark-grey">
-
-                    <div class="w3-container w3-center">
-                      <img src="Images/timepass.jpg" alt="Avatar" style="width:80%">
-                      <h5>John Doe</h5>
-
-                      <button id="acceptFR " name="acceptFR" onclick="friendAcc(this.value);" class= "w3-btn w3-green" >Accept</button>
-                      <button id="declineFR" name="declineFR" class="w3-btn w3-red">Decline</button>
-                      
-                    </div>
-
-                    </div>
-                </div>
-                <div id="friendFooter"><a href="friendRequested.php">See All</a></div>
-                </div>
-
-            </li>
-            
-            
-            </ul>
-             </div>
-          <!-- Menubar ends here-->
+         <?php include('header.php'); ?>
 <!--body-->
+                        <?php
+                              $flist=array();
+                              
+                              $friendList="select *from friend_status where eid1='$loggedUser' AND accepted=1";
+                              $friends=mysqli_query($con, $friendList);
+                              foreach ($friends as $fr)
+                                {
+                                    $flist[]=$fr["eid2"];
+
+                                }
+                                $friendList1="select *from friend_status where eid2='$loggedUser' AND accepted=1";
+                                $friends1=mysqli_query($con, $friendList1);
+                                foreach ($friends1 as $fr)
+                                {
+                                    $flist[]=$fr["eid1"];
+                                    echo 'Hii '.$flist[0];
+                                }
+                              $_SESSION['flist']=$flist;
+                      
+                    
+
+                      //Already Requested 
+                      $rlist=array();
+                      $requestList="select * from friend_status where eid1='$loggedUser' AND requested=1";
+                      $requestedfriends=mysqli_query($con, $requestList);
+                      foreach ($requestedfriends as $fr)
+                      {
+                          $rlist[]=$fr["eid2"];
+                          
+                      }
+                      $requestList1="select *from friend_status where eid2='$loggedUser' AND requested=1";
+                      $requestedfriends1=mysqli_query($con, $requestList1);
+                      foreach ($requestedfriends1 as $fr1)
+                      {
+                          $rlist[]=$fr1["eid1"];
+                      }
+                      $_SESSION['rlist']=$rlist;
+                      ?>
 <div id='checking'>
             <div id="centerbody">
                 <div id="leftboxes">
@@ -333,6 +308,8 @@ session_start();
 
 		</footer>
     <!--Footer ends here-->
+
+    <?php include('footer.php'); ?>
 
         
 </div>

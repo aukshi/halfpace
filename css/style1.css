@@ -176,13 +176,12 @@ body {
 	float:left;
 	position:relative;
 	padding-top:10px;
-       
-	margin-left:25px;
+        clear: both;
 }
 
 #links_left a{
 	color:#bbb;
-	font-size:13px;
+	font-size:17px;
 	text-decoration:none;
 	transition: color 0.5s linear;
 	-moz-transition: color 0.5s linear;
@@ -195,15 +194,16 @@ body {
 }
 
 #links_right{
-	float:right;
+        margin: auto;
+	float:left;
 	position:relative;
 	padding-top:12px;
-	margin-right:25px;
+	
 }
 
 #links_right a{
 	color:#bbb;
-	font-size:13px;
+	font-size:17px;
 	text-decoration:none;
 	transition: color 0.5s linear;
 	-moz-transition: color 0.5s linear;
@@ -213,6 +213,7 @@ body {
 
 #links_right a:hover{
 	color:#292929;
+        
 }
 
 #powered{
