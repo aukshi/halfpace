@@ -133,7 +133,7 @@ session_start();
                                 {
         
         ?>
-                                    <p class="activity"><?php echo $activity["description"] ?> at <?php echo $activity["timestamp"]?></p>
+                                    <p class="activity"><?php echo $activity["description"] ?> at <?php $activityTimestamp=$activity["timestamp"]; echo $activityTimestamp;?> OR <?php date_default_timezone_set('Asia/Calcutta');$time=date('Y-m-d G:i:s');echo ($time-$activityTimestamp)?></p>
         <?php 
                                 }
         ?>
