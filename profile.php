@@ -48,11 +48,7 @@ session_start();
 
 <body>
 <!-- Menubar begins here-->
-
-            
-
              <?php include('header.php'); ?>
-
           <!-- Menubar ends here-->
          
     

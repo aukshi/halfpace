@@ -198,57 +198,15 @@ session_start();
         </ul>
       </nav>
       
-       
-      
-        <div id="right_content" class="right_content">
-            
-             <section id="Skills" class="hidden">
+        <section id="Skills" class="hidden">
        <p>This is skills section:</p>
-        <!--skills-->
-            <div class="right_content_child">
-                skill1
-                <button class="btnr">Request</button>
-                <button class="btnr">Endorse</button>
-            </div>
-           
-             <div  class="right_content_child">
-                  skill2
-                <button class="btnr">Request</button>
-                <button class="btnr">Endorse</button>
-            </div>
-             <div  class="right_content_child">
-                skill3
-                <button class="btnr">Request</button>
-                <button class="btnr">Endorse</button>
-            </div>
-            
-            <!--End of skills-->
       </section>
       
         <section id="Requirements" class="hidden" >
-        <p>This is requirements section:</p> <!--requirements-->
-            
-            <div class="right_content_child">
-                req1
-                <button class="btnr">suggest yourself</button>
-            </div>
-           
-             <div  class="right_content_child">
-                  req2
-                <button class="btnr">suggest yourself</button>
-            </div>
-             <div  class="right_content_child">
-                req3
-                <button class="btnr">suggest yourself</button>
-            </div>
-            
-            <!--End of requirements-->
-     
+        <p>This is requirements section:</p>
         
       </section>
-           
-              </div>
-        
+      
     </div><!-- @end #content2 -->
    
   </div><!-- @end #w2 -->
