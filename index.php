@@ -78,7 +78,25 @@ session_start();
                                     echo 'Hii '.$flist[0];
                                 }
                               $_SESSION['flist']=$flist;
-                              
+                      
+                    
+
+                      //Already Requested 
+                      $rlist=array();
+                      $requestList="select * from friend_status where eid1='$loggedUser' AND requested=1";
+                      $requestedfriends=mysqli_query($con, $requestList);
+                      foreach ($requestedfriends as $fr)
+                      {
+                          $rlist[]=$fr["eid2"];
+                          
+                      }
+                      $requestList1="select *from friend_status where eid2='$loggedUser' AND requested=1";
+                      $requestedfriends1=mysqli_query($con, $requestList1);
+                      foreach ($requestedfriends1 as $fr1)
+                      {
+                          $rlist[]=$fr1["eid1"];
+                      }
+                      $_SESSION['rlist']=$rlist;
                       ?>
 <div id='checking'>
             <div id="centerbody">
