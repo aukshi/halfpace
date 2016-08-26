@@ -129,6 +129,8 @@ session_start();
         
         $activityQuery="select * from activity order by timestamp asc";
         $activities=  mysqli_query($con, $activityQuery);
+        $Query="insert into tablename (email_id,timestamp) values ('1234',CURRENT_TIMESTAMP);";
+        mysqli_query($con, $Query);
                                 foreach ($activities as $activity)//Fiends of the value in 2nd column
                                 {
         
@@ -153,9 +155,9 @@ session_start();
         <ul id="friendslist" class="clearfix">
             <!--Code for displaying friends-->
             <?php 
-                    $profileQueryRequested="select * from friend_status where eid1='$loggedUser'";
+                    $profileQueryRequested="select * from friend_status where eid1='$loggedUser' AND accepted=1";
                         $profileResultsReq=  mysqli_query($con, $profileQueryRequested);
-                        $profileQueryAccepted="select * from friend_status where eid2='$loggedUser'";
+                        $profileQueryAccepted="select * from friend_status where eid2='$loggedUser' AND accepted=1";
                         $profileResultsAcc=  mysqli_query($con, $profileQueryAccepted);
                         
                     //loop

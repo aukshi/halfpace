@@ -42,41 +42,44 @@ and open the template in the editor.
                 <?php 
                     
                       $loggedUser=$_SESSION["loggedUser"];
+                      $flist=$_SESSION["flist"];
+                      $rlist=$_SESSION["rlist"];
                       //Finding the friends of logged user
-                      $flist=array();
-                      $friendList="select *from friend_status where eid1='$loggedUser' AND accepted=1";
-                      
-                      $friends=mysqli_query($con, $friendList);
-                      foreach ($friends as $fr)
-                      {
-                          $flist[]=$fr["eid2"];
-                          
-                      }
-                      $friendList1="select *from friend_status where eid2='$loggedUser' AND accepted=1";
-                      $friends1=mysqli_query($con, $friendList1);
-                      foreach ($friends1 as $fr)
-                      {
-                          $flist[]=$fr["eid1"];
-                          echo 'Hii '.$flist[0];
-                      }
+//                      $flist=array();
+//                      $_SESSION['flist']=$flist;
+//                      $friendList="select *from friend_status where eid1='$loggedUser' AND accepted=1";
+//                      
+//                      $friends=mysqli_query($con, $friendList);
+//                      foreach ($friends as $fr)
+//                      {
+//                          $flist[]=$fr["eid2"];
+//                          
+//                      }
+//                      $friendList1="select *from friend_status where eid2='$loggedUser' AND accepted=1";
+//                      $friends1=mysqli_query($con, $friendList1);
+//                      foreach ($friends1 as $fr)
+//                      {
+//                          $flist[]=$fr["eid1"];
+//                          echo 'Hii '.$flist[0];
+//                      }
                       
                       ///////////////////////////////
-                      //Already Requested 
-                      
-                      $rlist=array();
-                      $requestList="select * from friend_status where eid1='$loggedUser' AND requested=1";
-                      $requestedfriends=mysqli_query($con, $requestList);
-                      foreach ($requestedfriends as $fr)
-                      {
-                          $rlist[]=$fr["eid2"];
-                          
-                      }
-                      $requestList1="select *from friend_status where eid2='$loggedUser' AND requested=1";
-                      $requestedfriends1=mysqli_query($con, $requestList1);
-                      foreach ($requestedfriends1 as $fr1)
-                      {
-                          $rlist[]=$fr1["eid1"];
-                      }
+//                      //Already Requested 
+//                      
+//                      $rlist=array();
+//                      $requestList="select * from friend_status where eid1='$loggedUser' AND requested=1";
+//                      $requestedfriends=mysqli_query($con, $requestList);
+//                      foreach ($requestedfriends as $fr)
+//                      {
+//                          $rlist[]=$fr["eid2"];
+//                          
+//                      }
+//                      $requestList1="select *from friend_status where eid2='$loggedUser' AND requested=1";
+//                      $requestedfriends1=mysqli_query($con, $requestList1);
+//                      foreach ($requestedfriends1 as $fr1)
+//                      {
+//                          $rlist[]=$fr1["eid1"];
+//                      }
                       
                       //////////////
                         $reqFriendsQuery="select * from friend_status where requested=1 AND eid2='$loggedUser'";
