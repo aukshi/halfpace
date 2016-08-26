@@ -30,21 +30,20 @@ function myFunction(id) {
 </head>
 <body>
    
+    <!--<div id="grandparent" class="grandparent">-->
    
-    
     <div class="superparent" id="left_div">
-        <h2>Choose your skill</h2>
+        <h2>Choose your skills </h2><label style="font-family: cursive">(maximum 15)</label>
  
 <div class="w3-accordion w3-light-grey">
   <button onclick="myFunction('Demo1')" class="w3-btn-block w3-left-align">
-    Lifestyle
+    Everyday skills
   </button>
   <div id="Demo1" class="w3-accordion-content w3-container">
-                  <div class="content">
-                      
+                                   
                       
                       <?php
-                      $skills = array("Bike Driving","Bi-Cycle Driving","Car Driving","Sewing","Decoration","Event Management","Gardenning","Cooking","Baking","Tie Knot","video making,editing anf Sound Mixing","Beauty Tips","Photography","Caligraphy","Entrepreneurship","Legal Advices","Communication Skills","Time Management","Fashion","Festival Knowledge","Trademarketing","Swimming","Excel","Rooting Phone","Formatting Laptop","Meditation");
+                      $skills = array("Bike Driving","Bi-Cycle Driving","Car Driving","Sewing","Decoration","Event Management","Gardenning","Cooking","Baking","To knot a tie","video making,editing and Sound Mixing","Beauty Tips","Photography","Caligraphy","Entrepreneurship","Legal Advices","Communication Skills","Time Management","Fashion","Festival Knowledge","Trademarketing","Swimming","Excel","Rooting a Phone","Formatting Laptop","Meditation");
                       $squared = array("squared1","squared2","squared3","squared4","squared5","squared6","squared7","squared8","squared9","squared10","squared11","squared12","squared13","squared14","squared15","squared16","squared17","squared18","Squared19","squared20","squared21","squared22","squared23","squared24","squared25","squared26");
                       $i=0;
                       foreach($skills as $item){
@@ -72,16 +71,16 @@ function myFunction(id) {
                       ?>
                                                                      
                      
-                  </div>
+                 
   </div>
   <button onclick="myFunction('Demo2')" class="w3-btn-block w3-left-align">
     Education
   </button>
   <div id="Demo2" class="w3-accordion-content w3-container">
-    <div class="content">
+  
                           
                       <?php
-                      $skills1 = array("General Mathematics","Statestics","Calculus","Chemistry","Physics","Biology","History","Geography","Economics","Civics","Politics","Psychology","Philosophy","Engineering Graphics","Mechanics","C","C++","Java","Python","Web Developement","Mobile App Developement","Embedded System","Microcontroller Programming","Robotics","Compititive Exams","Interviews","Career Guidance","College Selection");
+                      $skills1 = array("General Mathematics","Statestics","Calculus","Chemistry","Physics","Biology","History","Geography","Economics","Civics","Politics","Psychology","Philosophy","Engineering Graphics","Mechanics","C","C++","Java","Python","Web Developement","Mobile App Developement","Embedded System","Microcontroller Programming","Robotics","Competitive Exams","Interviews","Career Guidance","College Selection");
                       $squared1 = array("squared1","squared2","squared3","squared4","squared5","squared6","squared7","squared8","squared9","squared10","squared11","squared12","squared13","squared14","squared15","squared16","squared17","squared18","squared19","squared20","squared21","squared22","squared23","squared24","squared25","squared26","squared27","squared28");
                       $i=0;
                       foreach($skills1 as $item){
@@ -109,7 +108,6 @@ function myFunction(id) {
                       ?>
                                                                      
                      
-                    </div>
   </div>
 </div>
 
@@ -117,7 +115,7 @@ function myFunction(id) {
     Languages
   </button>
         <div id="Demo3" class="w3-accordion-content w3-container">
-            <div class="content">
+        
                                                  
                       <?php
                       $skills2 = array("English","Germen","French","Spanish","Hindi","Marathi","Sanskrit","Grammer");
@@ -148,14 +146,13 @@ function myFunction(id) {
                       ?>
                      
                     </div>
-                  </div>
-        
+                  
     
      <button onclick="myFunction('Demo4')" class="w3-btn-block w3-left-align">
     Food Fitness and Healthcare
   </button>
     <div id="Demo4" class="w3-accordion-content w3-container">
-        <div class="content">
+     
                                                                      
                                     <?php
                       $skills3 = array("Heart Care","Diabetes Care","Yoga","Diet","Home Remidies","BabyCare","Skin Care","Aerobics","Hair Care","Dressing","Mother care");
@@ -185,7 +182,6 @@ function myFunction(id) {
                       }
                       ?>
                       
-                  </div>
                   
         
     </div>
@@ -195,7 +191,7 @@ function myFunction(id) {
     Art
   </button>
     <div id="Demo5" class="w3-accordion-content w3-container">
-        <div class="content">
+
                                                                      
                                     <?php
                       $skills4 = array("Sketching","Painting","3-D Art","Nail Art","Dance","Singing","Drama","Guitar","Tabla","Synthesiser","Quilling","Card Making","Handcraft");
@@ -225,8 +221,6 @@ function myFunction(id) {
                       }
                       ?>
                       
-                  </div>
-                  
         
     </div>
  
@@ -234,10 +228,10 @@ function myFunction(id) {
         
         
         <button onclick="myFunction('Demo6')" class="w3-btn-block w3-left-align" >
-    Games
+    Sports and Games
   </button>
     <div id="Demo6" class="w3-accordion-content w3-container">
-        <div class="content">
+       
                                                                      
                                     <?php
                       $skills5 = array("Cricket","Badminton","Tennise","Table Tennise","Hockey","Chess","Kabaddi");
@@ -267,23 +261,22 @@ function myFunction(id) {
                       }
                       ?>
                       
-                  </div>
                   
         
     </div>
  
 </div>
     
-    <div class="superparent" id="right_div" >
+        <div class="superparent" id="right_div" >
           
-          <h2>Interests/Requirements</h2>
+          <h2>Interests/Requirements</h2><label style="font-family: cursive">(maximum 10)</label>
  
 <div class="w3-accordion w3-light-grey">
   <button onclick="myFunction('Demo11')" class="w3-btn-block w3-left-align">
     Lifestyle
   </button>
   <div id="Demo11" class="w3-accordion-content w3-container">
-                  <div class="content">
+                
                       
                       
                       <?php
@@ -314,19 +307,18 @@ function myFunction(id) {
                       ?>
                                                                      
                      
-                  </div>
   </div>
   <button onclick="myFunction('Demo22')" class="w3-btn-block w3-left-align">
     Education
   </button>
   <div id="Demo22" class="w3-accordion-content w3-container">
-    <div class="content">
+    
                           
                       <?php
                       $skills22 = array("General Mathematics","Statestics","Calculus","Chemistry","Physics","Biology","History","Geography","Economics","Civics","Politics","Psychology","Philosophy","Engineering Graphics","Mechanics","C","C++","Java","Python","Web Developement","Mobile App Developement","Embedded System","Microcontroller Programming","Robotics","Compititive Exams","Interviews","Career Guidance","College Selection");
                       $squared22 = array("squared1","squared2","squared3","squared4","squared5","squared6","squared7","squared8","squared9","squared10","squared11","squared12","squared13","squared14","squared15","squared16","squared17","squared18","squared19","squared20","squared21","squared22","squared23","squared24","squared25","squared26","squared27","squared28");
                       $i=0;
-                      foreach($skills1 as $item){
+                      foreach($skills22 as $item){
                       ?>
                                 <div class="squaredOne">
                                     <input class="cbox" type="checkbox" value="None" id="<?php echo $squared22[$i];?>" name="check" />
@@ -351,7 +343,6 @@ function myFunction(id) {
                       ?>
                                                                      
                      
-                    </div>
   </div>
 </div>
 
@@ -359,7 +350,7 @@ function myFunction(id) {
     Languages
   </button>
         <div id="Demo33" class="w3-accordion-content w3-container">
-            <div class="content">
+         
                                                  
                       <?php
                       $skills33 = array("English","Germen","French","Spanish","Hindi","Marathi","Sanskrit","Grammer");
@@ -390,14 +381,12 @@ function myFunction(id) {
                       ?>
                      
                     </div>
-                  </div>
-        
+            
     
      <button onclick="myFunction('Demo44')" class="w3-btn-block w3-left-align">
     Food Fitness and Healthcare
   </button>
     <div id="Demo44" class="w3-accordion-content w3-container">
-        <div class="content">
                                                                      
                                     <?php
                       $skills44 = array("Heart Care","Diabetes Care","Yoga","Diet","Home Remidies","BabyCare","Skin Care","Aerobics","Hair Care","Dressing","Mother care");
@@ -432,14 +421,14 @@ function myFunction(id) {
                   
         
     </div>
-    </div>
+    
  
         
          <button onclick="myFunction('Demo55')" class="w3-btn-block w3-left-align">
     Art
   </button>
     <div id="Demo55" class="w3-accordion-content w3-container">
-        <div class="content">
+      
                                                                      
                                     <?php
                       $skills55 = array("Sketching","Painting","3-D Art","Nail Art","Dance","Singing","Drama","Guitar","Tabla","Synthesiser","Quilling","Card Making","Handcraft");
@@ -473,7 +462,6 @@ function myFunction(id) {
                   </div>
                   
         
-    </div>
   
         
         
@@ -482,7 +470,7 @@ function myFunction(id) {
     Sports and Games
   </button>
     <div id="Demo66" class="w3-accordion-content w3-container">
-        <div class="content">
+     
                                                                      
                                     <?php
                       $skills66 = array("Cricket","Badminton","Tennise","Table Tennise","Hockey","Chess","Kabaddi");
@@ -512,14 +500,29 @@ function myFunction(id) {
                       }
                       ?>
                       
-                  </div>
-                  
+                 
         
     </div>
- 
+            </div>          
+    <footer>
+        <a href="index.php"><button type="submit" id="submitskill" class="btn" style="float:right">OK</button></a>
+  
+        <br>
+       
+        <form>
+            
+            <label style="color: floralwhite; margin:2%; font:cursive "> Couldn't find your skill?? Suggest yours..</label>
+            <input type="text">
+            <button type="submit" id="accept_skill" class="btn" >suggest</button>
+            
+        </form>
+        <a href="index.php"><button type="button" id="skillskip" class="btn btn-blue" style="float:right">Skip>></button></a>
+
         
-         
+</footer>  
         
+   
+    <!--</div>-->  
 </body>
 
 </html>
