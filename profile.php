@@ -75,26 +75,6 @@ session_start();
 <div class="main">
      
 <h2>Update Profile: </h2>
-
-<form id="Register" method="post" name="update">
- <br/>   
- <!--<label class="required">Username :</label>
-<input type="text" name="username" id="reg_username"/>
--->
-<label class="required" for="status">Status</label>
-<input type="text" id="status" name="mno" placeholder="Status"/>
-<br>
-<label class="required" for="mno">Mobile Number:</label>
-<input type="text" name="mno" id="mno" placeholder="0123456789"/>
-<br>
-<label class="required">Enter Password :</label>
-<input type="password" name="password" id="reg_password"/>
-<br>
-<label class="required">Confirm Password :</label>
-<input type="password" name="password" id="reg_confirm_password"/>
-<br>
-<label class="required" for="profStat">Profile Status</label><br> <input type="radio" name="profStat" value="Public"> Public<br> <input type="radio" name="profStat" value="Private"> Private
-
 <form id="Register" method="post" name="update" action="profUpdate.php">
  <br/>   
  <!--<label class="required">Username :</label>

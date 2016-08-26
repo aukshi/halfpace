@@ -212,8 +212,6 @@ session_start();
     
     <?php include('footer.php'); ?>
 
-    <?php include('footer.php'); ?>
-
         
 </div>
 
