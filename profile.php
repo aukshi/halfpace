@@ -151,9 +151,9 @@ session_start();
         <ul id="friendslist" class="clearfix">
             <!--Code for displaying friends-->
             <?php 
-                    $profileQueryRequested="select * from friend_status where eid1='$loggedUser'";
+                    $profileQueryRequested="select * from friend_status where eid1='$loggedUser' AND accepted=1";
                         $profileResultsReq=  mysqli_query($con, $profileQueryRequested);
-                        $profileQueryAccepted="select * from friend_status where eid2='$loggedUser'";
+                        $profileQueryAccepted="select * from friend_status where eid2='$loggedUser' AND accepted=1";
                         $profileResultsAcc=  mysqli_query($con, $profileQueryAccepted);
                         
                     //loop
