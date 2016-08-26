@@ -40,8 +40,10 @@ session_start();
             
             function myUpdate(){
                 $(".container").show();
-                $(".container").style.display="popup";
+                $("document").style.display="none";
+                $(".container").style.display="block";
                 $('.container').css("z-index","3");
+              
             }
             </script>          
             
