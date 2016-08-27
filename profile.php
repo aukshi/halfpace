@@ -89,33 +89,63 @@ $loggedUser=$_SESSION["loggedUser"];
                         ?>
         
         
-        <div id="userphoto"><img src="<?php
-        if ($profilePic == ""){
-            echo "Images//avatar.png";
-        }else{
-        echo $profilePic;}
+         <div id="userphoto"><img src="<?php
+                if ($profilePic == ""){
+                    echo "Images//avatar.png";
+                }else{
+                echo $profilePic;}
                 ?>" alt="<?php
                 if ($profilePic == ""){
                 echo "Avatar";}else
-                echo $profilePic ?>" width="300" height="300"></div>
-        <div class="w3-tooltip" style="float: right; margin-right: 35%;margin-top: -1%;"><image type="button" onclick="myUpload()"  src="Images/edit.png" style="cursor: pointer;"/><span style="position:absolute;left:0;bottom:18px" 
+                echo $profilePic ?>"
+                width="300" height="300" style="cursor:zoom-in;" onclick="document.getElementById('bigpic').style.display='block'">
+             <div id="bigpic" class="w3-modal" onclick="this.style.display='none'" style="margin-top: 5%;">
+                  <span class="w3-closebtn w3-hover-red w3-container w3-padding-16 w3-display-topright">&times;</span>
+                  <div class="w3-modal-content w3-animate-zoom">
+                    <img src="<?php
+                if ($profilePic == ""){
+                    echo "Images//avatar.png";
+                }else{
+                echo $profilePic;}
+                ?>" alt="<?php
+                if ($profilePic == ""){
+                echo "Avatar";}else
+                echo $profilePic ?>" style="width:100%">
+                  </div>
+                </div>
+        </div>
+        <div class="w3-tooltip" style="float: right; margin-right: 36%;margin-top: -2%;"><image type="button" onclick="document.getElementById('picupload').style.display='block'"  src="Images/edit.png" style="cursor: pointer;"/><span style="position:absolute;left:0;bottom:18px" 
 class="w3-text w3-tag">Upload your profile picture</span></div>
-        <div id="picupload" style="display: none; float: right; margin-left: 40%;">
-         <form id="uploadPic" action ="" method="post" enctype="multipart/form-data">
-            <input type="file" name="file" >
-            <input onclick= "myStopUpload()" type="submit" name="upload">
-        </form></div>
+          
+        <div id="picupload" class="w3-modal">
+            <div class="w3-modal-content w3-card-8 w3-animate-bottom" style="margin-top: 10%; width: 50%;">
+                <header class="w3-container w3-teal"> 
+      <span onclick="document.getElementById('picupload').style.display='none'" 
+      class="w3-closebtn">&times;</span>
+      <h2>Upload your profile picture</h2></header>
+                <form id="uploadPic" action ="" method="post" enctype="multipart/form-data">
+                    <div style="margin-left: 40%; margin-top: 1%;">   <input  type="file" name="file" ></div>
+                        
+           <div style="margin-left: 40%; margin-top: 1%; margin-bottom:1%;">  <input  onclick= "myStopUpload()" type="submit" name="upload">
+           </div>
+               </form>
+            <footer class="w3-container w3-teal">
+      <p>Bdw, you really look good ;)</p>
+    </footer>
+            </div></div>
          <!--Lets hope that profile pic has been uploaded. Pray for the same. Seriously, pray!-->
       <div id="profilespecs">
       <nav id="profiletabs">
           
-         <button type="button" id="updateProfile" class="btn btn-blue" onclick="myUpdate()">Update profile</button></a>
+         <button type="button" id="updateProfile" class="w3-btn" onclick="document.getElementById('myPopup').style.display='block'">Update profile</button></a>
 
-    <div class="container w3-dropdown-content" data-role="popup" id="myPopup" style="display: none; margin-top: -33%; margin-left: 30%;" >
-<div class="main">
-     
+    <div class="w3-modal" id="myPopup" style="display: none;" >
+<div class="main w3-modal-content w3-card-8 w3-animate-zoom" style="max-width:600px; margin-left: 40%;">
+    <div class="w3-center">   
 <h2>Update Profile: </h2>
-<form id="Register" method="post" name="update" action="profUpdate.php">
+<span onclick="document.getElementById('myPopup').style.display='none'" class="w3-closebtn w3-hover-red w3-container w3-padding-8 w3-display-topright" title="Close Modal">&times;</span>
+</div> 
+    <form id="Register" class="w3-container" method="post" name="update" action="profUpdate.php">
  <br/>   
  <!--<label class="required">Username :</label>
 <input type="text" name="username" id="reg_username"/>
@@ -135,7 +165,7 @@ class="w3-text w3-tag">Upload your profile picture</span></div>
 <label class="required" for="privacyStat">Privacy Status</label><br> <input type="radio" name="privacyStat" value="Public"> Public<br> <input type="radio" name="privacyStat" value="Private"> Private
             </p>
   
-            <button type="submit" id="submit" class="btn btn-blue" onclick="myFormSubmit()">Update</button>
+            <button type="submit" id="submit" class="w3-btn" onclick="document.getElementById('myPopup').style.display='none'">Update</button>
 </form>
 <!--<span><b >Note : </b> <b class="note"> * </b> fields are compulsory <br/></span>-->
 
