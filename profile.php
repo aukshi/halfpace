@@ -111,7 +111,6 @@ session_start();
           
           <li><a href="#activity">Activity</a></li>
           <li><a href="#friends">Friends</a></li>
-          <li><a href="#settings">Settings</a></li>
         </ul>
       </nav>
           </div>
@@ -178,18 +177,7 @@ session_start();
         </ul>
       </section>
       
-      <section id="settings" class="hidden">
-        <p>Update your account:</p>
-        
-        <p class="setting"><span>Mobile Number <img src="Images/edit.png" alt="*Edit*"></span> 1234567890</p>
-        
-        <p class="setting"><span>Address <img src="Images/edit.png" alt="*Edit*"></span>xyz</p>
-        
-        <p class="setting"><span>Status <img src="Images/edit.png" alt="*Edit*"></span> If you gotta dream then you gotta protect it.</p>
-        
-        <p class="setting"><span>Profile Status <img src="Images/edit.png" alt="*Edit*"></span> Public</p>
-        
-      </section>
+   
       
     </div><!-- @end #content -->
  
