@@ -2,6 +2,7 @@
 <?php
 include 'DB_Con.php';
 session_start();
+$loggedUser=$_SESSION["loggedUser"];
 ?>
 <html lang="en-US">
 <head>
@@ -37,9 +38,18 @@ session_start();
             
             function myUpdate(){
                 $(".container").show();
-                $("document").style.display="none";
                 $(".container").style.display="block";
                 $('.container').css("z-index","3");
+              
+            }
+            function myUpload(){
+                $("#picupload").toggle();
+                $("#picupload").style.display="block";
+              
+            }
+            function myStopUpload(){
+                $("#picupload").hide();
+                $("#picupload").style.display="none";
               
             }
             </script>          
@@ -56,16 +66,46 @@ session_start();
   <div id="w" style=" width: 65%; margin-left:2%;">
     <div id="content" class="clearfix">
         <h1 style="font-family: Comic Sans;">Profile</h1>
+        
+        
+        <!--For uploading a profile picture-->
+        <?php
+        if(isset($_POST['upload']) && $_FILES['file']['tmp_name']!=NULL){
+            
+            move_uploaded_file($_FILES['file']['tmp_name'], "User_Images/".$_FILES['file']['name']);
+              $uploadQuery="UPDATE profile SET picture= 'User_Images/".$_FILES['file']['name']."' WHERE email_id='$loggedUser'";
+               mysqli_query($con,$uploadQuery);
+                
+        }
+        ?>
         <?php
         //Code for getting the profile image  
-            $loggedUser=$_SESSION["loggedUser"];
+            
             $usersQuery="select * from profile where email_id='$loggedUser'";
             $profileResults=  mysqli_query($con, $usersQuery);
             $row = mysqli_fetch_array($profileResults);
             $profilePic=$row["picture"];
                         //////////////////////////////
                         ?>
-        <div id="userphoto"><img src="<?php echo $profilePic ?>" alt="<?php echo $profilePic ?>" width="300" height="300"></div>
+        
+        
+        <div id="userphoto"><img src="<?php
+        if ($profilePic == ""){
+            echo "Images//avatar.png";
+        }else{
+        echo $profilePic;}
+                ?>" alt="<?php
+                if ($profilePic == ""){
+                echo "Avatar";}else
+                echo $profilePic ?>" width="300" height="300"></div>
+        <div class="w3-tooltip" style="float: right; margin-right: 35%;margin-top: -1%;"><image type="button" onclick="myUpload()"  src="Images/edit.png" style="cursor: pointer;"/><span style="position:absolute;left:0;bottom:18px" 
+class="w3-text w3-tag">Upload your profile picture</span></div>
+        <div id="picupload" style="display: none; float: right; margin-left: 40%;">
+         <form id="uploadPic" action ="" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" >
+            <input onclick= "myStopUpload()" type="submit" name="upload">
+        </form></div>
+         <!--Lets hope that profile pic has been uploaded. Pray for the same. Seriously, pray!-->
       <div id="profilespecs">
       <nav id="profiletabs">
           

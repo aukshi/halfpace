@@ -25,7 +25,7 @@ foreach ($results as $user){
                         {
                             $_SESSION["loggedUser"] = $username;
                             $_SESSION["loggedpUserPassword"] = $password;
-                            header('Location: index.php');
+                            header('Location: home.php');
                         }
                         else
                         {
