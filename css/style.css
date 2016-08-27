@@ -5,6 +5,33 @@
 	
 	background:url(../images/bgimg.jpg) repeat;  
 }*/
+
+
+.right_content{
+    height: 100%;
+    width: 100%;
+    background:white;
+    margin-top: 20px;
+    margin-bottom: 20px
+    
+}
+.right_content_child{
+    margin: 4px;
+    margin-top: 5px;
+    padding: 20px;
+    background:#F5B7B1;
+    border: 2px;
+    border: #000
+}
+.btnr{
+    background:#006;
+    color: white;
+    padding: 2px;
+    float: right;
+    margin-right: 10px
+    
+}
+
 h2{
 /*background-color: #FEFFED;
 padding: 30px 35px;

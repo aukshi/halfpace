@@ -247,8 +247,7 @@ class="w3-text w3-tag">Upload your profile picture</span></div>
 <!--Footer-->
     <?php include('footer.php'); ?>
     <!--Footer ends here-->
-    <!--Footer ends here-->
-
+   
   </div><!-- @end #superWrapper -->
   
 <script type="text/javascript">
