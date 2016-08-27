@@ -82,7 +82,7 @@ function connect(mysqli $con) {
     mysqli_query($con,$activityQuery);
     ////////////////////////////////
     echo 'Successful';
-    //header('Location: ' . $_SERVER["HTTP_REFERER"] );
+    header('Location: ' . $_SERVER["HTTP_REFERER"] );
 exit;
 }
 ?>
