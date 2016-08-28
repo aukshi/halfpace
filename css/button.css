@@ -7,7 +7,7 @@ and open the template in the editor.
     Created on : Aug 8, 2016, 11:33:55 AM
     Author     : User
 */
-
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .hot-container p { margin-top: 10px; }
 a { text-decoration: none; margin: 0 10px; }
 

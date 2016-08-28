@@ -6,6 +6,7 @@ html {margin:0;padding:0;border:0;}body, div, span, object, iframe, h1, h2, h3, 
 
 /* General Styles
 ----------------------------------------------------------------------------------------------------*/
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 html {
 	min-height: 100%;
 }
