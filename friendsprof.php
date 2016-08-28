@@ -83,7 +83,7 @@ session_start();
           <?php 
                       $flist=$_SESSION["flist"];
                       $rlist=$_SESSION["rlist"];
-                        if(!in_array($currentUser,$flist)) {        
+                        if(!in_array($currentUser,$flist) && $currentUser!=$loggedUser) {        
                             if(in_array($currentUser, $rlist)){?>
                         <a href=""><button id="frndrqSent" class="w3-btn " style="float: right" >Request already sent </button></a>
                         <?php 

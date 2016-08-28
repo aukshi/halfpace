@@ -20,7 +20,7 @@ and open the template in the editor.
 
 			<div class="footer-left">
 
-				<h3>Halfpace<span>...Coz everything can't be learned on the Internet!</span></h3>
+				<h3>Halfpace<span>...Coz the Internet is not always enough!</span></h3>
 
 				<p class="footer-links">
 					<a href="#">About us</a>
