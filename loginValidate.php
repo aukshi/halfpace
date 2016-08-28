@@ -25,6 +25,7 @@ foreach ($results as $user){
                         {
                             $_SESSION["loggedUser"] = $username;
                             $_SESSION["loggedpUserPassword"] = $password;
+                            $_SESSION["logged_in"]=true;
                             header('Location: home.php');
                         }
                         else

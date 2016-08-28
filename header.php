@@ -4,7 +4,12 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-
+<?php
+if($_SESSION['logged_in']!=true)
+            {
+                header( "refresh:0; url=login.php" );
+            }
+?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -25,6 +30,7 @@ and open the template in the editor.
             <div id="logo">Logo</div>
             <div id="searcharea" class="header1"><input placeholder="search" type="text" id="searchbox"/></div>
             <?php
+            
             $loggedUser=$_SESSION["loggedUser"];
             $usersQuery="select * from profile where email_id='$loggedUser'";
             $profileResults=  mysqli_query($con, $usersQuery);
