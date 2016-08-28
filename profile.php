@@ -298,6 +298,7 @@ class="w3-text w3-tag">Upload your profile picture</span></div>
                 }
                 ?>
             </div>
+            <input type="button" class="w3-btn" name="skillUpdate" value="Update Your Skills">
       </section>
       
         <section id="Requirements" class="hidden" >
@@ -317,7 +318,7 @@ class="w3-text w3-tag">Upload your profile picture</span></div>
                 }
                 ?>
             </div>
-        
+        <input type="button" class="w3-btn" name="reqUpdate" value="Update Your Requirements">
       </section>
       
     </div><!-- @end #content2 -->
