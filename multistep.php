@@ -255,21 +255,21 @@ color: white;
 	<fieldset>
 		<h2 class="fs-title">Create your account</h2>
 		<h3 class="fs-subtitle">Account details!!</h3>
-		<input type="text" name="email" placeholder="Email" />
-		<input type="password" name="pass" placeholder="Password" />
-		<input type="password" name="cpass" placeholder="Confirm Password" />
+                <input type="text" name="email" placeholder="Email" maxlength="50"/>
+                <input type="password" name="pass" placeholder="Password" maxlength="50"/>
+                <input type="password" name="cpass" placeholder="Confirm Password" maxlength="50"/>
 		<input type="button" name="next1" class="next action-button" value="Next" />
 	</fieldset>
         
                 
         	<fieldset>
                     <h2 class="fs-title">Social Profiles</h2>
-		<h3 class="fs-subtitle">Address details!!</h3>
+		<h3 class="fs-subtitle">Profile  Details!!</h3>
                     
 		
-                <input type="text" name="fname" placeholder="First Name" />
-		<input type="text" name="lname" placeholder="Last Name" />
-		<input type="text" name="phone" placeholder="Phone" />
+                <input type="text" name="fname" placeholder="First Name" maxlength="25"/>
+                <input type="text" name="lname" placeholder="Last Name" maxlength="25"/>
+                <input type="text" name="phone" placeholder="Phone" maxlength="10"/>
                 Upload picture
 		 <input type="file" name="pic" accept="image/*" />
                  
@@ -279,7 +279,7 @@ color: white;
 	</fieldset>
         
         <fieldset>
-		<h2 class="fs-title">Profile  Details!!</h2>
+		<h2 class="fs-title">Address details!!</h2>
                 
                 
                 
@@ -313,7 +313,7 @@ color: white;
                        
                         
                
-		<input type="text" name="street" placeholder="Street Address/Area/Sector" />
+                        <input type="text" name="street" placeholder="Street Address/Area/Sector" maxlength="100"/>
                    
 		<input type="button" name="previous" class="previous action-button" value="Previous" />
                  <input type="submit" class="action-button" value="Submit" />
