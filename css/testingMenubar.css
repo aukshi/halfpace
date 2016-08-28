@@ -8,6 +8,34 @@ and open the template in the editor.
     Author     : Abhishek Kshirsagar
 */
 
+.w-color1{
+   background:#98F5FF;
+   border-bottom-style:groove;
+   margin: 1px
+}
+.w-color2{
+   background:#FFFF7E;
+   border-bottom-style:groove;
+   margin: 1px
+}
+.w-color3{
+   background:#E6E6FA;
+   border-bottom-style:groove;
+   margin: 1px
+}
+.notification_buttons{
+   background-color:#0016b0;
+   color: floralwhite;
+   margin:-12px;
+   margin-right: 20px;
+ float:right;
+   padding: 4px;
+   font-family: cursive  
+}
+
+
+
+
 section, head, aside, hgroup,body,header{
     display: box;
 }
@@ -162,7 +190,8 @@ border-bottom: 1px solid #dddddd;
 #notificationsBody,#friendBody
 {
 padding: 33px 0px 0px 0px !important;
-min-height:300px;
+overflow-y:auto;
+height: 200px;
 }
 #notificationFooter,#friendFooter
 {

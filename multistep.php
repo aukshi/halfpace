@@ -94,9 +94,17 @@ animating = false;
 easing: 'easeInOutBack'
 });
 });
-
-$(".submit").click(function(){
-return false;
+//$('.submit action-button').click(function(e) {
+//    e.preventDefault(); // prevent the link's default behaviour
+//    $('#try.php').submit(); // trigget the submit handler
+//});
+////
+//$( "#try.php" ).submit(function(){
+//     event.preventDefault();
+////}
+$(".submit").click(function(a){
+//return false;
+   a.preventDefault();
 });
 
 });
@@ -308,8 +316,7 @@ color: white;
 		<input type="text" name="street" placeholder="Street Address/Area/Sector" />
                    
 		<input type="button" name="previous" class="previous action-button" value="Previous" />
-                <input type="submit" name="submit" class="submit action-button" value="Submit" />
-                
+                <a href="try.php"> <input type="button" class="action-button" value="Submit" /></a>
 		 </fieldset>
         
 	

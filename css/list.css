@@ -8,27 +8,59 @@ and open the template in the editor.
 <<<<<<< HEAD
     Author     : Abhishek Kshirsagar
 */
-
+.grandparent{
+    
+    width: 100%;
+    height: 600px;
+    backgound: blue;
+    
+}
 
 .superparent{
-    width: 45%;
-    height: 900px;
+    width: 47%;
+    height: 490px;
     float:left; 
     background:beige;
     margin:10px;
     padding:10px;
     margin-left: 20px;
-    overflow-x: hidden;
+    overflow-y:auto;
 }
+
+
+.btn{
+background-color: dodgerblue; 
+color: white;
+/*float: right;*/
+margin-right: 2%;
+margin-top: 15px
+}
+
+
+
+footer {
+clear:both;
+bottom:0px;
+width: 98%;
+height: 130px;
+background: #32127A;
+margin: auto;
+border-radius: 10px;
+box-shadow: 5px 5px 10px #202020;
+float: bottom;
+}
+
 
 .squaredOne {
 	width:auto;
 	height: 28px;
 	margin: 5px;  
         font-family: cursive; 
-        background: wheat; 
+        background:grey; 
+        color: snow;
         float: left;
         border-radius: 5px;
+        padding: 4px;
         
 }
 
@@ -54,7 +86,7 @@ and open the template in the editor.
 .content {
 display: box;
 padding: 5px 10px;
-background-color:#fafafa;
+background-color: whitesmoke;
 }
 p { padding: 5px 0; }
 

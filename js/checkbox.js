@@ -14,17 +14,17 @@
      //       );
 $(document).ready(function(){
 $('.drop').removeClass("squaredOne");
-$('.cbox').change(function(){
-if(this.checked){
+$('.cbox').click(function(){
+//if(this.checked){
 $('.drop').hide();
-$(this).next().next().show();
+$(this).next().show();
 $('.drop').style.display="inline-block";
 $('.drop').css("z-index","3");
-}
-else{
-$('.drop').hide();
-$('.drop').css("z-index","0");
-}
+//}
+//else{
+//$('.drop').hide();
+//$('.drop').css("z-index","0");
+//}
 });});
 
 

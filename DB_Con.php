@@ -6,7 +6,6 @@ and open the template in the editor.
 -->
 <?php
 $con=mysqli_connect("localhost", "root", "", "halfpace");
-
 if(mysqli_connect_errno()){
     echo 'Failed to connect '.  mysqli_errorno();
 }

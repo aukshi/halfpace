@@ -82,7 +82,7 @@ and open the template in the editor.
                 <h2 class="fs-subtitle">Let's begin</h2>
 		<input type="text" id="username" name="username" placeholder="Email" onclick="this.value = ''" />
 		<input type="password"  id="password" name="password" placeholder="Password" onclick="this.value = ''"/>
-		 <button type="submit" id="submit" class="action-button">Log In</button>
+                <button type="submit" id="submit" class="action-button" style="margin-left: 30%;">Log In</button>
                 <br>
                 <div id="links_left" style="margin-left:21%;">
 

@@ -47,13 +47,29 @@ and open the template in the editor.
                 <div id="notificationContainer">
                 <div id="notificationTitle">Notifications</div>
                 <div id="notificationsBody" class="notifications">
-                    <div class="w3-card w3-yellow">
-                    <p>w3-card</p>
-                    </div>
+                     <div class="w3-card w-color1">
+                       <p> <p>xyz accepted your request for abc </p>
+                       <p>  <a href="header.php" title="Please do not share this contact with anybody else"><button id="vcontact" class="notification_buttons"> View contact</button></a>
+                       </p>   </p>
+                   </div>
+                   
+                   <div class="w3-card w-color2 ">
+                       
+                       <p>
+                       <p>  xyz sent you the request for abc</p>
+                       <p>  <button id="vcontact" class="notification_buttons"> View</button></p>
+                       </p></div>
+                 
+                   <div class="w3-card w-color3">
+                       <p> <p>xyz  endorsed you for abc</p>
+                       <p><button id="vcontact" class="notification_buttons"> View</button></p>
+                       </p>
+                   </div>
+             
                 </div>
                 <div id="notificationFooter"><a href="notification.php">See All</a></div>
                 </div>
-
+                
             </li>
             
             <li id="friend_li">
@@ -82,7 +98,7 @@ and open the template in the editor.
 
             </li>
             
-            
+            <li><a href="home.php">Home</a></li>
             </ul>
              </div>
           <!-- Menubar ends here-->
