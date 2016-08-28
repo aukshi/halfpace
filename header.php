@@ -18,14 +18,6 @@ and open the template in the editor.
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
             <script type="text/javascript" src="js/notifications.js"></script>
             <link rel="stylesheet" href="css/testingMenubar.css">
-            <script>
-                                $(".vcontact").mouseover(function() {
-                                    $(this).children(".irritatingpopup").show();
-                              }).mouseout(function() {
-                           $(this).children(".irritatingpopup").hide();
-                     });
-</script>
-           
     </head>
     <body>
         <!-- Menubar begins here-->
@@ -76,17 +68,6 @@ and open the template in the editor.
                 </div>
                 <div id="notificationFooter"><a href="notification.php">See All</a></div>
                 </div>
-<!--
-                <script>
-                                $(".vcontact").mouseover(function() {
-                                    $(this).children(".irritatingpopup").show();
-                              }).mouseout(function() {
-                           $(this).children(".irritatingpopup").hide();
-                     });
-</script>
-                -->
-                
-                
                 
             </li>
             
