@@ -72,9 +72,9 @@ $loggedUser=$_SESSION["loggedUser"];
         <?php
         if(isset($_POST['upload']) && $_FILES['file']['tmp_name']!=NULL){
             
-            move_uploaded_file($_FILES['file']['tmp_name'], "User_Images/".$_FILES['file']['name']);
-              $uploadQuery="UPDATE profile SET picture= 'User_Images/".$_FILES['file']['name']."' WHERE email_id='$loggedUser'";
-               mysqli_query($con,$uploadQuery);
+        move_uploaded_file($_FILES['file']['tmp_name'], "User_Images/".$_FILES['file']['name']);
+        $uploadQuery="UPDATE profile SET picture= 'User_Images/".$_FILES['file']['name']."' WHERE email_id='$loggedUser'";
+        mysqli_query($con,$uploadQuery);
                 
         }
         
@@ -262,6 +262,15 @@ class="w3-text w3-tag">Upload your profile picture</span></div>
     </div><!-- @end #content -->
  
   </div><!-- @end #w -->
+  <?php
+  $skillsQuery="select * from users_skills where email='$loggedUser'";
+            $results=  mysqli_query($con, $skillsQuery);
+            $skillRow = mysqli_fetch_array($results);
+         $skillArray = ["email","skill1","skill2","skill3","skill4","skill5","skill6","skill7","skill8","skill9","skill10","skill11","skill12","skill13","skill14","skill15",
+             "req1","req2","req3","req4","req5","req6","req7","req8","req9","req10",""];
+         
+         
+  ?>
    <div id="w2" style=" width: 30%; float:right; margin-left:2%;">
     <div id="content2" class="clearfix">
         <h1 style="font-family: Comic Sans;">Update</h1>
@@ -272,12 +281,41 @@ class="w3-text w3-tag">Upload your profile picture</span></div>
         </ul>
       </nav>
       
-        <section id="Skills" class="hidden">
-       <p>This is skills section:</p>
+        <section id="Skills" >
+            <div>
+                <?php
+                $i=0;
+                
+                while(($skillRow[$skillArray[$i]])){
+                    $i++;
+                    ?>
+                <div class="w3-center w3-card-8 w3-cyan"><font style="font-family: verdana; font-size: 20px; font-weight: bold;"><?php echo $skillRow[$skillArray[$i]] ?></font></div><br>
+                        <?php
+                        if ($i===15){
+                            break;
+                        }
+                }
+                ?>
+            </div>
       </section>
       
         <section id="Requirements" class="hidden" >
-        <p>This is requirements section:</p>
+            <div class="w3-container">
+                <?php
+                $i=16;
+                
+                while(($skillRow[$skillArray[$i]])){
+                  
+                    ?>
+                <div class="w3-center w3-card-8 w3-aqua"><font style="font-family: verdana; font-size: 20px; font-weight: bold;"><?php echo $skillRow[$skillArray[$i]] ?></font></div><br>
+                        <?php
+                  $i++;
+                  if ($i===26){
+                            break;
+                        }
+                }
+                ?>
+            </div>
         
       </section>
       
