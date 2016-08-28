@@ -103,7 +103,8 @@ $loggedUser=$_SESSION["loggedUser"];
                 echo $profilePic;}
                 ?>" alt="<?php
                 if ($profilePic == ""){
-                echo "Avatar";}else
+                echo "Avatar";}
+                else
                 echo $profilePic ?>"
                 width="300" height="300" style="cursor:zoom-in;" onclick="document.getElementById('bigpic').style.display='block'">
              <div id="bigpic" class="w3-modal" onclick="this.style.display='none'" style="margin-top: 5%;">

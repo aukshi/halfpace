@@ -46,6 +46,27 @@ and open the template in the editor.
 
                 <div id="notificationContainer">
                 <div id="notificationTitle">Notifications</div>
+<<<<<<< HEAD
+                <div id="notificationsBody" class="notifications" >
+                    <div class="w3-card w-color1">
+                        <p> <p>xyz accepted your request for abc </p>
+                        <p>  <a href="header.php" title="Please do not share this contact with anybody else"><button id="vcontact" class="notification_buttons"> View contact</button></a>
+                        </p>   </p>
+                    </div>
+                    
+                    <div class="w3-card w-color2 ">
+                        
+                        <p>
+                        <p>  xyz sent you the request for abc</p>
+                        <p>  <button id="vcontact" class="notification_buttons"> View</button></p>
+                        </p></div>
+                  
+                    <div class="w3-card w-color3">
+                        <p> <p>xyz  endorsed you for abc</p>
+                        <p><button id="vcontact" class="notification_buttons"> View</button></p>
+                        </p>
+                    </div>
+=======
                 <div id="notificationsBody" class="notifications">
                      <div class="w3-card w-color1">
                        <p> <p>xyz accepted your request for abc </p>
@@ -66,6 +87,7 @@ and open the template in the editor.
                        </p>
                    </div>
              
+>>>>>>> origin/master
                 </div>
                 <div id="notificationFooter"><a href="notification.php">See All</a></div>
                 </div>
