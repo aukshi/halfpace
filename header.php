@@ -18,6 +18,14 @@ and open the template in the editor.
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
             <script type="text/javascript" src="js/notifications.js"></script>
             <link rel="stylesheet" href="css/testingMenubar.css">
+            <script>
+                                $(".vcontact").mouseover(function() {
+                                    $(this).children(".irritatingpopup").show();
+                              }).mouseout(function() {
+                           $(this).children(".irritatingpopup").hide();
+                     });
+</script>
+           
     </head>
     <body>
         <!-- Menubar begins here-->
@@ -46,14 +54,40 @@ and open the template in the editor.
 
                 <div id="notificationContainer">
                 <div id="notificationTitle">Notifications</div>
-                <div id="notificationsBody" class="notifications">
-                    <div class="w3-card w3-yellow">
-                    <p>w3-card</p>
+                <div id="notificationsBody" class="notifications" >
+                    <div class="w3-card w-color1">
+                        <p> <p>xyz accepted your request for abc </p>
+                        <p>  <a href="header.php" title="Please do not share this contact with anybody else"><button id="vcontact" class="notification_buttons"> View contact</button></a>
+                        </p>   </p>
+                    </div>
+                    
+                    <div class="w3-card w-color2 ">
+                        
+                        <p>
+                        <p>  xyz sent you the request for abc</p>
+                        <p>  <button id="vcontact" class="notification_buttons"> View</button></p>
+                        </p></div>
+                  
+                    <div class="w3-card w-color3">
+                        <p> <p>xyz  endorsed you for abc</p>
+                        <p><button id="vcontact" class="notification_buttons"> View</button></p>
+                        </p>
                     </div>
                 </div>
                 <div id="notificationFooter"><a href="notification.php">See All</a></div>
                 </div>
-
+<!--
+                <script>
+                                $(".vcontact").mouseover(function() {
+                                    $(this).children(".irritatingpopup").show();
+                              }).mouseout(function() {
+                           $(this).children(".irritatingpopup").hide();
+                     });
+</script>
+                -->
+                
+                
+                
             </li>
             
             <li id="friend_li">
