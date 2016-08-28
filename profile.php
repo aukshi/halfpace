@@ -77,14 +77,21 @@ $loggedUser=$_SESSION["loggedUser"];
                mysqli_query($con,$uploadQuery);
                 
         }
+        
         ?>
         <?php
         //Code for getting the profile image  
             
-            $usersQuery="select * from profile where email_id='$loggedUser'";
+           
+           
+            if(isset($_POST['remove'])){
+            $uploadQuery="UPDATE profile SET picture= 'User_Images/avatar.png' WHERE email_id='$loggedUser'";
+               mysqli_query($con,$uploadQuery);
+        }
+         $usersQuery="select * from profile where email_id='$loggedUser'";
             $profileResults=  mysqli_query($con, $usersQuery);
             $row = mysqli_fetch_array($profileResults);
-            $profilePic=$row["picture"];
+         $profilePic=$row["picture"];
                         //////////////////////////////
                         ?>
         
@@ -109,7 +116,8 @@ $loggedUser=$_SESSION["loggedUser"];
                 echo $profilePic;}
                 ?>" alt="<?php
                 if ($profilePic == ""){
-                echo "Avatar";}else
+                echo "Avatar";}
+                else
                 echo $profilePic ?>" style="width:100%">
                   </div>
                 </div>
@@ -124,9 +132,12 @@ class="w3-text w3-tag">Upload your profile picture</span></div>
       class="w3-closebtn">&times;</span>
       <h2>Upload your profile picture</h2></header>
                 <form id="uploadPic" action ="" method="post" enctype="multipart/form-data">
+                    <div style="margin-left: 40%; margin-top: 1%; margin-bottom:1%;">  <input  onclick= "myStopUpload()" type="submit" value="remove" name="remove profile picture">
+           </div>
+                    
                     <div style="margin-left: 40%; margin-top: 1%;">   <input  type="file" name="file" ></div>
                         
-           <div style="margin-left: 40%; margin-top: 1%; margin-bottom:1%;">  <input  onclick= "myStopUpload()" type="submit" name="upload">
+           <div style="margin-left: 40%; margin-top: 1%; margin-bottom:1%;">  <input  onclick= "myStopUpload()" type="submit" name="upload" >
            </div>
                </form>
             <footer class="w3-container w3-teal">
@@ -163,8 +174,7 @@ class="w3-text w3-tag">Upload your profile picture</span></div>
 <input type="password" name="password" id="reg_confirm_password"/>
 <br>
 <label class="required" for="privacyStat">Privacy Status</label><br> <input type="radio" name="privacyStat" value="Public"> Public<br> <input type="radio" name="privacyStat" value="Private"> Private
-            </p>
-  
+           
             <button type="submit" id="submit" class="w3-btn" onclick="document.getElementById('myPopup').style.display='none'">Update</button>
 </form>
 <!--<span><b >Note : </b> <b class="note"> * </b> fields are compulsory <br/></span>-->
