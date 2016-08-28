@@ -248,7 +248,6 @@ and open the template in the editor.
                             
                             <!--Start Of 2nd column FR-->
                             <?php 
-                     $myArr1=array();
                       
                         $suggestFriendsQuery="select * from friend_status where eid2='$loggedUser'";
                         $Results=  mysqli_query($con, $suggestFriendsQuery);
@@ -262,9 +261,9 @@ and open the template in the editor.
                                 foreach ($Results as $suggestions)//Fiends of the value in 2nd column
                                 {
                                     
-                                    if($suggestions["eid2"]!=$loggedUser && $suggestions["eid2"]!=$loggedUser && !in_array($suggestions["eid2"], $myArr1) && !in_array($suggestions["eid2"], $flist) && !in_array($suggestions["eid2"], $rlist))
+                                    if($suggestions["eid2"]!=$loggedUser && $suggestions["eid2"]!=$loggedUser && !in_array($suggestions["eid2"], $myArr) && !in_array($suggestions["eid2"], $flist) && !in_array($suggestions["eid2"], $rlist))
                                     {
-                                        $myArr1[] =$suggestions["eid2"];
+                                        $myArr[] =$suggestions["eid2"];
                       ?>
                             <div id="knowthemsub2" style="width:25%;">
                 <div class="w3-card-4" style="width:75%; margin-left: 2%; padding-left: 2%;">
@@ -303,9 +302,9 @@ and open the template in the editor.
                                 foreach ($Results as $suggestions)//Fiends of the value in 2nd column
                                 {
                                     
-                                    if($suggestions["eid1"]!=$loggedUser && $suggestions["eid2"]!=$loggedUser && !in_array($suggestions["eid1"], $myArr1) && !in_array($suggestions["eid1"], $flist) && !in_array($suggestions["eid1"], $rlist))
+                                    if($suggestions["eid1"]!=$loggedUser && $suggestions["eid2"]!=$loggedUser && !in_array($suggestions["eid1"], $myArr) && !in_array($suggestions["eid1"], $flist) && !in_array($suggestions["eid1"], $rlist))
                                     {
-                                        $myArr1[] =$suggestions["eid1"];
+                                        $myArr[] =$suggestions["eid1"];
                       ?>
                             <div id="knowthemsub3" style="width: 25%;">
                 <div class="w3-card-4" style="width:75%; margin-left: 2%; padding-left: 2%;">
