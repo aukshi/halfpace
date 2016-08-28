@@ -174,7 +174,7 @@ session_start();
                         //////////////////////////////
                             ?>
                     <br>
-                    <div class='heading' id='hide'>
+                    <div class='heading1' id='hide'>
                              <label class='name'></label>
         
                          <label class='hardcontent'> <?php echo $userAccepted; ?> Has posted...</label>
