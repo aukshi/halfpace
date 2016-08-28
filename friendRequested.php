@@ -173,14 +173,12 @@ and open the template in the editor.
                                         $myArr[] = $suggestions["eid2"];
                                         
                       ?>
-                 <div id="knowthemsub" style="display: block; width:20%;" >
-                <div class="w3-card-8" >
+                  <div class="w3-card-8 w3-white" style="width:17%; height:180px; margin: 2%; padding: 2%; float: left;">
 
-                <header class="w3-light-grey">
-                  <h3 ><?php echo $suggestions["eid2"] ?></h3>
-                </header>
-
-                <div class="w3-container">
+                         <div class="w3-container w3-center" style="width: 100%; height: 105%; margin:0; padding-left: 2%; margin-top: -12%;">
+<!--                 <div id="knowthemsub" style="display: block; width:20%;" >
+                <div class="w3-card-8" >-->
+<div class="w3-container">
               
                   <?php
                     $suggestedFriend=$suggestions["eid2"];
@@ -190,10 +188,15 @@ and open the template in the editor.
                     $profilePic=$row1["picture"];
             ?>
                   <img src="<?php echo $profilePic ?>" alt="Avatar" class="w3-left imageCircle" style="width:35%">
-                  <p>CEO at Mighty Schools. Marketing and Advertising. Seeking a new job and new opportunities.</p><br>
+                 
                 </div>
+               
+                  <h3 ><?php echo $suggestions["eid2"] ?></h3>
+                
 
-                    <a href="friendsStatus.php?connect=<?php echo $suggestedFriend ?>"><button class="w3-btn-block w3-dark-grey">+ Connect</button></a>
+                
+
+                    <a href="friendsStatus.php?connect=<?php echo $suggestedFriend ?>"><button class="w3-btn-block w3-blue-grey">+ Connect</button></a>
                         
 
 </div>
@@ -212,14 +215,11 @@ and open the template in the editor.
                                         $myArr[] = $suggestions["eid1"];
                                         
                       ?>
-                 <div id="knowthemsub1" style="width:25%;">
-                <div class="w3-card-4" style="width:75%;">
+                <div class="w3-card-8 w3-white" style="width:17%; height:180px; margin: 2%; padding: 2%; float: left;">
 
-                <header class="w3-container w3-light-grey">
-                  <h3><?php echo $suggestions["eid1"] ?></h3>
-                </header>
-
-                <div class="w3-container">
+                         <div class="w3-container w3-center" style="width: 100%; height: 105%; margin:0; padding-left: 2%; margin-top: -12%;">
+           
+ <div class="w3-container">
                   <hr>
                   <?php
                     $suggestedFriend=$suggestions["eid1"];
@@ -229,10 +229,15 @@ and open the template in the editor.
                     $profilePic=$row1["picture"];
             ?>
                   <img src="<?php echo $profilePic ?>" alt="Avatar" class="w3-left imageCircle w3-margin-right" style="width:40%">
-                  <p>CEO at Mighty Schools. Marketing and Advertising. Seeking a new job and new opportunities.</p><br>
+                  <br>
                 </div>
+                
+                  <h3><?php echo $suggestions["eid1"] ?></h3>
+                
 
-                    <a href="friendsStatus.php?connect=<?php echo $suggestedFriend ?>"><button class="w3-btn-block w3-dark-grey">+ Connect</button></a>
+               
+
+                    <a href="friendsStatus.php?connect=<?php echo $suggestedFriend ?>"><button class="w3-btn-block w3-blue-grey">+ Connect</button></a>
                         
 
 </div>
@@ -265,15 +270,12 @@ and open the template in the editor.
                                     {
                                         $myArr[] =$suggestions["eid2"];
                       ?>
-                            <div id="knowthemsub2" style="width:25%;">
-                <div class="w3-card-4" style="width:75%; margin-left: 2%; padding-left: 2%;">
+                        <div class="w3-card-8 w3-white" style="width:17%; height:180px; margin: 2%; padding: 2%; float: left;">
 
-                <header class="w3-container w3-light-grey">
-                  <h3><?php echo $suggestions["eid2"] ?></h3>
-                </header>
-
-                <div class="w3-container">
-                  <hr>
+                        <div class="w3-container w3-center" style="width: 100%; height: 105%; margin:0; padding-left: 2%; margin-top: -12%;">
+           
+<div class="w3-container">
+                 
                   
                   <?php
                   
@@ -284,10 +286,15 @@ and open the template in the editor.
                     $profilePic=$row1["picture"];
             ?>
                   <img src="<?php echo $profilePic ?>" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:40%">
-                  <p>CEO at Mighty Schools. Marketing and Advertising. Seeking a new job and new opportunities.</p><br>
+                  
                 </div>
+               
+                  <h3><?php echo $suggestions["eid2"] ?></h3>
+               
 
-                    <a href="friendsStatus.php?connect=<?php echo $suggestedFriend ?>"><button class="w3-btn-block w3-dark-grey">+ Connect</button></a>
+                
+
+                    <a href="friendsStatus.php?connect=<?php echo $suggestedFriend ?>"><button class="w3-btn-block w3-blue-grey">+ Connect</button></a>
                         
 
 </div>
@@ -306,15 +313,12 @@ and open the template in the editor.
                                     {
                                         $myArr[] =$suggestions["eid1"];
                       ?>
-                            <div id="knowthemsub3" style="width: 25%;">
-                <div class="w3-card-4" style="width:75%; margin-left: 2%; padding-left: 2%;">
+                        <div class="w3-card-8 w3-white" style="width:17%; height:180px; margin: 2%; padding: 2%; float: left;">
 
-                <header class="w3-container w3-light-grey">
-                  <h3><?php echo $suggestions["eid1"] ?></h3>
-                </header>
+                        <div class="w3-container w3-center" style="width: 100%; height: 100%; margin:0; padding-left: 2%; margin-top: -12%;">
 
-                <div class="w3-container">
-                  <hr>
+              <div class="w3-container">
+              
                   
                   <?php
                   
@@ -324,9 +328,14 @@ and open the template in the editor.
                     $row1 = mysqli_fetch_array($profileResults);
                     $profilePic=$row1["picture"];
             ?>
-                  <img src="<?php echo $profilePic ?>" alt="Avatar" class="w3-left imageCircle w3-margin-right" style="width:40%">
-                  <p>CEO at Mighty Schools. Marketing and Advertising. Seeking a new job and new opportunities.</p><br>
+                  <img src="<?php echo $profilePic ?>" alt="Avatar" class="w3-left imageCircle w3-margin-right" style="width:40%; float:left;">
+                  
                 </div>
+                            
+                            <h3 style="float: right; margin-top: -20%;"><?php echo $suggestions["eid1"] ?></h3>
+             
+
+                
 
                     <a href="friendsStatus.php?connect=<?php echo $suggestedFriend ?>"><button class="w3-btn-block w3-dark-grey">+ Connect</button></a>
                         
