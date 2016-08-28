@@ -243,7 +243,7 @@ color: white;
     </head>
     <body>
         <!-- multistep form -->
-<form id="msform">
+        <form id="msform" method="post" action="RegisterUser.php">
 	<!-- progressbar -->
 	<ul id="progressbar">
 		<li class="active">Account Setup</li>
@@ -261,7 +261,7 @@ color: white;
 		<input type="button" name="next1" class="next action-button" value="Next" />
 	</fieldset>
         
-       
+                
         	<fieldset>
                     <h2 class="fs-title">Social Profiles</h2>
 		<h3 class="fs-subtitle">Address details!!</h3>
@@ -272,7 +272,7 @@ color: white;
 		<input type="text" name="phone" placeholder="Phone" />
                 Upload picture
 		 <input type="file" name="pic" accept="image/*" />
-                
+                 
 		
 		<input type="button" name="previous" class="previous action-button" value="Previous" />
 		<input type="button" name="next" class="next action-button" value="Next" />
@@ -316,7 +316,7 @@ color: white;
 		<input type="text" name="street" placeholder="Street Address/Area/Sector" />
                    
 		<input type="button" name="previous" class="previous action-button" value="Previous" />
-                <a href="try.php"> <input type="button" class="action-button" value="Submit" /></a>
+                 <input type="submit" class="action-button" value="Submit" />
 		 </fieldset>
         
 	
