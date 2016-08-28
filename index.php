@@ -61,6 +61,7 @@ session_start();
          <?php include('header.php'); ?>
 <!--body-->
                         <?php
+                              $loggedUser=$_SESSION['loggedUser'];
                               $flist=array();
                               
                               $friendList="select *from friend_status where eid1='$loggedUser' AND accepted=1";
@@ -97,6 +98,7 @@ session_start();
                           $rlist[]=$fr1["eid1"];
                       }
                       $_SESSION['rlist']=$rlist;
+                      
                       ?>
 <div id='checking'>
             <div id="centerbody">
@@ -210,7 +212,9 @@ session_start();
                     </div>
             </div>
     
-    <?php include('footer.php'); ?>
+    <?php include('footer.php'); 
+    
+    print_r($rlist);?>
 
         
 </div>

@@ -136,7 +136,7 @@ and open the template in the editor.
                                 foreach ($Results as $suggestions)//Fiends of the value in 2nd column
                                 {
                                     //echo 'Hii';
-                                    if($suggestions["eid1"]!=$loggedUser && $suggestions["eid2"]!=$loggedUser && !in_array($suggestions["eid2"], $myArr) && !in_array($suggestions["eid2"], $flist) && !in_array($suggestions["eid2"], $rlist))
+                                    if($suggestions["eid1"]!=$loggedUser && $suggestions["eid2"]!=$loggedUser && !in_array($suggestions["eid2"], $myArr) && !in_array($suggestions["eid2"], $_SESSION['flist']) && !in_array($suggestions["eid2"], $_SESSION['rlist']))
                                     {
                                         $myArr[] = $suggestions["eid2"];
                                         

@@ -26,7 +26,7 @@ and open the template in the editor.
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="css/footer-distributed-with-contact-form.css">
-        <script type="text/javascript" src="js/notifications.js"></script>
+        <script type="text/javascript" src="js/notifications.0  js"></script>
         <link rel="stylesheet" href="css/testingMenubar.css">
         
 <!--         <script type="text/javascript">
@@ -125,43 +125,46 @@ and open the template in the editor.
                      <?php 
                     
                       $loggedUser=$_SESSION["loggedUser"];
-                      //Finding the friends of logged user
-                      $flist=array();
-                      $friendList="select *from friend_status where eid1='$loggedUser' AND accepted=1";
-                      
-                      $friends=mysqli_query($con, $friendList);
-                      foreach ($friends as $fr)
-                      {
-                          $flist[]=$fr["eid2"];
-                          
-                      }
-                      $friendList1="select *from friend_status where eid2='$loggedUser' AND accepted=1";
-                      $friends1=mysqli_query($con, $friendList1);
-                      foreach ($friends1 as $fr)
-                      {
-                          $flist[]=$fr["eid1"];
-                          echo 'Hii '.$flist[0];
-                      }
-                      
-                      ///////////////////////////////
-                      //Already Requested 
-                      
-                      $rlist=array();
-                      $requestList="select * from friend_status where eid1='$loggedUser' AND requested=1";
-                      $requestedfriends=mysqli_query($con, $requestList);
-                      foreach ($requestedfriends as $fr)
-                      {
-                          $rlist[]=$fr["eid2"];
-                          
-                      }
-                      $requestList1="select *from friend_status where eid2='$loggedUser' AND requested=1";
-                      $requestedfriends1=mysqli_query($con, $requestList1);
-                      foreach ($requestedfriends1 as $fr1)
-                      {
-                          $rlist[]=$fr1["eid1"];
-                      }
-                      
-                      //////////////
+                      $flist=$_SESSION["flist"];
+                      $rlist=$_SESSION["rlist"];
+                      print_r($_SESSION['rlist']);
+//                      //Finding the friends of logged user
+//                      $flist=array();
+//                      $friendList="select *from friend_status where eid1='$loggedUser' AND accepted=1";
+//                      
+//                      $friends=mysqli_query($con, $friendList);
+//                      foreach ($friends as $fr)
+//                      {
+//                          $flist[]=$fr["eid2"];
+//                          
+//                      }
+//                      $friendList1="select *from friend_status where eid2='$loggedUser' AND accepted=1";
+//                      $friends1=mysqli_query($con, $friendList1);
+//                      foreach ($friends1 as $fr)
+//                      {
+//                          $flist[]=$fr["eid1"];
+//                          echo 'Hii '.$flist[0];
+//                      }
+//                      
+//                      ///////////////////////////////
+//                      //Already Requested 
+//                      
+//                      $rlist=array();
+//                      $requestList="select * from friend_status where eid1='$loggedUser' AND requested=1";
+//                      $requestedfriends=mysqli_query($con, $requestList);
+//                      foreach ($requestedfriends as $fr)
+//                      {
+//                          $rlist[]=$fr["eid2"];
+//                          
+//                      }
+//                      $requestList1="select *from friend_status where eid2='$loggedUser' AND requested=1";
+//                      $requestedfriends1=mysqli_query($con, $requestList1);
+//                      foreach ($requestedfriends1 as $fr1)
+//                      {
+//                          $rlist[]=$fr1["eid1"];
+//                      }
+//                      
+//                      //////////////
                         $reqFriendsQuery="select * from friend_status where requested=1 AND eid2='$loggedUser'";
                         $Results=  mysqli_query($con, $reqFriendsQuery);
                         foreach ($Results as $row)
@@ -255,7 +258,7 @@ and open the template in the editor.
                                 foreach ($Results as $suggestions)//Inner loop 1
                                 {
                                     //echo 'Hii';
-                                    if($suggestions["eid1"]!=$loggedUser && $suggestions["eid2"]!=$loggedUser && !in_array($suggestions["eid1"], $myArr) && !in_array($suggestions["eid1"], $flist) && !in_array($suggestions["eid2"], $rlist))
+                                    if($suggestions["eid1"]!=$loggedUser && $suggestions["eid2"]!=$loggedUser && !in_array($suggestions["eid1"], $myArr) && !in_array($suggestions["eid1"], $flist) && !in_array($suggestions["eid1"],$rlist))
                                     {
                                         $myArr[] = $suggestions["eid1"];
                                         
@@ -351,7 +354,7 @@ and open the template in the editor.
                                 foreach ($Results as $suggestions)//Fiends of the value in 2nd column
                                 {
                                     
-                                    if($suggestions["eid1"]!=$loggedUser && $suggestions["eid2"]!=$loggedUser && !in_array($suggestions["eid1"], $myArr1) && !in_array($suggestions["eid1"], $flist) && !in_array($suggestions["eid2"], $rlist))
+                                    if($suggestions["eid1"]!=$loggedUser && $suggestions["eid2"]!=$loggedUser && !in_array($suggestions["eid1"], $myArr1) && !in_array($suggestions["eid1"], $flist) && !in_array($suggestions["eid1"], $rlist))
                                     {
                                         $myArr1[] =$suggestions["eid1"];
                       ?>

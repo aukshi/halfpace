@@ -31,7 +31,7 @@ and open the template in the editor.
             $row = mysqli_fetch_array($profileResults);
             $profilePic=$row["picture"];
             ?>
-            <div id="profilename" class="header1"><h4>Hi <?php echo $loggedUser;?></h4></div>
+            <div id="profilename" class="header1"><h4> <?php echo $loggedUser;?></h4></div>
             <div  id="profilearea" class="header1" ><a href="profile.php"><img class="imageCircle" src="<?php echo $profilePic; ?>" alt="<?php echo $profilePic; ?>" width="100" height="100"></a></div>
             
             <ul id="nav">
@@ -77,7 +77,7 @@ and open the template in the editor.
 
                     </div>
                 </div>
-                <div id="friendFooter"><a href="friendRequest.php">See All</a></div>
+                <div id="friendFooter"><a href="friendRequested.php">See All</a></div>
                 </div>
 
             </li>
