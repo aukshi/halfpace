@@ -18,7 +18,7 @@
   
   <script>
 function myFunction(id) {
-    $(".drop").hide();
+    //$(".drop").hide();
     var x = document.getElementById(id);
     if (x.className.indexOf("w3-show") === -1) {
         x.className += " w3-show";
@@ -34,7 +34,7 @@ function myFunction(id) {
    
     <div class="superparent" id="left_div">
         <h2>Choose your skills </h2><label style="font-family: cursive">(maximum 15)</label>
- 
+        
 <div class="w3-accordion w3-light-grey">
   <button onclick="myFunction('Demo1')" class="w3-btn-block w3-left-align">
     Everyday skills
@@ -71,7 +71,8 @@ function myFunction(id) {
                       ?>
                                                                      
                      
-                 
+               
+      
   </div>
   <button onclick="myFunction('Demo2')" class="w3-btn-block w3-left-align">
     Education
@@ -90,7 +91,7 @@ function myFunction(id) {
                                     <label for="<?php echo $squared1[$i];?>"><font size="3"> <?php echo $item;?> </font></label>
                                    <div class="drop w3-card-8 w3-dropdown-content" >
                                     
-                          <div ><input class="w3-radio" type="radio" name="gender" value="Beginner" checked>
+                          <div ><input class="w3-radio" type="radio" name="gender" value="Beginner">
                               <label class="w3-validate">Beginner</label></div>
 
                                   <div> <input class="w3-radio" type="radio" name="gender" value="Intermediate">
@@ -109,7 +110,7 @@ function myFunction(id) {
                                                                      
                      
   </div>
-</div>
+
 
         <button onclick="myFunction('Demo3')" class="w3-btn-block w3-left-align">
     Languages
@@ -128,7 +129,7 @@ function myFunction(id) {
                                     <label for="<?php echo $squared2[$i];?>"><font size="3"> <?php echo $item;?> </font></label>
                                    <div class="drop w3-card-8 w3-dropdown-content" >
                                     
-                          <div ><input class="w3-radio" type="radio" name="gender" value="Beginner" checked>
+                          <div ><input class="w3-radio" type="radio" name="gender" value="Beginner">
                               <label class="w3-validate">Beginner</label></div>
 
                                   <div> <input class="w3-radio" type="radio" name="gender" value="Intermediate">
@@ -165,7 +166,7 @@ function myFunction(id) {
                                     <label for="<?php echo $squared3[$i];?>"><font size="3"> <?php echo $item;?> </font></label>
                                    <div class="drop w3-card-8 w3-dropdown-content" >
                                     
-                          <div ><input class="w3-radio" type="radio" name="gender" value="Beginner" checked>
+                          <div ><input class="w3-radio" type="radio" name="gender" value="Beginner">
                               <label class="w3-validate">Beginner</label></div>
 
                                   <div> <input class="w3-radio" type="radio" name="gender" value="Intermediate">
@@ -204,7 +205,7 @@ function myFunction(id) {
                                     <label for="<?php echo $squared4[$i];?>"><font size="3"> <?php echo $item;?> </font></label>
                                    <div class="drop w3-card-8 w3-dropdown-content" >
                                     
-                          <div ><input class="w3-radio" type="radio" name="gender" value="Beginner" checked>
+                          <div ><input class="w3-radio" type="radio" name="gender" value="Beginner">
                               <label class="w3-validate">Beginner</label></div>
 
                                   <div> <input class="w3-radio" type="radio" name="gender" value="Intermediate">
@@ -223,7 +224,7 @@ function myFunction(id) {
                       
         
     </div>
- 
+ </div>
         
         
         
@@ -244,7 +245,7 @@ function myFunction(id) {
                                     <label for="<?php echo $squared5[$i];?>"><font size="3"> <?php echo $item;?> </font></label>
                                    <div class="drop w3-card-8 w3-dropdown-content" >
                                     
-                          <div ><input class="w3-radio" type="radio" name="gender" value="Beginner" checked>
+                          <div ><input class="w3-radio" type="radio" name="gender" value="Beginner">
                               <label class="w3-validate">Beginner</label></div>
 
                                   <div> <input class="w3-radio" type="radio" name="gender" value="Intermediate">
